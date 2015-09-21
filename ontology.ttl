@@ -1,0 +1,242 @@
+# Contents of this file
+### 1. Basic info
+### 2. Classes
+### 3. Properties
+
+# Internal Namespaces
+
+@prefix oe:         <https://id.erfgoed.net/ontology#>.
+
+# External Namespaces
+@prefix dc:         <http://purl.org/dc/elements/1.1/>.
+@prefix dct:        <http://purl.org/dc/terms/>.
+@prefix foaf:       <http://xmlns.com/foaf/0.1/>.
+@prefix owl:        <http://www.w3.org/2002/07/owl#>.
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann:       <http://purl.org/vocab/vann/>.
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#>.
+
+### 1. Basic info about the Ontology
+
+<https://id.erfgoed.net/ontology> a owl:Ontology;
+    rdfs:label "Onroerend Erfgoed ontology";
+    dct:created "2015-09-17"^^xsd:date;
+    dct:modified "2015-09-19"^^xsd:date;
+    dct:publisher <https://id.erfgoed.net/actoren/501>;
+    dct:creator <https://id.erfgoed.net/actoren/1>;
+    vann:preferredNamespacePrefix "oe";
+    vann:preferredNamespaceUri "https://id.erfgoed.net/ontology#";
+    dct:description """The Onroerend Erfgoed ontology describes an ontology that 
+    is used for modelling information present in Onroerend Erfgoed information 
+    systems.""".
+
+### 2. Classes
+
+# Onroerend Erfgoed Classes
+#
+oe:Actor a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Actor";
+    foaf:homepage <https://actoren.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """An actor.
+    An actor is a person or organisation that is involved in a certain business 
+    process for Onroerend Erfgoed.""".
+
+oe:Aanduidingsobject a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Aanduidingsobject";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """An aanduidingsobject.
+    An aanduidingsobject is an object that designates an area as heritage. This 
+    can be both used for listings and lower level forms of protection such as 
+    the vaststelling.""".
+
+oe:Advies a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Advies";
+    foaf:homepage <https://adviezen.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """An advies.
+    The Advies class represents a set of resources that tell whether a certain
+    action is permitted.""".
+
+oe:Besluit a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Besluit";
+    foaf:homepage <https://besluiten.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """A besluit.
+    A besluit is a document that describes a formal decision taken by an actor
+    entitled to do so, eg. a minister, deputy, director, ...""".
+
+oe:Dossier a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Dossier";
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """A dossier.
+    This represents information of both a temporary and a permanent nature on a
+    certain dossier.""".
+
+oe:Erfgoedobject a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Erfgoedobject";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """An erfgoedobject.
+    An erfgoedobject describes some piece of cultural heritage from a scientific, 
+    artistic and historic point of view. It implies no legal protection, that's 
+    the responsibility of aanduidingsobjecten.""".
+
+oe:Plan a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Plan";
+    foaf:homepage <https://plannen.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """A plan.
+    A plan is a document that describes a future planned state of some set or 
+    instance of heritage. Commonly a destincion is made between a beheersplan and
+    and an erfgoedrichtplan.""".
+
+oe:Poststuk a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "Poststuk";
+    foaf:homepage <https://post.onroerenderfgoed.be>;
+    dct:created "2015-09-17"^^xsd:date;
+    dct:description """A poststuk.
+    A poststuk is a piece of communication that is received or sent by 
+    Onroerend Erfgoed. This can be both analog, digital or spoken communication.""".
+
+### 3. Properties
+
+oe:isPreAdviesDossierVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is het preadviesdossier van";
+    dct:created "2015-09-17"^^xsd:date;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier.
+
+oe:heeftAlsPreAdviesDossier a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "heeft als preadviesdossier";
+    dct:created "2015-09-17"^^xsd:date;
+    owl:inverseOf oe:isPreAdviesDossierVan;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier.
+
+oe:isDubbelDossierVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is het dubbele dossier van";
+    dct:created "2015-09-17"^^xsd:date;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier.
+
+oe:heeftAlsDubbelDossier a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "heeft als dubbeldossier";
+    dct:created "2015-09-17"^^xsd:date;
+    owl:inverseOf oe:isDubbelDossierVan;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier.
+
+oe:isHetOnderwerpVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is het onderwerp van";
+    dct:created "2015-09-17"^^xsd:date;
+    rdfs:domain [
+        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
+    ];
+    rdfs:range oe:Dossier.
+
+oe:heeftAlsOnderwerp a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "heeft als onderwerp";
+    dct:created "2015-09-17"^^xsd:date;
+    owl:inverseOf oe:isHetOnderwerpVan;
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
+    ].
+
+oe:isDeAanvragerVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is de aanvrager van";
+    dct:created "2015-09-17"^^xsd:date;
+    rdfs:domain oe:Actor;
+    rdfs:range oe:Dossier.
+
+oe:heeftAlsAanvrager a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "heeft als aanvrager";
+    dct:created "2015-09-17"^^xsd:date;
+    owl:inverseOf oe:isDeAanvragerVan;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor.
+
+oe:isAangeduidAls a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is aangeduid als";
+    dct:created "2015-09-18"^^xsd:date;
+    rdfs:domain oe:Erfgoedobject;
+    rdfs:range oe:Aanduidingsobject;
+    dct:description """
+    This indicates with what Aanduidingsobjecten legal status was given to an 
+    Erfgoedobject. It implies that the Erfgoedobject was (almost) entirely 
+    designated.""".
+
+oe:isDeAanduidingVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is de aanduiding van";
+    dct:created "2015-09-18"^^xsd:date;
+    owl:inverseOf oe:isAangeduidAls;
+    rdfs:domain oe:Aanduidingsobject;
+    rdfs:range oe:Erfgoedobject;
+    dct:description """
+    Indicates which Erfgoedobjecten this Aanduidingsobject is a designation of.
+    It implies that the designation is more or less the same as the object it's
+    designating.
+    """.
+
+oe:omvatDeAanduidingAls a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "omvat de aanduiding als";
+    dct:created "2015-09-18"^^xsd:date;
+    rdfs:domain oe:Erfgoedobject;
+    rdfs:range oe:Aanduidingsobject;
+    dct:description """
+    Indicates that a part of this Erfgoedobject has been designated in a certain
+    Aanduidingsobject.""".
+
+oe:isDeGedeeltelijkeAanduidingVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is de gedeeltelijke aanduiding van";
+    dct:created "2015-09-18"^^xsd:date;
+    owl:inverseOf oe:omvatDeAanduidingAls;
+    rdfs:domain oe:Aanduidingsobject;
+    rdfs:range oe:Erfgoedobject;
+    dct:description """
+    Indicates that this Aanduidingsobject is the partial designation of a 
+    certain Erfgoedobject.""".
+
+oe:isDeelVanDeAanduidingAls a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is deel van de aanduiding als";
+    dct:created "2015-09-18"^^xsd:date;
+    rdfs:domain oe:Erfgoedobject;
+    rdfs:range oe:Aanduidingsobject;
+    dct:description """
+    Indicates that this Erfgoedobject is part of a (much) larger 
+    Aanduidingsobject.""".
+
+oe:isDeOmvattendeAanduidingVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is de omvattende aanduiding van";
+    dct:created "2015-09-18"^^xsd:date;
+    owl:inverseOf oe:isDeelVanDeAanduidingAls;
+    rdfs:domain oe:Aanduidingsobject;
+    rdfs:range oe:Erfgoedobject;
+    dct:description """
+    Indicates that this Aanduidingsobject contains a (much) smaller 
+    Erfgoedobject.""".
