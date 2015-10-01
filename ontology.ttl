@@ -27,6 +27,8 @@
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
+    dct:contributor <https://id.erfgoed.net/actoren/1163>;
+    dct:contributor <https://id.erfgoed.net/actoren/1765>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/ontology#";
     vs:term_status "testing";
