@@ -1,0 +1,51 @@
+==============
+Vergaderingn 2
+==============
+
+:datum: 2015-11-05
+:aanwezig: Koen Van Daele, Sophie Mortier, Wouter Claeys, Klaas Millet
+
+Agenda
+======
+
+1. Verslag laatste vergadering
+2. Relaties voor dossiers
+3. Varia
+
+Verslag
+=======
+
+1. Verslag laatste vergadering
+
+   * Nog geen verslag van
+   * Presentatie zal worden toegevoegd aan repo
+
+2. Relaties voor dossiers
+
+   * oe:dos_IsDeZoneringVan <-> oe:dos_WerdGezoneerdAls. Zoneringsdossier A
+     oe:dos_IsDeZoneringVan adviesdossier B en omgekeerd.
+   * Probleem met dubbele dossiers. We ontvangen een brief. Hoort bij een
+     bestaand dossier, maar niemand heeft dit door. Er wordt een nieuwe zonering
+     gestart waaruit blijkt dat er al een dossier is. De nieuwe zonering moet
+     afgesloten worden en verwijzen naar het bestaande dossier. Dus, een relatie
+     tussen twee dossiers. Kan eigenlijk opgevangen worden door meerdere
+     zoneringsdossiers toe te laten bij een dossier.
+   * oe:dos_HandeltOver. Dossier A handelt over object B. Object B kan een
+     erfgoedobject, een aanduidingsobject. Op termijn moet dit mogelijk
+     uitgebreid worden met plannen.
+   * oe:dos_HeeftPoststuk. Dossier A heeft een bepaald poststuk. 
+   * oe:dos_WerdOpgestartDoorPoststuk. Dossier A werd opgestart door een bepaald
+     poststuk B.
+   * oe:dos_WerdAangevraagdDoor. Dossier A werd aangevraagd door Actor B.
+
+3. Varia
+
+   * Term Advies is niet helemaal goed. Zijn adviezen, toelatingen en
+     machtigingen. We proberen echter de class naam los te zien van de
+     beschrijving van die class. Dus we houden de Class naam Advies.
+   * Waarschijnlijk hebben we een nieuwe Class BeslissingInBeroe nodig. Alleen
+     niet helemaal duidelijk wat het is en door wie het wordt utigevaardigd.
+
+4. Te doen
+
+   * Uitzoeken wat er met BeslissingenInBeroep moet gebeuren. (claeyswo)
