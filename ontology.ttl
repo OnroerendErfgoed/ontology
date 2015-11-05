@@ -127,6 +127,38 @@ oe:Poststuk a owl:Class;
 
 ### 3. Properties
 
+oe:dos_isDeZoneringVan a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "is de zonering van";
+    dct:created "2015-11-5"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    owl:inverseOf oe:dos_werdGezoneerdAls;
+    dct:description """Dossier A is de zonering van Dossier B.
+    This relation indicates that Dossier A is a zoneringsdossier that is coupled 
+    to dossier B. Quite often there will only be one zoneringsdossier for a 
+    certain dossier, but more than one is possible. This can happen because 
+    several Postukken have have entered the organisation at different points in
+    time.
+    """.
+
+oe:dos_werdGezoneerdAls a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "werd gezoneerd als";
+    dct:created "2015-11-5"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    owl:inverseOf oe:dos_isDeZoneringVan;
+    dct:description """Dossier B werd gezoneeerd als Dossier A.
+    This relation indicates that Dossier A is a zoneringsdossier that is coupled 
+    to dossier B. Quite often there will only be one zoneringsdossier for a 
+    certain dossier, but more than one is possible. This can happen because 
+    several Postukken have have entered the organisation at different points in
+    time.
+    """.
+
 oe:isPreAdviesDossierVan a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
     rdfs:label "is het preadviesdossier van";
