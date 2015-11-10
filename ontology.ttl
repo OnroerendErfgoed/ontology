@@ -32,7 +32,7 @@
     dct:contributor <https://id.erfgoed.net/actoren/1763>;
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
     vann:preferredNamespacePrefix "oe";
-    vann:preferredNamespaceUri "https://id.erfgoed.net/ontology#";
+    vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/ontology#";
     vs:term_status "testing";
     dct:description """The Onroerend Erfgoed ontology describes an ontology that 
     is used for modelling information present in Onroerend Erfgoed information 
