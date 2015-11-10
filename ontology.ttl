@@ -23,11 +23,12 @@
 <https://id.erfgoed.net/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-10-1"^^xsd:date;
+    dct:modified "2015-11-01"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
     dct:contributor <https://id.erfgoed.net/actoren/1163>;
+    dct:contributor <https://id.erfgoed.net/actoren/1763>;
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/ontology#";
@@ -66,7 +67,7 @@ oe:Advies a owl:Class;
     rdfs:label "Advies";
     foaf:homepage <https://adviezen.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-10-1"^^xsd:date;
+    dct:modified "2015-10-01"^^xsd:date;
     vs:term_status "testing";
     dct:description """An advies.
     The Advies class represents a set of resources that tell whether a certain 
@@ -119,7 +120,7 @@ oe:Poststuk a owl:Class;
     rdfs:label "Poststuk";
     foaf:homepage <https://post.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-10-1"^^xsd:date;
+    dct:modified "2015-10-01"^^xsd:date;
     vs:term_status "testing";
     dct:description """A poststuk.
     A poststuk is a piece of communication that is received or sent by an actor.
@@ -130,7 +131,7 @@ oe:Poststuk a owl:Class;
 oe:dos_isDeZoneringVan a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
     rdfs:label "is de zonering van";
-    dct:created "2015-11-5"^^xsd:date;
+    dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range oe:Dossier;
@@ -146,7 +147,7 @@ oe:dos_isDeZoneringVan a owl:ObjectProperty;
 oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
     rdfs:label "werd gezoneerd als";
-    dct:created "2015-11-5"^^xsd:date;
+    dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range oe:Dossier;
@@ -158,6 +159,68 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     several Postukken have have entered the organisation at different points in
     time.
     """.
+
+oe:dos_handeltOver a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "handelt over";
+    dct:created "2015-09-17"^^xsd:date;
+    dct:modified "2015-11-05"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
+    ];
+    dct:description """Dossier A handelt over object B.
+    This relation indicaties that Dossier A interacts with a certain object, 
+    either an AanduidingsObject or an ErfgoedObject.
+    """;
+    skos:historyNote """
+    Was called oe:heeftAlsOnderwerp in original draft. Changed to oe:dos_handeltOver
+    on 05-11-2015.
+    """.
+
+oe:dos_heeftPoststuk a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "heeft als poststuk";
+    dct:created "2015-11-05"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Poststuk;
+    dct:description """Dossier A heeft postuk Poststuk B.
+    This relation indicaties that a certain Poststuk is related to this Dossier.
+    """.
+
+oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "werd opgestart door poststuk";
+    dct:created "2015-11-05"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Poststuk;
+    dct:description """Dossier A werd opgestart door Poststuk B.
+    This relation indicaties that a certain Poststuk was the original poststuk 
+    that 'created' this Dossier.
+    """.
+
+oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:label "werd aangevraagd door";
+    dct:created "2015-09-17"^^xsd:date;
+    dct:modified "2015-11-05"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor;
+    dct:description """Dossier A werd aangevraagd door Actor B.
+    This relation indicates that a certain person is the original applicant who 
+    'created' this Dossier.
+    """;
+    skos:historyNote """
+    Was called oe:heeftAanvrager in original draft. Changed to oe:dos_werdAangevraagdDoor
+    on 05-11-2015.
+    """.
+
+# Unstable properties.
+# Don't use for the moment.
 
 oe:isPreAdviesDossierVan a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
@@ -176,60 +239,6 @@ oe:heeftAlsPreAdviesDossier a owl:ObjectProperty;
     rdfs:domain oe:Dossier;
     rdfs:range oe:Dossier.
 
-oe:isDubbelDossierVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "is het dubbele dossier van";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossier.
-
-oe:heeftAlsDubbelDossier a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "heeft als dubbeldossier";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    owl:inverseOf oe:isDubbelDossierVan;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossier.
-
-oe:isHetOnderwerpVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "is het onderwerp van";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    rdfs:domain [
-        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
-    ];
-    rdfs:range oe:Dossier.
-
-oe:heeftAlsOnderwerp a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "heeft als onderwerp";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    owl:inverseOf oe:isHetOnderwerpVan;
-    rdfs:domain oe:Dossier;
-    rdfs:range [
-        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
-    ].
-
-oe:isDeAanvragerVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "is de aanvrager van";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    rdfs:domain oe:Actor;
-    rdfs:range oe:Dossier.
-
-oe:heeftAlsAanvrager a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
-    rdfs:label "heeft als aanvrager";
-    dct:created "2015-09-17"^^xsd:date;
-    vs:term_status "unstable";
-    owl:inverseOf oe:isDeAanvragerVan;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Actor.
 
 oe:isAangeduidAls a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
