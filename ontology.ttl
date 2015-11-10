@@ -5,7 +5,7 @@
 
 # Internal Namespaces
 
-@prefix oe:         <https://id.erfgoed.net/ontology#>.
+@prefix oe:         <https://id.erfgoed.net/vocab/ontology#>.
 
 # External Namespaces
 @prefix dc:         <http://purl.org/dc/elements/1.1/>.
@@ -20,7 +20,7 @@
 
 ### 1. Basic info about the Ontology
 
-<https://id.erfgoed.net/ontology> a owl:Ontology;
+<https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2015-11-01"^^xsd:date;
@@ -42,7 +42,7 @@
 # Onroerend Erfgoed Classes
 #
 oe:Actor a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Actor";
     foaf:homepage <https://actoren.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -52,7 +52,7 @@ oe:Actor a owl:Class;
     process for Onroerend Erfgoed.""".
 
 oe:Aanduidingsobject a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Aanduidingsobject";
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -63,7 +63,7 @@ oe:Aanduidingsobject a owl:Class;
     the vaststelling.""".
 
 oe:Advies a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Advies";
     foaf:homepage <https://adviezen.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -74,7 +74,7 @@ oe:Advies a owl:Class;
     actor agreed to, allowed or authorised a certain action.""".
 
 oe:Besluit a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Besluit";
     foaf:homepage <https://besluiten.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -84,7 +84,7 @@ oe:Besluit a owl:Class;
     entitled to do so, eg. a minister, deputy, director, ...""".
 
 oe:Dossier a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Dossier";
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
@@ -93,7 +93,7 @@ oe:Dossier a owl:Class;
     certain dossier.""".
 
 oe:Erfgoedobject a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Erfgoedobject";
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -104,7 +104,7 @@ oe:Erfgoedobject a owl:Class;
     the responsibility of aanduidingsobjecten.""".
 
 oe:Plan a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Plan";
     foaf:homepage <https://plannen.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -116,7 +116,7 @@ oe:Plan a owl:Class;
     and an erfgoedrichtplan.""".
 
 oe:Poststuk a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Poststuk";
     foaf:homepage <https://post.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
@@ -129,7 +129,7 @@ oe:Poststuk a owl:Class;
 ### 3. Properties
 
 oe:dos_isDeZoneringVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de zonering van";
     dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
@@ -145,7 +145,7 @@ oe:dos_isDeZoneringVan a owl:ObjectProperty;
     """.
 
 oe:dos_werdGezoneerdAls a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd gezoneerd als";
     dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
@@ -161,7 +161,7 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     """.
 
 oe:dos_handeltOver a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "handelt over";
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2015-11-05"^^xsd:date;
@@ -180,7 +180,7 @@ oe:dos_handeltOver a owl:ObjectProperty;
     """.
 
 oe:dos_heeftPoststuk a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als poststuk";
     dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
@@ -191,7 +191,7 @@ oe:dos_heeftPoststuk a owl:ObjectProperty;
     """.
 
 oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd opgestart door poststuk";
     dct:created "2015-11-05"^^xsd:date;
     vs:term_status "testing";
@@ -203,7 +203,7 @@ oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
     """.
 
 oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd aangevraagd door";
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2015-11-05"^^xsd:date;
@@ -223,7 +223,7 @@ oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
 # Don't use for the moment.
 
 oe:isPreAdviesDossierVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is het preadviesdossier van";
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "unstable";
@@ -231,7 +231,7 @@ oe:isPreAdviesDossierVan a owl:ObjectProperty;
     rdfs:range oe:Dossier.
 
 oe:heeftAlsPreAdviesDossier a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als preadviesdossier";
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "unstable";
@@ -241,7 +241,7 @@ oe:heeftAlsPreAdviesDossier a owl:ObjectProperty;
 
 
 oe:isAangeduidAls a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is aangeduid als";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
@@ -253,7 +253,7 @@ oe:isAangeduidAls a owl:ObjectProperty;
     designated.""".
 
 oe:isDeAanduidingVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de aanduiding van";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
@@ -267,7 +267,7 @@ oe:isDeAanduidingVan a owl:ObjectProperty;
     """.
 
 oe:omvatDeAanduidingAls a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "omvat de aanduiding als";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
@@ -278,7 +278,7 @@ oe:omvatDeAanduidingAls a owl:ObjectProperty;
     Aanduidingsobject.""".
 
 oe:isDeGedeeltelijkeAanduidingVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de gedeeltelijke aanduiding van";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
@@ -290,7 +290,7 @@ oe:isDeGedeeltelijkeAanduidingVan a owl:ObjectProperty;
     certain Erfgoedobject.""".
 
 oe:isDeelVanDeAanduidingAls a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is deel van de aanduiding als";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
@@ -301,7 +301,7 @@ oe:isDeelVanDeAanduidingAls a owl:ObjectProperty;
     Aanduidingsobject.""".
 
 oe:isDeOmvattendeAanduidingVan a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/ontology>;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de omvattende aanduiding van";
     dct:created "2015-09-18"^^xsd:date;
     vs:term_status "unstable";
