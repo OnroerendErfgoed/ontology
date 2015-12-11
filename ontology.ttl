@@ -129,6 +129,8 @@ oe:Poststuk a owl:Class;
 
 ### 3. Properties
 
+#### Properties related to Dossier
+
 oe:dos_isDeZoneringVan a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de zonering van";
@@ -218,6 +220,32 @@ oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     skos:historyNote """
     Was called oe:heeftAanvrager in original draft. Changed to oe:dos_werdAangevraagdDoor
     on 05-11-2015.
+    """.
+
+#### Properties related to Poststuk
+
+oe:post_werdBeantwoordIn a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd beantwoord in";
+    dct:created "2015-12-08"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Poststuk;
+    rdfs:range oe:Poststuk;
+    owl:inverseOf oe:post_isHetAntwoordOp;
+    dct:description """Poststuk A werd beantwoord in Poststuk B.
+    This relation indicates that a certain Poststuk was answered in another Poststuk.
+    """.
+
+oe:post_isHetAntwoordOp a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "is het antwoord op";
+    dct:created "2015-12-08"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Poststuk;
+    rdfs:range oe:Poststuk;
+    owl:inverseOf oe:post_werdBeantwoordIn;
+    dct:description """Poststuk A is het antwoord op Poststuk B.
+    This relation indicates that a certain Poststuk was created as the answer to another Poststuk.
     """.
 
 # Unstable properties.
