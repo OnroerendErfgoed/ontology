@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-11-01"^^xsd:date;
+    dct:modified "2016-02-17"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -162,6 +162,31 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     several Postukken have have entered the organisation at different points in
     time.
     """.
+
+oe:dos_wordtGevolgdDoor a owl:objectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "wordt gevolgd door";
+    dct:created "2016-02-17"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    owl:inverseOf oe:dos_wordtVoorafgegaanDoor;
+    dct:description """Dossier A wordt gevolgd door Dossier B.
+    This relation indicates that a certain Dossier was later followed by another 
+    Dossier.
+    """.
+
+oe:dos_wordtVoorafgegaanDoor a owl:objectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "wordt voorafgegaan door";
+    dct:created "2016-02-17"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    owl:inverseOf oe:dos_wordtGevolgdDoor;
+    dct:description """Dossier A wordt voorafgegaan door Dossier B.
+    This relation indicates that a certain Dossier was preceded by another 
+    Dossier."""
 
 oe:dos_handeltOver a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
