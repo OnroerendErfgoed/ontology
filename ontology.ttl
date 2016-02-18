@@ -93,6 +93,17 @@ oe:Dossier a owl:Class;
     This represents information of both a temporary and a permanent nature on a
     certain dossier.""".
 
+oe:Dossierbijlage a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Dossierbijlage";
+    dct:created "2015-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A dossierbijlage.
+    This represents a digital object that has been added to a certain Dossier.
+    It can be a report, a letter, an image, a map, ... The object is only 
+    relevant in the context of this Dossier and is deleted or archived 
+    together with the Dossier.""".
+
 oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Erfgoedobject";
@@ -131,6 +142,8 @@ oe:Poststuk a owl:Class;
 
 #### Properties related to Dossier
 
+##### Dossier to Dossier
+
 oe:dos_isDeZoneringVan a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "is de zonering van";
@@ -163,6 +176,8 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     time.
     """.
 
+##### Dossier to Aanduidingsobject or Erfgoedobject
+
 oe:dos_handeltOver a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "handelt over";
@@ -181,6 +196,8 @@ oe:dos_handeltOver a owl:ObjectProperty;
     Was called oe:heeftAlsOnderwerp in original draft. Changed to oe:dos_handeltOver
     on 05-11-2015.
     """.
+
+##### Dossier to Poststuk
 
 oe:dos_heeftPoststuk a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -205,6 +222,8 @@ oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
     that 'created' this Dossier.
     """.
 
+##### Dossier to Actor
+
 oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd aangevraagd door";
@@ -220,6 +239,148 @@ oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     skos:historyNote """
     Was called oe:heeftAanvrager in original draft. Changed to oe:dos_werdAangevraagdDoor
     on 05-11-2015.
+    """.
+
+##### Dossier to Dossierbijlage
+
+oe:dos_heeftBijlage a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als bijlage";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als bijlage Dossierbijlage B.
+    This relation indicates that B is a file that was added to A.
+    """.
+
+oe:dos_heeftVerslagBureauonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als verslag bureauonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als verslag bureauonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is a 
+    report from a desk-based assessment of an archaeological site.
+    """.
+
+oe:dos_heeftMotivatieBureauonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als motivatie bureauonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als motivatie bureauonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is the
+    motivation for a desk-based assessment of an archaeological site.
+    """.
+
+oe:dos_heeftVerslagTerreinonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als verslag terreinonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als verslag terreinonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is a 
+    report from a site-based assessment of an archaeological site.
+    """.
+
+oe:dos_heeftMotivatieTerreinonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als motivatie terreinonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als motivatie terreinonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is the
+    motivation for a site-based assessment of an archaeological site.
+    """.
+
+oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief inkennisstelling";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "unstable";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als brief inkennisstelling Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. TODO: ADD DESCRIPTION
+    """.
+
+oe:dos_heeftBriefVerlenging a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief verlenging";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "unstable";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als brief verlenging Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. TODO: ADD DESCRIPTION
+    """.
+
+oe:dos_heeftBriefEindePassiefBehoud a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief einde passief behoud";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "unstable";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als brief verlenging Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. TODO: ADD DESCRIPTION
+    """.
+
+oe:dos_heeftFoto a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als foto";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als foto Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is a
+    picture or image that illustrates a certain aspect of the Dossier.
+    """.
+
+oe:dos_heeftFotoBureauonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als foto bureauonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftFoto;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als foto bureauonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is a
+    picture or image that illustrates a certain aspect of the Dossier and is 
+    related to the desk-based assessment of an archaeological site.
+    """.
+
+oe:dos_heeftFotoTerreinonderzoek a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als foto terreinonderzoek";
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_heeftFoto;
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossierbijlage;
+    dct:description """Dossier A heeft als foto terreinonderzoek Dossierbijlage B.
+    This relation indicates that B is a file that was added to A. The file is a
+    picture or image that illustrates a certain aspect of the Dossier and is 
+    related to the site-based assessment of an archaeological site.
     """.
 
 #### Properties related to Poststuk
