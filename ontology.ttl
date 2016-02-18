@@ -127,6 +127,42 @@ oe:Poststuk a owl:Class;
     A poststuk is a piece of communication that is received or sent by an actor.
     This can be both analog, digital or spoken communication.""".
 
+oe:Toevalsvondst a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Toevalsvondst";
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/vondstmeldingen/toevalsvondsten>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A toevalsvondst.
+    TODO.""".
+
+oe:ArcheologischeNota a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologische nota";
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/notas>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A submitted nota.
+    TODO.""".
+
+oe:ArcheologischeArcheologieNota a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologische archeologienota";
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A submitted archeologienota.
+    TODO.""".
+
+oe:MeldingVooronderzoek a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding vooronderzoek";
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/meldingen_vooronderzoek>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding vooronderzoek.
+    A notification that a vooronderzoek (preliminary survey) was undertaken.""".
+
 ### 3. Properties
 
 #### Properties related to Dossier
