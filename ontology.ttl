@@ -129,39 +129,60 @@ oe:Poststuk a owl:Class;
 
 oe:Toevalsvondst a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toevalsvondst";
+    rdfs:label "Toevalsvondst"@nl;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/vondstmeldingen/toevalsvondsten>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
     dct:description """A toevalsvondst.
-    TODO.""".
+    A toevalsvondst is a notification by external parties to the Flanders Heritage Agency
+    that archaeological heritage was found by accident. This specifically excludes
+    finds done during archaeological surveying or excavations or by metal detector."""@en.
 
-oe:ArcheologischeNota a owl:Class;
+oe:Archeologienota a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologische nota";
-    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/notas>;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    dct:description """A submitted nota.
-    TODO.""".
-
-oe:ArcheologischeArcheologieNota a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologische archeologienota";
+    rdfs:label "Archeologienota"@nl;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
     dct:description """A submitted archeologienota.
-    TODO.""".
+    An archeologienota in this context is a document that was created based on 
+    archaeological preliminary research that contains information about the results
+    of the executed research, a suggestion for a decision and a course of action 
+    in regards to this decision.
+    In case an archaeologienota is purely based on desk-based research it will be 
+    followed by a ArcheologieinotaNota that details what was found during the later 
+    site-based research.
+    """@en.
+
+oe:ArcheologienotaNota a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologienota nota"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A submitted nota following certain archeologienotas.
+    This nota is a document that was created based on an archeological site-based
+    survey that contains information about the results of the executed research,
+    a suggestion for a decision and a course of action in regards to this decision.
+    This type of nota is the result of a preceding Archeologienota that was based 
+    purely on desk-based research because a site-based survey was impossible.
+    """@en.
 
 oe:MeldingVooronderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Melding vooronderzoek";
+    rdfs:label "Melding vooronderzoek met ingreep in de bodem"@nl;
+    rdfs:label "Notification site-based evaluation"@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/meldingen_vooronderzoek>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
-    dct:description """A melding vooronderzoek.
-    A notification that a vooronderzoek (preliminary survey) was undertaken.""".
+    dct:description """A melding vooronderzoek met ingreep in de bodem.
+    A notification that a site-based evaluation will be undertaken. This is a limited 
+    programme of intrusive fieldwork to determine the presence or absence of 
+    archaeological features, structures, deposits, ...
+    This resource contains the notification by the registered archaeologist and
+    a set of data such as the location where the research will be carried out, 
+    the reason for the research and the suggested method of execution.
+    """@en.
 
 ### 3. Properties
 
