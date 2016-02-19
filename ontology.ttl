@@ -155,14 +155,16 @@ oe:Archeologienota a owl:Class;
     rdfs:label "Archeologienota"@nl;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
     dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-02-19"^^xsd:date;
     vs:term_status "testing";
     dct:description """A submitted archeologienota.
     An archeologienota in this context is a document that was created based on 
     archaeological preliminary research that contains information about the results
     of the executed research, a suggestion for a decision and a course of action 
     in regards to this decision.
-    In case an archaeologienota is purely based on desk-based research it will be 
-    followed by a ArcheologieinotaNota that details what was found during the later 
+    In case site-based research is impossible or undesirable, the archaeologienota 
+    will be purely based on desk-based research and will be followed by an 
+    ArcheologienotaNota that details what was found during the later 
     site-based research.
     """@en.
 
@@ -177,7 +179,8 @@ oe:ArcheologienotaNota a owl:Class;
     survey that contains information about the results of the executed research,
     a suggestion for a decision and a course of action in regards to this decision.
     This type of nota is the result of a preceding Archeologienota that was based 
-    purely on desk-based research because a site-based survey was impossible.
+    purely on desk-based research because a site-based survey was impossible
+    or undesirable.
     """@en.
 
 oe:MeldingVooronderzoek a owl:Class;
