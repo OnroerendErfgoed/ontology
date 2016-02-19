@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-11-01"^^xsd:date;
+    dct:modified "2016-02-18"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -36,7 +36,9 @@
     vs:term_status "testing";
     dct:description """The Onroerend Erfgoed ontology describes an ontology that 
     is used for modelling information present in Onroerend Erfgoed information 
-    systems.""".
+    systems."""@en;
+    dct:description """De Onroerend Erfgoed ontology beschrijft een ontology die
+    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl.
 
 ### 2. Classes
 
@@ -44,13 +46,22 @@
 #
 oe:Actor a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Actor";
+    rdfs:label "Actor"@en;
+    rdfs:label "Actor"@nl;
     foaf:homepage <https://actoren.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
+    dct:modified "2016-02-18"^^xsd:date;
     vs:term_status "testing";
-    dct:description """An actor.
-    An actor is a person or organisation that is involved in a certain business 
-    process for Onroerend Erfgoed.""".
+    dct:description """An actor or agent.
+    An actor or agent is a person or thing that does stuff. Generally this is a 
+    person or organisation that is involved in a certain business 
+    process for Onroerend Erfgoed. But this can also be something more abstract
+    such as a software agent."""@en;
+    dct:description """Een actor.
+    Een actor is een persoon of ding dat iets doet. Meestal is dit een persoon
+    of organisatie die betrokken is bij een bepaald business proces van 
+    Onroerend Erfgoed. Het kan echter ook om een meer abstracte actor gaan zoals
+    een stuk software die handelingen verricht."""@nl;
 
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
