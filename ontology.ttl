@@ -31,6 +31,7 @@
     dct:contributor <https://id.erfgoed.net/actoren/1163>;
     dct:contributor <https://id.erfgoed.net/actoren/1763>;
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
+    dct:contributor <https://id.erfgoed.net/actoren/1850>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/ontology#";
     vs:term_status "testing";
