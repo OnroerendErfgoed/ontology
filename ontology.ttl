@@ -171,7 +171,7 @@ oe:Archeologienota a owl:Class;
 oe:ArcheologienotaNota a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Archeologienota nota"@nl;
-    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/notas>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
     dct:description """A submitted nota following certain archeologienotas.
@@ -187,7 +187,7 @@ oe:MeldingVooronderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Melding vooronderzoek met ingreep in de bodem"@nl;
     rdfs:label "Notification site-based evaluation"@en;
-    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/meldingen_vooronderzoek>;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_vooronderzoek>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
     dct:description """A melding vooronderzoek met ingreep in de bodem.
@@ -197,6 +197,50 @@ oe:MeldingVooronderzoek a owl:Class;
     This resource contains the notification by the registered archaeologist and
     a set of data such as the location where the research will be carried out, 
     the reason for the research and the suggested method of execution.
+    """@en.
+
+oe:MeldingAanvangVooronderzoekVI a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_vi>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description:"""A melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep.
+    A notification by a registered archeologist that a site-based evaluation 
+    resulting from a vergunningsplichtige ingreep was started.
+    """@en.
+
+oe:MeldingAanvangVooronderzoekWV a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_wv>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description:"""A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    A notification by a registered archeologist that a site-based evaluation 
+    resulting from a research question was started.
+    """@en.
+
+oe:MeldingAanvangOpgravingVI a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang opgraving op basis van een vergunningsplichtige ingreep"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_vi>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description:"""A melding aanvang opgraving op basis van een vergunningsplichtige ingreep.
+    A notification by a registered archeologist that an excavation resulting from 
+    a vergunningsplichtige ingreep was started.
+    """@en.
+
+oe:MeldingAanvangOpgravingWV a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang opgraving op basis van een wetenschappelijke vraagstelling"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_wv>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description:"""A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    A notification by a registered archeologist that a research excavation 
+    was started.
     """@en.
 
 ### 3. Properties
