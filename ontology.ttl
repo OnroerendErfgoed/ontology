@@ -62,7 +62,7 @@ oe:Actor a owl:Class;
     Een actor is een persoon of ding dat iets doet. Meestal is dit een persoon
     of organisatie die betrokken is bij een bepaald business proces van 
     Onroerend Erfgoed. Het kan echter ook om een meer abstracte actor gaan zoals
-    een stuk software die handelingen verricht."""@nl;
+    een stuk software die handelingen verricht."""@nl.
 
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
