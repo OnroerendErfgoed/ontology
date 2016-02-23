@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-02-19"^^xsd:date;
+    dct:modified "2016-02-23"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -200,6 +200,57 @@ oe:MeldingVooronderzoek a owl:Class;
     """@en.
 
 ### 3. Properties
+#
+#### Properties related to Toevalsvondst
+
+oe:tv_heeftAlsVinder a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als vinder"@nl;
+    rdfs:label "was found by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als vinder Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan door de actor B.
+    """@nl;
+    dct:description """Toevalsvondst A was found by Actor B.
+    Indicaties that accidental find A was done by Actor B.
+    """@en.
+
+oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als gebruiker"@nl;
+    rdfs:label "was found on a terrain used by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als gebruiker Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
+    de gebruiker is.
+    """@nl;
+    dct:description """Toevalsvondst A was found on a terrain used by Actor B.
+    Indicaties that accidental find A was done on a terrain that's being used
+    by Actor B.
+    """@en.
+
+oe:tv_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als zakelijkrechthouder"@nl;
+    rdfs:label "was found on a terrain owned by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als zakelijkrechthouder Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
+    de zakelijkrechthouder is.
+    """@nl;
+    dct:description """Toevalsvondst A was found on a terrain owned by Actor B.
+    Indicaties that accidental find A was done on a terrain that's owned in some 
+    way by Actor B.
+    """@en.
 
 #### Properties related to Dossier
 
