@@ -207,7 +207,7 @@ oe:MeldingAanvangVooronderzoekVI a owl:Class;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_vi>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
-    dct:description:"""A melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep.
+    dct:description """A melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep.
     A notification by a registered archeologist that a site-based evaluation 
     resulting from a vergunningsplichtige ingreep was started.
     """@en.
@@ -218,7 +218,7 @@ oe:MeldingAanvangVooronderzoekWV a owl:Class;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_wv>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
-    dct:description:"""A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    dct:description """A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
     A notification by a registered archeologist that a site-based evaluation 
     resulting from a research question was started.
     """@en.
@@ -229,7 +229,7 @@ oe:MeldingAanvangOpgravingVI a owl:Class;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_vi>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
-    dct:description:"""A melding aanvang opgraving op basis van een vergunningsplichtige ingreep.
+    dct:description """A melding aanvang opgraving op basis van een vergunningsplichtige ingreep.
     A notification by a registered archeologist that an excavation resulting from 
     a vergunningsplichtige ingreep was started.
     """@en.
@@ -240,7 +240,7 @@ oe:MeldingAanvangOpgravingWV a owl:Class;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_wv>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
-    dct:description:"""A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    dct:description """A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
     A notification by a registered archeologist that a research excavation 
     was started.
     """@en.
