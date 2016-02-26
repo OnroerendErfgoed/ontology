@@ -349,10 +349,14 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     time.
     """.
 
+#### Properties related to the sequence within Dossiers.
+
 oe:dos_wordtGevolgdDoor a owl:objectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "wordt gevolgd door";
+    rdfs:label "wordt gevolgd door"@nl;
+    rdfs:label "is followed by"@en;
     dct:created "2016-02-17"^^xsd:date;
+    dct:modified "2016-02-26"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range oe:Dossier;
@@ -364,15 +368,48 @@ oe:dos_wordtGevolgdDoor a owl:objectProperty;
 
 oe:dos_wordtVoorafgegaanDoor a owl:objectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "wordt voorafgegaan door";
+    rdfs:label "wordt voorafgegaan door"@nl;
+    rdfs:label "is preceded by"@en;
     dct:created "2016-02-17"^^xsd:date;
+    dct:modified "2016-02-26"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range oe:Dossier;
     owl:inverseOf oe:dos_wordtGevolgdDoor;
     dct:description """Dossier A wordt voorafgegaan door Dossier B.
     This relation indicates that a certain Dossier was preceded by another 
-    Dossier."""
+    Dossier.""".
+
+oe:dos_wordtGevolgdDoorToelatingOpgraving a owl:objectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "wordt gevolgd door toelating opgraving"@nl;
+    rdfs:label "is followed by excavationpermit"@en;
+    dct:created "2016-02-26"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    rdfs:subPropertyOf oe:dosWordtGevolgdDoor;
+    owl:inverseOf oe:dos_wordtVoorafgegaanDoorToelatingOpgraving;
+    dct:description """Dossier A wordt gevolgd door toelating opgraving Dossier B.
+    This relation indicates that a certain Dossier was follow by another Dossier 
+    that contains an excavationpermit."""@en.
+
+oe:dos_wordtVoorafgegaanDoorToevalsvondst a owl:objectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "wordt voorafgegaan door toevalsvondst"@nl;
+    rdfs:label "is preceded by accidental find"@en;
+    dct:created "2016-02-26"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Dossier;
+    rdfs:subPropertyOf oe:dosWordtVoorafgegaanDoor;
+    owl:inverseOf oe:dos_wordtGevolgdDoorToelatingOpgraving;
+    dct:description """Dossier A wordt voorafgegaan door toevalsvondst Dossier B.
+    This relation indicates that a certain Dossier was preceded by another 
+    Dossier that contains an accidental find. In effect, this excavationpermit
+    was allowed at least partially because of an accidental find.""".
+
+#### Properties relating Dossiers to Objecten.
 
 oe:dos_handeltOver a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
