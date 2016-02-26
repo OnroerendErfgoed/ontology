@@ -24,19 +24,22 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-02-17"^^xsd:date;
+    dct:modified "2016-02-24"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
     dct:contributor <https://id.erfgoed.net/actoren/1163>;
     dct:contributor <https://id.erfgoed.net/actoren/1763>;
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
+    dct:contributor <https://id.erfgoed.net/actoren/1850>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/ontology#";
     vs:term_status "testing";
     dct:description """The Onroerend Erfgoed ontology describes an ontology that 
     is used for modelling information present in Onroerend Erfgoed information 
-    systems.""".
+    systems."""@en;
+    dct:description """De Onroerend Erfgoed ontology beschrijft een ontology die
+    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl.
 
 ### 2. Classes
 
@@ -44,13 +47,22 @@
 #
 oe:Actor a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Actor";
+    rdfs:label "Actor"@en;
+    rdfs:label "Actor"@nl;
     foaf:homepage <https://actoren.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
+    dct:modified "2016-02-18"^^xsd:date;
     vs:term_status "testing";
-    dct:description """An actor.
-    An actor is a person or organisation that is involved in a certain business 
-    process for Onroerend Erfgoed.""".
+    dct:description """An actor or agent.
+    An actor or agent is a person or thing that does stuff. Generally this is a 
+    person or organisation that is involved in a certain business 
+    process for Onroerend Erfgoed. But this can also be something more abstract
+    such as a software agent."""@en;
+    dct:description """Een actor.
+    Een actor is een persoon of ding dat iets doet. Meestal is dit een persoon
+    of organisatie die betrokken is bij een bepaald business proces van 
+    Onroerend Erfgoed. Het kan echter ook om een meer abstracte actor gaan zoals
+    een stuk software die handelingen verricht."""@nl.
 
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -127,7 +139,181 @@ oe:Poststuk a owl:Class;
     A poststuk is a piece of communication that is received or sent by an actor.
     This can be both analog, digital or spoken communication.""".
 
+oe:Toevalsvondst a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Toevalsvondst"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/vondstmeldingen/toevalsvondsten>;
+    dct:created "2016-02-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A toevalsvondst.
+    A toevalsvondst is a notification by external parties to the Flanders Heritage Agency
+    that archaeological heritage was found by accident. This specifically excludes
+    finds done during archaeological surveying or excavations or by metal detector."""@en.
+
+oe:Archeologienota a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologienota"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
+    dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-02-19"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A submitted archeologienota.
+    An archeologienota in this context is a document that was created based on 
+    archaeological preliminary research that contains information about the results
+    of the executed research, a suggestion for a decision and a course of action 
+    in regards to this decision.
+    In case site-based research is impossible or undesirable, the archaeologienota 
+    will be purely based on desk-based research and will be followed by an 
+    ArcheologienotaNota that details what was found during the later 
+    site-based research.
+    """@en.
+
+oe:ArcheologienotaNota a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologienota nota"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/notas>;
+    dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A submitted nota following certain archeologienotas.
+    This nota is a document that was created based on an archeological site-based
+    survey that contains information about the results of the executed research,
+    a suggestion for a decision and a course of action in regards to this decision.
+    This type of nota is the result of a preceding Archeologienota that was based 
+    purely on desk-based research because a site-based survey was impossible
+    or undesirable.
+    """@en.
+
+oe:MeldingVooronderzoek a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding vooronderzoek met ingreep in de bodem"@nl;
+    rdfs:label "Notification site-based evaluation"@en;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_vooronderzoek>;
+    dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding vooronderzoek met ingreep in de bodem.
+    A notification that a site-based evaluation will be undertaken. This is a limited 
+    programme of intrusive fieldwork to determine the presence or absence of 
+    archaeological features, structures, deposits, ...
+    This resource contains the notification by the registered archaeologist and
+    a set of data such as the location where the research will be carried out, 
+    the reason for the research and the suggested method of execution.
+    """@en.
+
+oe:MeldingAanvangVooronderzoekVI a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_vi>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep.
+    A notification by a registered archeologist that a site-based evaluation 
+    resulting from a vergunningsplichtige ingreep was started.
+    """@en.
+
+oe:MeldingAanvangVooronderzoekWV a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_wv>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    A notification by a registered archeologist that a site-based evaluation 
+    resulting from a research question was started.
+    """@en.
+
+oe:MeldingAanvangOpgravingVI a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang opgraving op basis van een vergunningsplichtige ingreep"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_vi>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding aanvang opgraving op basis van een vergunningsplichtige ingreep.
+    A notification by a registered archeologist that an excavation resulting from 
+    a vergunningsplichtige ingreep was started.
+    """@en.
+
+oe:MeldingAanvangOpgravingWV a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Melding aanvang opgraving op basis van een wetenschappelijke vraagstelling"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_wv>;
+    dct:created "2016-02-22"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
+    A notification by a registered archeologist that a research excavation 
+    was started.
+    """@en.
+
 ### 3. Properties
+#
+#### Properties related to Toevalsvondst
+
+oe:tv_heeftAlsVinder a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als vinder"@nl;
+    rdfs:label "was found by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als vinder Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan door de actor B.
+    """@nl;
+    dct:description """Toevalsvondst A was found by Actor B.
+    Indicaties that accidental find A was done by Actor B.
+    """@en.
+
+oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als gebruiker"@nl;
+    rdfs:label "was found on a terrain used by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als gebruiker Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
+    de gebruiker is.
+    """@nl;
+    dct:description """Toevalsvondst A was found on a terrain used by Actor B.
+    Indicaties that accidental find A was done on a terrain that's being used
+    by Actor B.
+    """@en.
+
+oe:tv_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als zakelijkrechthouder"@nl;
+    rdfs:label "was found on a terrain owned by"@en;
+    dct:created "2016-02-23"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als zakelijkrechthouder Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
+    de zakelijkrechthouder is.
+    """@nl;
+    dct:description """Toevalsvondst A was found on a terrain owned by Actor B.
+    Indicaties that accidental find A was done on a terrain that's owned in some 
+    way by Actor B.
+    """@en.
+
+oe:tv_heeftAlsGemeente a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als gemeente"@nl;
+    rdfs:label "was found in community"@en;
+    dct:created "2016-02-24"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Toevalsvondst;
+    rdfs:range oe:Actor;
+    dct:description """Toevalsvondst A heeft als gemeente Actor B.
+    Geeft aan dat de toevalsvondst A werd gedaan op een terrein dat ligt op het
+    grondgebied van Actor B.
+    """@nl;
+    dct:description """Toevalsvondst A was found on a terrain in community Actor B.
+    Indicaties that accidental find A was done on a terrain that's situated on 
+    the land governed by Actor B.
+    """@en.
 
 #### Properties related to Dossier
 
