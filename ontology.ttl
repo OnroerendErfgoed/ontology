@@ -357,7 +357,7 @@ oe:dos_handeltOver a owl:ObjectProperty;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range [
-        owl:unionOf (oe:AanduidingsObject oe:Erfgoedobject)
+        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject)
     ];
     dct:description """Dossier A handelt over object B.
     This relation indicaties that Dossier A interacts with a certain object, 
