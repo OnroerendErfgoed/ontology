@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-02-24"^^xsd:date;
+    dct:modified "2016-02-26"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -368,11 +368,11 @@ oe:dos_handeltOver a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "handelt over";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2015-11-05"^^xsd:date;
+    dct:modified "2016-02-26"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range [
-        owl:unionOf (oe:aanduidingsObject oe:erfgoedobject)
+        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject)
     ];
     dct:description """Dossier A handelt over object B.
     This relation indicaties that Dossier A interacts with a certain object, 
