@@ -444,58 +444,6 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
     """@nl.
 
-oe:dos_heeftVerslagBureauonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als verslag bureauonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als verslag bureauonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is a 
-    report from a desk-based assessment of an archaeological site.
-    """@en.
-
-oe:dos_heeftMotivatieBureauonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als motivatie bureauonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als motivatie bureauonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is the
-    motivation for a desk-based assessment o.
-    """@en.
-
-oe:dos_heeftVerslagTerreinonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als verslag terreinonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als verslag terreinonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is a 
-    report from a site-based assessment of an archaeological site.
-    """@en.
-
-oe:dos_heeftMotivatieTerreinonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als motivatie terreinonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als motivatie terreinonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is the
-    motivation for a site-based assessment of an archaeological site.
-    """@en.
-
 oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief inkennisstelling"@nl;
@@ -559,34 +507,6 @@ oe:dos_heeftFoto a owl:ObjectProperty;
     dct:description """Dossier A heeft als foto Dossierbijlage B.
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A. Het bestand
     is een foto die relevant is voor het dossier.
-    """@en.
-
-oe:dos_heeftFotoBureauonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als foto bureauonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftFoto;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als foto bureauonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is a
-    picture or image that illustrates a certain aspect of the Dossier and is 
-    related to the desk-based assessment of an archaeological site.
-    """@en.
-
-oe:dos_heeftFotoTerreinonderzoek a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als foto terreinonderzoek"@nl;
-    dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftFoto;
-    rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als foto terreinonderzoek Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is a
-    picture or image that illustrates a certain aspect of the Dossier and is 
-    related to the site-based assessment of an archaeological site.
     """@en.
 
 #### Properties related to Poststuk
