@@ -107,14 +107,21 @@ oe:Dossier a owl:Class;
 
 oe:Dossierbijlage a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Dossierbijlage";
+    rdfs:label "Dossierbijlage"@nl;
+    rdfs:label "Dossieratttachment"@nl;
     dct:created "2015-02-18"^^xsd:date;
+    dct:created "2015-03-02"^^xsd:date;
     vs:term_status "testing";
-    dct:description """A dossierbijlage.
+    dct:description """A dossierattachment.
     This represents a digital object that has been added to a certain Dossier.
     It can be a report, a letter, an image, a map, ... The object is only 
     relevant in the context of this Dossier and is deleted or archived 
-    together with the Dossier.""".
+    together with the Dossier."""@en;
+    dct:description """Een dossierbijlage.
+    Vertegenwoordigd een digitaal object dat toegevoegd werd aan een Dossier. Kan 
+    een rapport, brief, afbeelding, kaart, ... zijn. Het object is enkel relevant 
+    in de context van het Dossier en kan samen met het dossier gearchiveerd of 
+    verwijderd worden."""@nl.
 
 oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
