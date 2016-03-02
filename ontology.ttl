@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-02-26"^^xsd:date;
+    dct:modified "2016-03-02"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -448,48 +448,51 @@ oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief inkennisstelling"@nl;
     dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-03-02"^^xsd:date;
     vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
     rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als brief inkennisstelling Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. The file is
-    a letter to a number of actors that details what the expected heritage value 
-    is of a certain Toevalsvondst en what the legal consequences of this 
-    decision are.
+    rdfs:range [
+        owl:unionOf (oe:Dossierbijlage oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief inkennisstelling Dossierbijlage of Poststuk B.
+    Indicates that B is a letter to a number of actors that details what the 
+    expected heritage value  is of a certain Toevalsvondst en what the legal
+    consequences of this decision are.
     """@en.
 
 oe:dos_heeftBriefTermijnverlenging a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief termijnverlenging"@nl;
     dct:created "2016-02-18"^^xsd:date;
-    vs:term_status "unstable";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
+    dct:modified "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
     rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als brief termijnverlenging Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. This file is a 
-    letter that a certain duration will be extended with a number of days.
+    rdfs:range [
+        owl:unionOf (oe:Dossierbijlage oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief termijnverlenging Dossierbijlage of Poststuk B.
+    Indicates that B is letter that a certain duration will be extended 
+    with a number of days.
     """@en.
 
 oe:dos_heeftBriefEindePassiefBehoud a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief einde passief behoud";
     dct:created "2016-02-18"^^xsd:date;
+    dct:modified "2016-03-02"^^xsd:date;
     vs:term_status "testing";
-    rdfs:subPropertyOf oe:dos_heeftBijlage;
     rdfs:domain oe:Dossier;
-    rdfs:range oe:Dossierbijlage;
-    dct:description """Dossier A heeft als brief einde passief behoud Dossierbijlage B.
-    This relation indicates that B is a file that was added to A. This file is 
-    a letter that a notifies a zakelijkrechthouder and the user of a terrain that
-    the period in which passief behoud is necessary is over.
+    rdfs:range [
+        owl:unionOf (oe:Dossierbijlage oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief einde passief behoud B.
+    Indicates that B is a letter that a notifies a zakelijkrechthouder and the 
+    user of a terrain that the period in which passief behoud is necessary is over.
     """@en;
-    dct:description """Dossier A heeft als brief einde passief behoud Dossierbijlage B.
-    Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A. Het bestand
-    bevat een brief die de zakelijkrechthouder en de gebruiker van een terrein
-    op de hoogte brengt dat het passief behoud van een archeologische toevalsvondst 
-    niet meer nodig is."""@nl.
+    dct:description """Dossier A heeft als brief einde passief behoud B.
+    Geeft aan dat B eenn brief is die de zakelijkrechthouder en de gebruiker 
+    van een terrein op de hoogte brengen dat het passief behoud van een 
+    archeologische toevalsvondst niet meer nodig is."""@nl.
 
 oe:dos_heeftFoto a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
