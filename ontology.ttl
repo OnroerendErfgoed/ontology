@@ -262,7 +262,39 @@ oe:Projectcode a owl:Class;
     """@en.
 
 ### 3. Properties
-#
+
+#### General properties
+
+oe:follows a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "volgt op"@nl;
+    rdfs:label "follows"@en;
+    dct:created "2016-03-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf dct:relation;
+    owl:inverseOf oe:precedes;
+    dct:description """A follows B.
+    A very general purpose relation to indicate that A follows B.
+    """@en;
+    dct:description """A volgt op B.
+    Een erg brede relatie die aangeeft dat A op B volgt.
+    """@nl.
+
+oe:precedes a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "gaat vooraf aan"@nl;
+    rdfs:label "precedes"@en;
+    dct:created "2016-03-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf dct:relation;
+    owl:inverseOf oe:precedes;
+    dct:description """A precedes B.
+    A very general purpose relation to indicate that A precedes B.
+    """@en;
+    dct:description """A gaat vooraf aan B.
+    Een erg brede relatie die aangeeft dat A aan B vooraf gaat.
+    """@nl.
+
 #### Properties related to Toevalsvondst
 
 oe:tv_heeftAlsVinder a owl:ObjectProperty;
