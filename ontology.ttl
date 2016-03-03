@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-02-26"^^xsd:date;
+    dct:modified "2016-03-03"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -243,6 +243,22 @@ oe:MeldingAanvangOpgravingWV a owl:Class;
     dct:description """A melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling.
     A notification by a registered archeologist that a research excavation 
     was started.
+    """@en.
+
+oe:Projectcode a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Projectcode"@nl;
+    rdfs:label "Projectcode"@en;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/projectcodes>;
+    dct:created "2016-03-03"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een projectcode.
+    Een unieke identifier die een archeoloog moet toewijzen aan zijn projecten. 
+    Voorbeelden: 2016A1, 2017L31;
+    """@nl;
+    dct:description """A projectcode.
+    A unique identifier that an archaeologist has to assign to his projects. 
+    Sample codes: 2016A1, 2017L31.
     """@en.
 
 ### 3. Properties
