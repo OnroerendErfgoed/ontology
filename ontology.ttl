@@ -702,7 +702,7 @@ oe:aanduid_aanduidingstype a owl:ObjectProperty;
     vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl;
     dct:description """Designationobject A designationtype B.
     Indicates as what A was designated (listed monument, 
-    scheduled built heritage, listed landscape, ...)."""@en;
+    scheduled built heritage, listed landscape, ...)."""@en.
 
 # Unstable properties.
 # Don't use for the moment.
