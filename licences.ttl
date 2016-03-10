@@ -1,0 +1,98 @@
+# Contents of this file
+### 1. Basic info
+### 2. Licenses
+#
+# Internal Namespaces
+
+@prefix oelic:         <https://id.erfgoed.net/vocab/licences#>.
+
+# External Namespaces
+@prefix dct:        <http://purl.org/dc/terms/>.
+@prefix void:       <http://rdfs.org/ns/void#>.
+@prefix cc:         <http://creativecommons.org/ns#>.
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann:       <http://purl.org/vocab/vann/>.
+@prefix vs:         <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#>.
+
+### 1. Basic info about the Ontology
+
+<https://id.erfgoed.net/vocab/licences> a void:Dataset;
+    rdfs:label "Open Data Licences"@en-GB;
+    rdfs:label "Open Data Licenties"@nl;
+    rdfs:seeAlso <http://www.opendataforum.info/index.php/component/k2/item/155-de-open-data-licenties>;
+    dct:created "2016-03-10"^^xsd:date;
+    dct:publisher <https://id.erfgoed.net/actoren/501>;
+    dct:creator <https://id.erfgoed.net/actoren/1>;
+    dct:contributor <https://id.erfgoed.net/actoren/1765>;
+    vann:preferredNamespacePrefix "oelic";
+    vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/licences#";
+    vs:term_status "testing";
+    dct:description """Describes a set of licences that can be used for open data 
+    within the Flemish Government"""@en-GB;
+    dct:description """Beschrijft een verzameling licenties die kunnen gebruikt
+    worden voor open data binnen de Vlaamse overheid."""@nl.
+
+### 2. Licenses
+
+oelic:GODL a dct:LicenseDocument;
+    rdf:type cc:License;
+    rdfs:label "Gratis Open Data Licentie"@nl;
+    rdfs:label "Free Open Data Licence"@en-GB;
+    dct:created "2016-03-10"^^xsd:date;
+    rdfs:seeAlso <http://www.opendataforum.info/index.php/component/k2/item/155-de-open-data-licenties>;
+    void:inDataset <https://id.erfgoed.net/vocab/licences>;
+    vs:term_status "testing";
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_ENG_20141119.pdf>;
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_NL_20141119.pdf>;
+    dct:description """Deze licentie omvat de voorwaarden voor het hergebruik van
+    datasets in het bezit van een instantie die als ‘open data’ gratis ter 
+    beschikking worden gesteld."""@nl;
+    cc:requires cc:Attribution.
+
+oelic:ODLBV a dct:LicenseDocument;
+    rdf:type cc:License;
+    rdfs:label "Open Data Licentie tegen Billijke Vergoeding"@nl;
+    rdfs:label "Open Data Licence at a Fair Cost"@en-GB;
+    dct:created "2016-03-10"^^xsd:date;
+    rdfs:seeAlso <http://www.opendataforum.info/index.php/component/k2/item/155-de-open-data-licenties>;
+    void:inDataset <https://id.erfgoed.net/vocab/licences>;
+    vs:term_status "testing";
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_ENG_20141119.pdf>;
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_NL_20141119.pdf>;
+    dct:description """Deze licentie omvat de voorwaarden voor het hergebruik 
+    van datasets in het bezit van een instantie die als ‘open data’ ter 
+    beschikking worden gesteld tegen een billijke vergoeding."""@nl;
+    cc:requires cc:Attribution.
+
+oelic:GODL-NC a dct:LicenseDocument;
+    rdf:type cc:License;
+    rdfs:label "Gratis Open Data Licentie voor Niet-Commercieel Hergebruik"@nl;
+    rdfs:label "Free Open Data Licence for Non-Commercial Re-Use"@en-GB;
+    dct:created "2016-03-10"^^xsd:date;
+    rdfs:seeAlso <http://www.opendataforum.info/index.php/component/k2/item/155-de-open-data-licenties>;
+    void:inDataset <https://id.erfgoed.net/vocab/licenses>;
+    vs:term_status "testing";
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_ENG_20141119.pdf>;
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_NL_20141119.pdf>;
+    dct:description """Deze licentie omvat de voorwaarden voor het hergebruik 
+    van datasets in het bezit van een instantie die als ‘open data’ gratis 
+    ter beschikking worden gesteld voor niet-commercieel hergebruik."""@nl;
+    cc:requires cc:Attribution;
+    cc:prohibits cc:CommercialUse.
+
+oelic:ODLBV-C a dct:LicenseDocument;
+    rdf:type cc:License;
+    dct:created "2016-03-10"^^xsd:date;
+    rdfs:label "Open Data Licentie tegen Billijke Vergoeding voor Commercieel Hergebruik"@nl;
+    rdfs:label "Open Data Licence at a Fair Cost for Commercial Re-Use"@en-GB;
+    rdfs:seeAlso <http://www.opendataforum.info/index.php/component/k2/item/155-de-open-data-licenties>;
+    void:inDataset <https://id.erfgoed.net/vocab/licenses>;
+    vs:term_status "testing";
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_ENG_20141119.pdf>;
+    dct:source <http://www.opendataforum.info/files/Laatste%20docs/Modellicenties_NL_20141119.pdf>;
+    dct:description """Deze licentie omvat de voorwaarden voor het hergebruik 
+    van datasets in het bezit van een instantie die als ‘open data’ ter 
+    beschikking worden gesteld voor commercieel gebruik tegen een billijke vergoeding."""@nl;
+    cc:requires cc:Attribution.
