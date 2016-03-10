@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-03-03"^^xsd:date;
+    dct:modified "2016-03-07"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -85,6 +85,24 @@ oe:Advies a owl:Class;
     dct:description """An advies.
     The Advies class represents a set of resources that tell whether a certain 
     actor agreed to, allowed or authorised a certain action.""".
+
+oe:Attachment a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Bijlage"@nl;
+    rdfs:label "Atttachment"@nl;
+    dct:created "2015-03-07"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """An attachment.
+    This represents an object that has been added to another object.
+    It can be a report, a letter, an image, a map, ...
+    This objects relevance is generally limited to the object it's attached to. 
+    """@en;
+    dct:description """Een bijlage.
+    Vertegenwoordigd een object dat toegevoegd werd aan een ander object. Kan 
+    een rapport, brief, afbeelding, kaart, ... zijn.
+    De betekenis van dit object is grotendeels beperkt tot het object waar het 
+    aan toegevoegd werd.
+    """@nl.
 
 oe:Besluit a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -592,6 +610,109 @@ oe:post_isHetAntwoordOp a owl:ObjectProperty;
     dct:description """Poststuk A is het antwoord op Poststuk B.
     This relation indicates that a certain Poststuk was created as the answer to another Poststuk.
     """.
+
+#### Properties related to Besluit
+
+oe:dateSigned a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd getekend op"@nl;
+    rdfs:label "was signed on"@en;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf dct:date;
+    dct:description """Document A werd getekend op datum B.
+    Geeft aan op welke datum een bepaald document ondertekend werd.
+    """@nl;
+    dct:description """Document A was signed on date B.
+    Indicates on what date a document was signed.
+    """@en.
+
+oe:dateBetekend a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd betekend op"@nl;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf dct:date;
+    rdfs:range xsd:date;
+    dct:description """Document A werd betekend op datum B.
+    Deze property geeft aan op welke datum een bepaald document betekend werd.
+    """@nl.
+
+oe:rechtsgevolgen a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "rechtsgevolgen"@nl;
+    rdfs:label "legal consequences"@en;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:range skos:Concept;
+    dct:description """Document A heeft rechtsgevolgen B.
+    Geeft aan dat er aan het document rechtsgevolgen gekoppeld zijn van een 
+    bepaald type.
+    """@nl;
+    dct:description """Document A has legal consequences B.
+    Indicates that A creates certain legal consequences. B indicates the type of 
+    these consequences.
+    """@nl.
+
+oe:besluit_uitgevaardigdAls a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "uitgevaardigd als"@nl;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Besluit;
+    rdfs:range skos:Concept;
+    dct:description """Besluit A werd uitgevaardigd als B.
+    Geeft aan dat het besluit uitgevaardigd werd door een bepaald type autoriteit,
+    bv. een koning, minister of administrateur-generaal.
+    """@nl;
+    dct:description """Besluit A werd uitgevaardigd als B.
+    Indicates that A was created by a certain type of authority, eg. a king, 
+    a minister or a civil servant.
+    """@en.
+
+oe:besluit_handeltOver a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "regelt de aanduiding van"@nl;
+    rdfs:label "handles the designation of"@en;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Besluit;
+    rdfs:range oe:Aanduidingsobject;
+    owl:inverseOf oe:aanduid_werdBeslistIn;
+    dct:description """Besluit A handelt over Aanduidingsobject B.
+    Geeft aan dat er in het besluit beslissingen genomen worden over bepaalde 
+    aanduidingsobjecten."""@nl.
+
+#### Properties related to Aanduidingsobject
+
+oe:aanduid_werdBeslistIn a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd beslist in"@nl;
+    rdfs:label "was decided in"@en;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Aanduidingsobject;
+    rdfs:range oe:Besluit;
+    owl:inverseOf oe:aanduid_handeltOver;
+    dct:description """Aanduidingsobject A werd beslist in Besluit B.
+    Verwijst naar een besluit waarin beslissingen over een bepaald 
+    aanduidingsobject genomen worden die tot een wijziging in de 
+    aanduidingsstatus van een bepaald object leidden."""@en.
+
+oe:aanduid_aanduidingstype a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "aanduidngstype"@nl;
+    rdfs:label "designationtype"@en;
+    dct:created "2016-03-02"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Aanduidingsobject;
+    rdfs:range skos:Concept;
+    dct:description """Aanduidingsobject A aanduidingstype B.
+    Geeft aan als wat A aangeduid werd (beschermd monument, 
+    vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl;
+    dct:description """Designationobject A designationtype B.
+    Indicates as what A was designated (listed monument, 
+    scheduled built heritage, listed landscape, ...)."""@en.
 
 # Unstable properties.
 # Don't use for the moment.
