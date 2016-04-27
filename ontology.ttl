@@ -325,7 +325,7 @@ oe:precedes a owl:ObjectProperty;
     dct:created "2016-03-03"^^xsd:date;
     vs:term_status "testing";
     rdfs:subPropertyOf dct:relation;
-    owl:inverseOf oe:precedes;
+    owl:inverseOf oe:follows;
     dct:description """A precedes B.
     A very general purpose relation to indicate that A precedes B.
     """@en;
