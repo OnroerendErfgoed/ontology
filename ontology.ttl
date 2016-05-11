@@ -350,21 +350,6 @@ oe:tv_heeftAlsVinder a owl:ObjectProperty;
     Indicaties that accidental find A was done by Actor B.
     """@en.
 
-oe:tv_heeftAlsContactpersoonAgentschap a owl:ObjectProperty;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als contactpersoon agentschap"@nl;
-    rdfs:label "has internal contact"@en;
-    dct:created "2016-05-11"^^xsd:date;
-    vs:term_status "testing";
-    rdfs:domain oe:Toevalsvondst;
-    rdfs:range oe:Actor;
-    dct:description """Toevalsvondst A heeft als contactpersoon binnen het agentschap Actor B.
-    Geeft aan dat de interne contactpersoon voor toevalsvondst A actor B is.
-    """@nl;
-    dct:description """Toevalsvondst A has Actor B as internal contact.
-    Indicaties that accidental find A has Actor B as an internal contact.
-    """@en.
-
 oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als gebruiker"@nl;
@@ -499,6 +484,21 @@ oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
     """.
 
 ##### Dossier to Actor
+
+oe:dos_heeftAlsVerantwoordelijke a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als verantwoordelijke"@nl;
+    rdfs:label "has as person responsible"@en;
+    dct:created "2016-05-11"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor;
+    dct:description """Actor B is verantwoordelijk voor Dossier A.
+    Geeft aan dat de verantwoordelijke voor dossier A actor B is.
+    """@nl;
+    dct:description """Actor B is responsible for Dossier A.
+    Indicaties that Actor B is responsible for Dossier A.
+    """@en.
 
 oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
