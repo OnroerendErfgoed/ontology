@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2016-05-24"^^xsd:date;
+    dct:modified "2016-06-15"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -298,6 +298,62 @@ oe:Projectcode a owl:Class;
     A unique identifier that an archaeologist has to assign to his projects. 
     Sample codes: 2016A1, 2017L31.
     """@en.
+
+oe:ToelatingVooronderzoek a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Toelating vooronderzoek"@nl;
+    rdfs:label "Site-based evaluation permit"@en;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/toelatingen>;
+    dct:created "2016-06-15"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een toelating voor een vooronderzoek met bodemingreep.
+    Een toelating tot een vooronderzoek met ingreep in de bodem die moet bekomen 
+    worden in het kader van archeologisch onderzoek op basis van een 
+    wetenschappelijke vraagstelling. Hiervoor moet een erkende archeoloog een
+    aanvraag indienen bij het Agentschap Onroerend Erfgoed.
+    """@nl.
+
+oe:ToelatingOpgraving a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Toelating opgraving"@nl;
+    rdfs:label "Excavation permit"@en;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/toelatingen>;
+    dct:created "2016-06-15"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een toelating voor een opgraving.
+    Een toelating tot een opgraving die moet bekomen worden in het kader van 
+    archeologisch onderzoek op basis van een wetenschappelijke vraagstelling. 
+    Hiervoor moet een erkende archeoloog een aanvraag indienen bij het 
+    Agentschap Onroerend Erfgoed.
+    """@nl.
+
+oe:ArcheologieArcheologierapport a owl:class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Archeologierapport"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten>;
+    dct:created "2016-06-15"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een archeologierapport.
+    Een archelogierapport is een document dat wordt opgemaakt door een erkend
+    archeoloog na een archeologische opgraging binnen de 2 maanden na het 
+    afsluiten van het veldwerk. Het bevat een eerste verslag van de uitgevoerde
+    werken en resultaten, een beschrijving van de verdere aanpak en een voorstel
+    over het bewaren van het archeologisch ensemble.
+    """@nl.
+
+oe:ArcheologieEindverslag a owl:class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Eindverslag van een opgraving"@nl;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/eindverslagen>;
+    dct:created "2016-06-15"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een eindverslag van een opgraving.
+    Een eindverslag van een opgraving is een document dat wordt opgemaakt door 
+    een erkend archeoloog na een archeologische opgraging binnen de 2 jaar na het 
+    afsluiten van het veldwerk. Het bevat een volledig verslag van de uitgevoerde
+    werken en resultaten.
+    """@nl.
+
 
 ### 3. Properties
 
