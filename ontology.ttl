@@ -330,7 +330,7 @@ oe:ToelatingOpgraving a owl:Class;
 oe:ArcheologieArcheologierapport a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Archeologierapport"@nl;
-    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten>;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten/archeologierapporten>;
     dct:created "2016-06-15"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een archeologierapport.
@@ -344,7 +344,7 @@ oe:ArcheologieArcheologierapport a owl:class;
 oe:ArcheologieEindverslag a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Eindverslag van een opgraving"@nl;
-    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/eindverslagen>;
+    foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten/eindverslagen>;
     dct:created "2016-06-15"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een eindverslag van een opgraving.
