@@ -354,9 +354,9 @@ oe:ArcheologieEindverslag a owl:class;
     werken en resultaten.
     """@nl.
 
-oe:ArcheologieArcheologischEnsemble a owl:class;
+oe:ArcheologischEnsemble a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologsich ensemble"@nl;
+    rdfs:label "Archeologisch ensemble"@nl;
     rdfs:label "Archaeological ensemble"@en;
     dct:created "2016-08-09"^^xsd:date;
     vs:term_status "testing";
@@ -470,6 +470,40 @@ oe:tv_heeftAlsGemeente a owl:ObjectProperty;
     dct:description """Toevalsvondst A was found on a terrain in community Actor B.
     Indicaties that accidental find A was done on a terrain that's situated on 
     the land governed by Actor B.
+    """@en.
+
+#### Properties related to Archeologisch Ensemble
+
+oe:ae_heeftAlsGebruiker a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als gebruiker"@nl;
+    rdfs:label "is being used by"@en;
+    dct:created "2016-08-09"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:ArcheologischEnsemble;
+    rdfs:range oe:Actor;
+    dct:description """Archeologisch ensemble A heeft als gebruiker Actor B.
+    Geeft aan dat Actor B het Archeologisch ensemble A in beheer heeft. Dit
+    impliceert dat Actor B niet de zakelijk rechthouder is.
+    """@nl;
+    dct:description """Archaeological ensemble A is being used by Actor B.
+    Indicates that Actor B is using the Archaeological ensemble A. This
+    means actor B is not the owner of the ensemble.
+    """@en.
+
+oe:ae_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als zakelijkrechthouder"@nl;
+    rdfs:label "is owned by"@en;
+    dct:created "2016-08-09"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:ArcheologischEnsemble;
+    rdfs:range oe:Actor;
+    dct:description """Archeologisch ensemble A heeft als zakelijkrechthouder Actor B.
+    Geeft aan dat Actor B het Archeologisch ensemble A in bezit heeft.
+    """@nl;
+    dct:description """Archaeological ensemble A is owned by Actor B.
+    Indicates that Actor B is the owner of Archaeological ensemble A.
     """@en.
 
 #### Properties related to Dossier
