@@ -506,7 +506,7 @@ oe:ae_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
     Indicates that Actor B is the owner of Archaeological ensemble A.
     """@en.
 
-#### Properties related to Nota
+#### Properties related to Archeologienota and ArcheologienotaNota
 
 oe:nota_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -534,6 +534,33 @@ oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:range oe:Actor;
     dct:description """Archeologienota A werd ingediend door Actor B.
     Geeft aan dat Actor B de archeologienota of de uitgestelde nota heeft
+    ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
+    Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
+    """@nl.
+
+#### Properties related to MeldingVooronderzoek
+
+oe:mv_heeftAlsIndiener a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd ingediend door"@nl;
+    rdfs:label "was submitted by"@en;
+    dct:created "2016-09-15"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:MeldingVooronderzoek;
+    rdfs:range oe:Actor;
+    dct:description """MeldingVooronderzoek A werd ingediend door Actor B.
+    Geeft aan dat Actor B de melding vooronderzoek heeft ingediend.
+    """@nl.
+
+oe:mv_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl;
+    dct:created "2016-09-15"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:MeldingVooronderzoek;
+    rdfs:range oe:Actor;
+    dct:description """Melding vooronderzoek A werd ingediend door Actor B.
+    Geeft aan dat Actor B de melding vooronderzoek heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
     """@nl.
