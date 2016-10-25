@@ -783,7 +783,7 @@ oe:dos_heeftBriefWeigering owl:ObjectProperty;
         owl:unionOf (oe:DossierAttachment oe:Poststuk)
     ];
     dct:description """Dossier A heeft als brief weigering DossierAttachment of Poststuk B.
-    Indicates that B is a registered letter to a number of actors which containscontains as a motivated decision a refusal (weigering).
+    Indicates that B is a registered letter to a number of actors which contains as a motivated decision a refusal (weigering).
     """@en.
 
 oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
