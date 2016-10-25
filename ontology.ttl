@@ -727,6 +727,65 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
     """@nl.
 
+oe:dos_heeftBriefBekrachtiging a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief bekrachtiging met voorwaarden"@nl;
+    dct:created "2016-10-25"^^xsd:date;
+    dct:modified "2016-10-25"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief bekrachtiging DossierAttachment of Poststuk B.
+    Indicates that B is a registered letter to a number of actors which contains as a motivated decision a 
+    confirmation (bekrachtiging).
+    """@en.
+
+oe:dos_heeftBriefBekrachtigingMetVoorwaarden a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief bekrachtiging"@nl;
+    dct:created "2016-10-25"^^xsd:date;
+    dct:modified "2016-10-25"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief bekrachtiging met voorwaarden DossierAttachment of Poststuk B.
+    Indicates that B is a registered letter to a number of actors which contains as a motivated decision a 
+    confirmation under certain conditions (bekrachtiging met voorwaarden).
+    """@en.
+
+oe:dos_heeftBriefStilzwijgendeBekrachtiging a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief stilzwijgende bekrachtiging"@nl;
+    dct:created "2016-10-25"^^xsd:date;
+    dct:modified "2016-10-25"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief stilzwijgende bekrachtiging DossierAttachment of Poststuk B.
+    Indicates that B is a registered letter to a number of actors which contains the information that the decision
+    is automatically confirmed because a certain legal period has passed.
+    """@en.
+
+oe:dos_heeftBriefWeigering owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief weigering"@nl;
+    dct:created "2016-10-25"^^xsd:date;
+    dct:modified "2016-10-25"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief weigering DossierAttachment of Poststuk B.
+    Indicates that B is a registered letter to a number of actors which containscontains as a motivated decision a refusal (weigering).
+    """@en.
+
 oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief inkennisstelling"@nl;
@@ -738,9 +797,8 @@ oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
         owl:unionOf (oe:DossierAttachment oe:Poststuk)
     ];
     dct:description """Dossier A heeft als brief inkennisstelling DossierAttachment of Poststuk B.
-    Indicates that B is a letter to a number of actors that details what the 
-    expected heritage value  is of a certain Toevalsvondst en what the legal
-    consequences of this decision are.
+    Indicates that B is a letter to a number of actors that informs about certain decisions, legal 
+    consequences, expected heritage value etc.
     """@en.
 
 oe:dos_heeftBriefTermijnverlenging a owl:ObjectProperty;
