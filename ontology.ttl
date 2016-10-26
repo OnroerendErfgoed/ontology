@@ -776,7 +776,7 @@ oe:dos_heeftBriefStilzwijgendeBekrachtiging a owl:ObjectProperty;
     passed.
     """@en.
 
-oe:dos_heeftBriefWeigering owl:ObjectProperty;
+oe:dos_heeftBriefWeigering a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief weigering"@nl;
     dct:created "2016-10-25"^^xsd:date;
