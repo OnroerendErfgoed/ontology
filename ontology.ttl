@@ -710,6 +710,23 @@ oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     on 05-11-2015.
     """.
 
+oe:dos_heeftAlsOEGemeente a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als onroerenderfgoedgemeente";
+    dct:created "2016-11-03"^^xsd:date;
+    dct:modified "2016-11-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor;
+    dct:description """Dossier A has Actor B as onroerenderfgoedgemeente.
+    This relation indicates that a certain Dossier is located within the confines of
+    an onroerenderfgoedgemeente and should therefore be treated by them.
+    """@en;
+    dct:description """Dossier A heeft als onroerenderfgoedgemeente Actor B.
+    Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
+    onroerenderfgoedgemeente ligt en dus door hen behandeld dient te worden.
+    """@nl.
+
 ##### Dossier to DossierAttachment
 
 oe:dos_heeftBijlage a owl:ObjectProperty;
@@ -726,6 +743,51 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     """@en;
     dct:description """Dossier A heeft als attachment DossierAttachment B.
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
+    """@nl.
+
+oe:dos_heeftBriefNietBevoegd a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief niet bevoegd"@nl;
+    dct:created "2016-11-03"^^xsd:date;
+    dct:modified "2016-11-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief niet bevoegd DossierAttachment of Poststuk B.
+    Geeft aan dat B een brief is die werd verstuurd naar een bevoegde onroerenderfgoedgemeente
+    om hen te melden dat een bepaald Dossier hun verantwoordelijkheid is.
+    """@nl.
+
+oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief inkennisstelling niet bevoegd"@nl;
+    dct:created "2016-11-03"^^xsd:date;
+    dct:modified "2016-11-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief inkennisstelling niet bevoegd DossierAttachment of Poststuk B.
+    Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor om aan te geven dat het dossier
+    dat hij/zij bij ons indiende eigenlijk bedoeld was voor een onroerenderfgoedgemeente.
+    """@nl.
+
+oe:dos_heeftBriefNietConform a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief niet conform"@nl;
+    dct:created "2016-11-03"^^xsd:date;
+    dct:modified "2016-11-03"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief niet conform DossierAttachment of Poststuk B.
+    Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor die een aanvraag indiende
+    om hen te melden dat de aanvraag eigenlijk niet geldig/nodig was.
     """@nl.
 
 oe:dos_heeftBriefBekrachtiging a owl:ObjectProperty;
