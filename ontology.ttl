@@ -433,10 +433,26 @@ oe:LocatieElementOpenbaarDomein a owl:class;
     voorstellen dat deel uitmaakt van het openbare domein.
     """@nl.
 
+oe:PubliekPersoon a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "publiek persoon"@nl;
+    rdfs:subClassOf oe:Actor;
+    rdfs:subClassOf foaf:Person;
+    dct:created "2017-01-12"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een actor waarvan het bestaan publiek gekend is.
+    Deze actor is een natuurlijke persoon waarvan het bestaan publiek gekend mag
+    zijn. Dit geeft aan dat de persoon betrokken is geweest bij Onroerend
+    Erfgoed in een publieke capaciteit, bv. omdat ze een foto hebben getrokken
+    of tekst hebben geschreven. De actor wordt publiek gemaakt om intellectuele
+    of andere rechten te kunnen laten gelden.
+    """@nl.
+
 oe:OnroerendErfgoedGemeente a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "onroerenderfgoedgemeente"@nl;
     rdfs:subClassOf oe:Actor;
+    rdfs:subClassOf foaf:Organization;
     dct:created "2017-01-07"^^xsd:date;
     dct:modified "2017-01-12"^^xsd:date;
     vs:term_status "testing";
