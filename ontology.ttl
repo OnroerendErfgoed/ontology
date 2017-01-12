@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2017-01-07"^^xsd:date;
+    dct:modified "2017-01-12"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -436,7 +436,9 @@ oe:LocatieElementOpenbaarDomein a owl:class;
 oe:OnroerendErfgoedGemeente a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "onroerenderfgoedgemeente"@nl;
+    rdfs:subClassOf oe:Actor;
     dct:created "2017-01-07"^^xsd:date;
+    dct:modified "2017-01-12"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een gemeente die zelf bevoegd is voor Onroerend Erfgoed.
     Een onroerenderfgoedgemeente is een gemeente die een eigen beleid uitbouwt
@@ -444,6 +446,19 @@ oe:OnroerendErfgoedGemeente a owl:Class;
     het Vlaamse beleid. Tegelijk neemt een erkende onroerenderfgoedgemeente
     welbepaalde bevoegdheden en taken over in het kader van het uitvoeren van
     het Onroerenderfgoeddecreet van 12 juli 2013.
+    """@nl.
+
+oe:ErkendArcheoloog a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "erkend archeoloog"@nl;
+    rdfs:subClassOf oe:Actor;
+    dct:created "2017-01-12"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een archeoloog die erkend werd.
+    Een archeoloog die een erkenning van de Vlaamse Overheid gekregen heeft. Dit
+    kunnen natuurlijke personen of rechtspersonen zijn. Een archeoloog kan
+    erkend worden op basis van criteria zoals relevante ervaring en opleiding.
+    Daarnaast zijn er ook een aantal archeologen die van rechtswege erkend zijn.
     """@nl.
 
 ### 3. Properties
