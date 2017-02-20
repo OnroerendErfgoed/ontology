@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2017-01-12"^^xsd:date;
+    dct:modified "2017-02-20"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -475,6 +475,67 @@ oe:ErkendArcheoloog a owl:Class;
     kunnen natuurlijke personen of rechtspersonen zijn. Een archeoloog kan
     erkend worden op basis van criteria zoals relevante ervaring en opleiding.
     Daarnaast zijn er ook een aantal archeologen die van rechtswege erkend zijn.
+    """@nl.
+
+oe:Premieaanvraag a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "premieaanvraag"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van een premie.
+    Een aanvraag tot het bekomen van een premie in verband met onroerend
+    erfgoed.
+    """@nl.
+
+oe:PremieaanvraagStandaard a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van een erfgoedpremie.
+    Een aanvraag tot het bekomen van een premie in verband met onroerend
+    erfgoed volgens de standaardprocedure.
+    """@nl.
+
+
+oe:PremieaanvraagBijzonder a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de uitgebreide procedure"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van een erfgoedpremie.
+    Een aanvraag tot het bekomen van een premie in verband met onroerend
+    erfgoed volgens de bijzondere procedure waarbij hogere bedragen in
+    aanmerking worden genomen.
+    """@nl.
+
+oe:PremieaanvraagBeheersplan a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "premieaanvraag voor een onderzoekspremie voor het opstellen van een beheersplan"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van een onderzoekspremie.
+    Een aanvraag tot het bekomen van een onderzoekspremie die de opmaak van een
+    beheersplan helpt bekostigen.
+    """@nl.
+
+oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "premieaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van een onderzoekspremie.
+    Een aanvraag tot het bekomen van een onderzoekspremie die voorafgaand
+    onderzoek helpt bekostigen.
+
+    Onder voorafgaand onderzoek verstaan we:
+    * Historisch (-archivalisch), bouwtechnisch en materiaaltechnisch
+    onderzoek, stabiliteits-technisch voorafgaand onderzoek of archeologisch
+    vooronderzoek met of zonder ingreep in de bodem.
+    * Voorafgaand onderzoek naar de kwaliteit van houtige beplanting met
+    erfgoedwaarde en de groeiplaats ervan, met inbegrip van de analyse van de
+    impact van geplande werken.
+    * Bestemmings- en herbestemmings-onderzoek.
     """@nl.
 
 ### 3. Properties
