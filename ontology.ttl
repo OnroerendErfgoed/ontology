@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2017-02-20"^^xsd:date;
+    dct:modified "2017-05-17"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -78,7 +78,7 @@ oe:Aanduidingsobject a owl:Class;
 
 oe:Advies a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Advies";
+    rdfs:label "Advies"@nl;
     foaf:homepage <https://adviezen.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2015-10-01"^^xsd:date;
@@ -86,6 +86,19 @@ oe:Advies a owl:Class;
     dct:description """An advies.
     The Advies class represents a set of resources that tell whether a certain 
     actor agreed to, allowed or authorised a certain action.""".
+
+oe:ToelatingVoorHandelingen a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Toelating voor Handelingen"@nl;
+    foaf:homepage <https://adviezen.onroerenderfgoed.be>;
+    dct:created "2017-05-17"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A Toelating voor Handelingen.
+    The Toelatingen voor Handelingen class represents a set of resources 
+    that tell whether a certain  actor agreed to, allowed or authorised a 
+    certain action.
+    It is very similar to an Advies, but is different in it's legal implications.
+    """.
 
 oe:Attachment a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
