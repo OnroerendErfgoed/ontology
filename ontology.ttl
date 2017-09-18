@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2017-05-17"^^xsd:date;
+    dct:modified "2017-059-18"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -488,6 +488,19 @@ oe:ErkendArcheoloog a owl:Class;
     kunnen natuurlijke personen of rechtspersonen zijn. Een archeoloog kan
     erkend worden op basis van criteria zoals relevante ervaring en opleiding.
     Daarnaast zijn er ook een aantal archeologen die van rechtswege erkend zijn.
+    """@nl.
+
+oe:MetaalDetectorist a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "metaaldetectorist"@nl;
+    rdfs:subClassOf oe:Actor;
+    dct:created "2017-09-18"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een metaaldetectorist die erkend werd.
+    Een metaaldetectorist die een erkenning van de Vlaamse Overheid gekregen heeft.
+    Een erkende metaaldetectorist moet aan een aantal criteria beantwoorden. Zo
+    moeten ze 18 jaar oud zijn en mogen ze recent geen veroordelingen tegen de
+    onroerend erfgoed wetgeving hebben opgelopen.
     """@nl.
 
 oe:Premieaanvraag a owl:Class;
