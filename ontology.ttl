@@ -564,6 +564,26 @@ oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
     * Bestemmings- en herbestemmings-onderzoek.
     """@nl.
 
+oe:Uitbetalingsaanvraag a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "uitbetalingsaanvraag"@nl;
+    dct:created "2048-04-11"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van de uitbetaling van een premie.
+    Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
+    erfgoed.
+    """@nl.
+
+oe:UitbetalingsaanvraagStandaard a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "uitbetalingsaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl;
+    dct:created "2017-02-20"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van de uitbetaling van een erfgoedpremie.
+    Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
+    erfgoed volgens de standaardprocedure.
+    """@nl.
+
 ### 3. Properties
 
 #### General properties
