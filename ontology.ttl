@@ -584,6 +584,16 @@ oe:UitbetalingsaanvraagStandaard a owl:Class;
     erfgoed volgens de standaardprocedure.
     """@nl.
 
+oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "uitbetalingsaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl;
+    dct:created "2018-11-06"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek.
+    Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie die voorafgaand
+    onderzoek helpt bekostigen.
+    """@nl.
+
 ### 3. Properties
 
 #### General properties
