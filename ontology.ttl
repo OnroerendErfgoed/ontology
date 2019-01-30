@@ -24,7 +24,7 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2017-09-18"^^xsd:date;
+    dct:modified "2019-01-30"^^xsd:date;
     owl:versionInfo "0.1.0.dev";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
@@ -1149,6 +1149,24 @@ oe:dos_heeftBriefInSituBewaring a owl:ObjectProperty;
     het terrein vrijgegeven. De verplichtingen van passief behoud gelden niet
     langer."""@nl.
 
+oe:dos_heeftBriefGedeeltelijkeInSituBewaring a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief gedeeltelijke in situ bewaring"@nl;
+    dct:created "2019-01-30"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief gedeeltelijke in situ bewaring B.
+    Brief om een gebruiker, zakelijkrechthouder of gemeente op de hoogte te brengen
+    dat er een archeologische vondst gedaan werd. Een medewerker van het
+    agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
+    plaatsbezoek werd duidelijk dat een deel van de archeologische site niet 
+    bedreigd wordt. Op een ander deel werd een onderzoek uitgevoerd. Het 
+    onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
+    van passief behoud gelden niet langer."""@nl.
+
 oe:dos_heeftBriefOntoegankelijkTerrein a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief ontoegankelijk terrein"@nl;
@@ -1183,6 +1201,41 @@ oe:dos_heeftBriefPlaatsbezoekTerreinregistratie a owl:ObjectProperty;
     plaatsbezoek werd de toevalsvondst geregistreerd. Het onderzoek is hiermee
     afgerond en het terrein vrijgegeven. De verplichtingen van passief behoud
     gelden niet langer."""@nl.
+
+oe:dos_heeftBriefPlaatsbezoekZonderVondsten a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief plaatsbezoek zonder aanwezige vondsten"@nl;
+    dct:created "2019-01-30"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief plaatsbezoek zonder aanwezige
+    vondsten B.
+    Brief om gebruiker, zakelijkrechthouder of gemeente op de hoogte te brengen
+    dat er een archeologische vondst gedaan werd. Een medewerker van het
+    agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
+    plaatsbezoek werd vastgesteld dat de vondst niet meer in site aanwezig is. 
+    Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
+    van passief behoud gelden niet langer."""@nl.
+
+oe:dos_heeftBriefGeenArcheologischeWaarde a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als brief geen archeologische waarde"@nl;
+    dct:created "2019-01-30"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als brief geen archeologische waarde B.
+    Brief om gebruiker, zakelijkrechthouder of gemeente op de hoogte te brengen
+    dat er een archeologische vondst gedaan werd. Een medewerker van het
+    agentschap Onroerend Erfgoed heeft contact gehad of is ter plaatse geweest. 
+    Er werd vastgesteld dat de vondst geen archeologische erfgoedwaarde heeft. 
+    Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
+    van passief behoud gelden niet langer."""@nl.
 
 oe:dos_heeftFoto a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
