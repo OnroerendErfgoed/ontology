@@ -268,7 +268,7 @@ oe:MeldingVooronderzoek a owl:Class;
 
 oe:ToelatingVooronderzoekVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    owl:sameAs <https://id.erfgoed.net/vocab/ontology#ToelatingVooronderzoekVI>;
+    owl:sameAs <https://id.erfgoed.net/vocab/ontology#MeldingVooronderzoek>;
     dct:created "2019-03-07"^^xsd:date.
 
 oe:MeldingAanvangVooronderzoekVI a owl:Class;
