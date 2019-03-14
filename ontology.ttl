@@ -238,10 +238,10 @@ oe:ArcheologienotaNota a owl:Class;
 
 oe:MeldingVooronderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toelating vooronderzoek met ingreep in de bodem in het kader van
-    een vergunningsplichtige ingreep"@nl;
-    rdfs:label "Permit for site-based evaluation during a spatial planning
-    process"@en;
+    rdfs:label """Toelating vooronderzoek met ingreep in de bodem in het kader van
+    een vergunningsplichtige ingreep"""@nl;
+    rdfs:label """Permit for site-based evaluation during a spatial planning
+    process"""@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_vooronderzoek>;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2019-03-07"^^xsd:date;
