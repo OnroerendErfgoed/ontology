@@ -333,8 +333,8 @@ oe:Projectcode a owl:Class;
 
 oe:ToelatingVooronderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toelating vooronderzoek in het kader van wetenschappelijke
-    vraagstelling"@nl;
+    rdfs:label """Toelating vooronderzoek in het kader van wetenschappelijke
+    vraagstelling"""@nl;
     rdfs:label "Site-based evaluation permit for scientific research"@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/toelatingen>;
     dct:created "2016-06-15"^^xsd:date;
