@@ -979,6 +979,23 @@ oe:dos_heeftAlsOEGemeente a owl:ObjectProperty;
     onroerenderfgoedgemeente ligt en dus door hen behandeld dient te worden.
     """@nl.
 
+oe:dos_heeftAlsGemeente a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als gemeente";
+    dct:created "2020-01-10"^^xsd:date;
+    dct:modified "2020-01-10"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor;
+    dct:description """Dossier A has Actor B as municipality.
+    This relation indicates that a certain Dossier is located within the confines of
+    a certain municipality.
+    """@en;
+    dct:description """Dossier A heeft als gemeente Actor B.
+    Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
+    bepaalde gemeente ligt.
+    """@nl.
+
 ##### Dossier to DossierAttachment
 
 oe:dos_heeftBijlage a owl:ObjectProperty;
