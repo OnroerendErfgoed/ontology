@@ -864,11 +864,11 @@ oe:dos_handeltOver a owl:ObjectProperty;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range [
-        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject)
+        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject oe:Plan oe:Besluit)
     ];
     dct:description """Dossier A handelt over object B.
     This relation indicaties that Dossier A interacts with a certain object, 
-    either an AanduidingsObject or an ErfgoedObject.
+    either an AanduidingsObject, an ErfgoedObject, a Plan or a Besluit.
     """;
     skos:historyNote """
     Was called oe:heeftAlsOnderwerp in original draft. Changed to oe:dos_handeltOver
