@@ -1014,6 +1014,21 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
     """@nl.
 
+oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als beslissingsbrief"@nl;
+    dct:created "2020-05-28"^^xsd:date;
+    dct:modified "2020-05-28"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als beslissingsbrief DossierAttachment of Poststuk B.
+    Geeft aan dat er over een bepaald dossier een beslissing werd genomen en deze beslissing
+    werd neergeschreven in brief B.
+    """@nl.
+
 oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "heeft als brief inkennisstelling niet bevoegd"@nl;
