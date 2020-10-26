@@ -864,15 +864,27 @@ oe:dos_handeltOver a owl:ObjectProperty;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range [
-        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject oe:Plan oe:Besluit)
+        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject oe:Plan)
     ];
     dct:description """Dossier A handelt over object B.
     This relation indicaties that Dossier A interacts with a certain object, 
-    either an AanduidingsObject, an ErfgoedObject, a Plan or a Besluit.
+    either an AanduidingsObject, an ErfgoedObject or a Plan.
     """;
     skos:historyNote """
     Was called oe:heeftAlsOnderwerp in original draft. Changed to oe:dos_handeltOver
     on 05-11-2015.
+    """.
+
+oe:dos_handeltPrimairOver a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "handelt primair over";
+    dct:created "2020-10-26"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_handeltOver;
+    rdfs:domain oe:Dossier;
+    dct:description """Dossier A handelt primair over object B.
+    This relation indicaties that Dossier A interacts with a certain object, 
+    and that object is more relevant to the Dossier than other objects.
     """.
 
 ##### Dossier to Poststuk
