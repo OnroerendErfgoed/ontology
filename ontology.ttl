@@ -864,15 +864,27 @@ oe:dos_handeltOver a owl:ObjectProperty;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
     rdfs:range [
-        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject)
+        owl:unionOf (oe:Aanduidingsobject oe:Erfgoedobject oe:Plan)
     ];
     dct:description """Dossier A handelt over object B.
     This relation indicaties that Dossier A interacts with a certain object, 
-    either an AanduidingsObject or an ErfgoedObject.
+    either an AanduidingsObject, an ErfgoedObject or a Plan.
     """;
     skos:historyNote """
     Was called oe:heeftAlsOnderwerp in original draft. Changed to oe:dos_handeltOver
     on 05-11-2015.
+    """.
+
+oe:dos_handeltPrimairOver a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "handelt primair over";
+    dct:created "2020-10-26"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:subPropertyOf oe:dos_handeltOver;
+    rdfs:domain oe:Dossier;
+    dct:description """Dossier A handelt primair over object B.
+    This relation indicaties that Dossier A interacts with a certain object, 
+    and that object is more relevant to the Dossier than other objects.
     """.
 
 ##### Dossier to Poststuk
@@ -1012,6 +1024,21 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     """@en;
     dct:description """Dossier A heeft als attachment DossierAttachment B.
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
+    """@nl.
+
+oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als beslissingsbrief"@nl;
+    dct:created "2020-05-28"^^xsd:date;
+    dct:modified "2020-05-28"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:DossierAttachment oe:Poststuk)
+    ];
+    dct:description """Dossier A heeft als beslissingsbrief DossierAttachment of Poststuk B.
+    Geeft aan dat er over een bepaald dossier een beslissing werd genomen en deze beslissing
+    werd neergeschreven in brief B.
     """@nl.
 
 oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
