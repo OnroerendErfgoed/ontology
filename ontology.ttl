@@ -236,7 +236,7 @@ oe:ArcheologienotaNota a owl:Class;
     or undesirable.
     """@en.
 
-oe:MeldingVooronderzoek a owl:Class;
+oe:ToelatingVooronderzoekVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label """Toelating vooronderzoek met ingreep in de bodem in het kader van
     een vergunningsplichtige ingreep"""@nl;
@@ -265,11 +265,6 @@ oe:MeldingVooronderzoek a owl:Class;
     the reason for the research and the suggested method of execution and the
     final decision about the application.
     """@en.
-
-oe:ToelatingVooronderzoekVI a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    owl:sameAs <https://id.erfgoed.net/vocab/ontology#MeldingVooronderzoek>;
-    dct:created "2019-03-07"^^xsd:date.
 
 oe:MeldingAanvangVooronderzoekVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -331,7 +326,7 @@ oe:Projectcode a owl:Class;
     Sample codes: 2016A1, 2017L31.
     """@en.
 
-oe:ToelatingVooronderzoek a owl:Class;
+oe:ToelatingVooronderzoekWV a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label """Toelating vooronderzoek in het kader van wetenschappelijke
     vraagstelling"""@nl;
@@ -350,11 +345,6 @@ oe:ToelatingVooronderzoek a owl:Class;
     wetenschappelijke vraagstelling. Hiervoor moet een erkende archeoloog een
     aanvraag indienen bij het Agentschap Onroerend Erfgoed.
     """@nl.
-
-oe:ToelatingVooronderzoekWV a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    owl:sameAs <https://id.erfgoed.net/vocab/ontology#ToelatingVooronderzoek>;
-    dct:created "2019-03-07"^^xsd:date.
 
 oe:ToelatingOpgraving a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -791,29 +781,33 @@ oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
     """@nl.
 
-#### Properties related to MeldingVooronderzoek
+#### Properties related to ToelatingVooronderzoekVI, ToelatingVooronderzoekWV and ToelatingOpgraving
 
-oe:mv_heeftAlsIndiener a owl:ObjectProperty;
+oe:toelating_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd ingediend door"@nl;
     rdfs:label "was submitted by"@en;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
-    rdfs:domain oe:MeldingVooronderzoek;
+    rdfs:domain [
+        owl:unionOf (oe:ToelatingVooronderzoekVI oe:ToelatingVooronderzoekWV oe:ToelatingOpgraving)
+    ];
     rdfs:range oe:Actor;
-    dct:description """MeldingVooronderzoek A werd ingediend door Actor B.
-    Geeft aan dat Actor B de melding vooronderzoek heeft ingediend.
+    dct:description """Toelating A werd ingediend door Actor B.
+    Geeft aan dat Actor B de toelating heeft ingediend.
     """@nl.
 
-oe:mv_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
+oe:toelating_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
-    rdfs:domain oe:MeldingVooronderzoek;
+    rdfs:domain [
+        owl:unionOf (oe:ToelatingVooronderzoekVI oe:ToelatingVooronderzoekWV oe:ToelatingOpgraving)
+    ];
     rdfs:range oe:Actor;
-    dct:description """Melding vooronderzoek A werd ingediend door Actor B.
-    Geeft aan dat Actor B de melding vooronderzoek heeft
+    dct:description """Toelating A werd ingediend door Actor B.
+    Geeft aan dat Actor B de toelating heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
     """@nl.
@@ -852,6 +846,23 @@ oe:dos_werdGezoneerdAls a owl:ObjectProperty;
     certain dossier, but more than one is possible. This can happen because 
     several Postukken have have entered the organisation at different points in
     time.
+    """.
+
+##### Dossier to Archeologienota or ArcheologienotaNota
+
+oe:dos_overlaptMet a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "overlapt over";
+    dct:created "2022-01-13"^^xsd:date;
+    dct:modified "2022-01-13"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range [
+        owl:unionOf (oe:Archeologienota oe:ArcheologienotaNota)
+    ];
+    dct:description """Dossier A overlapt met Nota B.
+    This relation indicaties that Dossier A has a spatial overlap with a certain object,
+    either an Archeologienota or a ArcheologienotaNota.
     """.
 
 ##### Dossier to Aanduidingsobject or Erfgoedobject
