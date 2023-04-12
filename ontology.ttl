@@ -968,6 +968,23 @@ oe:dos_heeftAlsBeslisser a owl:ObjectProperty;
     taken by the decision maker.
     """@en.
 
+oe:dos_heeftAlsMedewerker a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "heeft als medewerker"@nl;
+    rdfs:label "has as contributor"@en;
+    dct:created "2023-04-12"^^xsd:date;
+    vs:term_status "testing";
+    rdfs:domain oe:Dossier;
+    rdfs:range oe:Actor;
+    dct:description """Actor B ondersteunt als medewerker de verantwoordelijke Actor C voor Dossier A.
+    Je hebt een dossierverantwoordelijke en daarnaast heb je
+    bij grote dossiers nog een aantal andere betrokken medewerkers.
+    """@nl;
+    dct:description """As an contributor, Actor B supports the Actor C responsible for Dossier A.
+    You have an actor C that is responsible for Dossier A and you also have,
+    in the case of large files, a number of other contributors who are involved.
+    """@en.
+
 oe:dos_werdAangevraagdDoor a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "werd aangevraagd door";
