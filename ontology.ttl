@@ -1578,3 +1578,166 @@ oe:isDeOmvattendeAanduidingVan a owl:ObjectProperty;
     dct:description """
     Indicates that this Aanduidingsobject contains a (much) smaller 
     Erfgoedobject.""".
+
+oe:Gebeurtenis a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Gebeurtenis";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A gebeurtenis.
+    A gebeurtenis provides more information about a specific action
+    carried out by our agency or partners, usually inventory projects.""".
+
+oe:Persoon a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Persoon";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A person.
+    A persoon describes an individual or collective and their
+    role in relation to the heritage in the database.""".
+
+oe:Thema a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Thema";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """An thema.
+    A geografisch thema provides more information about the heritage
+    of a specific location and its history. An inhoudelijk thema offers
+    more information about interesting topics, such as historic gardens and parks,
+    heritage-worthy woody vegetation, and World War heritage.""".
+
+oe:Waarneming a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Waarneming";
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A waarneming.
+    A waarneming is the result of research or other findings that hold a certain relevance
+    for heritage. A large number of sources are used for this purpose.
+    At the moment, these consist exclusively of archaeological observations,
+    also known as the Centrale Archeologische Inventaris (CAI).""".
+
+oe:ActiefstatusTypeID a owl:DatatypeProperty;
+    rdfs:domain owl:Class;
+    rdfs:range xsd:integer;
+    rdfs:label "Status ID";
+    dct:description """Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
+    Activeerbare objecten in een toepassing bezitten een collectie van minimaal 1 actiefstatus
+    waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
+
+    Elk actiefstatus heeft een ID en de actiefstatussen kunnen worden onderverdeeld
+    in 2 grote categorieën Actief en niet-Actief.
+    Een actiefstatus ID <= 50 betekent dat het object in de categorie niet-Actief zit.
+    Een actiefstatus ID > 50 betekent dat het object tot de categorie Actief behoort.
+
+    Per type object zijn de beschikbare actiefstatussen opgegeven in een enumeratie.
+    Zo wordt per type object bepaalt welke actiefstatussen beschikbaar mogen zijn.
+    We gebruiken doorheen al onze toepassing telkens hetzelfde ID voor een bepaald actiefstatus.""".
+
+oe:ActiefstatusTypeKlad a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klad";
+    oe:ActiefstatusTypeID 10;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klad status.
+    Een status dat aanduidt dat een object in klad-status staat.""".
+
+oe:ActiefstatusTypeKlaarZonderFoto a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar zonder foto";
+    oe:ActiefstatusTypeID 20;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar zonder foto status.
+    Een status dat aanduidt dat een object klaar is voor activatie, maar er is
+    nog geen foto toegevoegd.""".
+
+oe:ActiefstatusTypeKlaarVoorControle a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar voor controle";
+    oe:ActiefstatusTypeID 23;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar voor controle status.
+    Een status dat aanduidt dat een object klaar is voor activatie, maar
+    het object moet nog gecontroleerd worden.""".
+
+oe:ActiefstatusTypeKlaarVoorActivatie a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar voor activatie";
+    oe:ActiefstatusTypeID 25;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar voor activatie status.
+    Een status dat aanduidt dat een object klaar is om geactiveerd te worden."""
+
+oe:ActiefstatusTypeAutomatischTeActiveren a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Automatisch te activeren";
+    oe:ActiefstatusTypeID 30;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Automatisch te activeren status.
+    Een status dat aanduidt dat een object automatisch geactiveerd zal worden.""".
+
+oe:ActiefstatusTypeOnHold a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "On hold";
+    oe:ActiefstatusTypeID 40;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """On hold status.
+    Een status dat aanduidt dat een object tijdelijk niet geactiveerd kan worden.""".
+
+oe:ActiefstatusTypeHerroepen a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Herroepen";
+    oe:ActiefstatusTypeID 45;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Herroepen status.
+    Een status dat aanduidt dat een object herroepen is en dus niet meer actief is.""".
+
+oe:ActiefstatusTypeActief a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Actief";
+    oe:ActiefstatusTypeID 75;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Actief status.
+    Een status dat aanduidt dat een object actief is.""".
+
+oe:ActiefstatusTypeTeHerwerken a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Te herwerken";
+    oe:ActiefstatusTypeID 85;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Te herwerken status.
+    Een status dat aanduidt dat een object moet om herwerkt te worden.""".
+
+oe:ActiefstatusTypeTeValideren a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Te valideren";
+    oe:ActiefstatusTypeID 87;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Te valideren status.
+    Een status dat aanduidt dat een herwerkt object moet gevalideerd worden.""".
