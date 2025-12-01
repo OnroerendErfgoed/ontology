@@ -1605,7 +1605,7 @@ oe:Thema a owl:Class;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
-    dct:description """An thema.
+    dct:description """A thema.
     A geografisch thema provides more information about the heritage
     of a specific location and its history. An inhoudelijk thema offers
     more information about interesting topics, such as historic gardens and parks,
@@ -1700,7 +1700,8 @@ oe:ActiefstatusTypeOnHold a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """On hold status.
-    Een status die aanduidt dat een object tijdelijk niet geactiveerd kan worden.""".
+    Een status die aanduidt dat het publicatieproces rond een object tijdelijk stopgezet wordt.
+    De reden voor deze onderbreking moet worden genoteerd in het veld Opmerkingen.""".
 
 oe:ActiefstatusTypeHerroepen a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1730,7 +1731,7 @@ oe:ActiefstatusTypeTeHerwerken a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """Te herwerken status.
-    Een status die aanduidt dat een object moet herwerkt worden.""".
+    Een status die aanduidt dat een object dat al actief was moet herwerkt worden.""".
 
 oe:ActiefstatusTypeTeValideren a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1740,4 +1741,5 @@ oe:ActiefstatusTypeTeValideren a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """Te valideren status.
-    Een status die aanduidt dat een herwerkt object moet gevalideerd worden.""".
+    Een status die aanduidt dat een object dat al actief was, herwerkt is en dat
+    deze herwerking gevalideerd moet worden.""".
