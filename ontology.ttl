@@ -24,8 +24,8 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2019-03-07"^^xsd:date;
-    owl:versionInfo "0.1.0.dev";
+    dct:modified "2025-11-25"^^xsd:date;
+    owl:versionInfo "0.2.0";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
     dct:contributor <https://id.erfgoed.net/actoren/1163>;
@@ -33,6 +33,7 @@
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
     dct:contributor <https://id.erfgoed.net/actoren/1766>;
     dct:contributor <https://id.erfgoed.net/actoren/1850>;
+    dct:contributor <https://id.erfgoed.net/actoren/1764>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/ontology#";
     vs:term_status "testing";
