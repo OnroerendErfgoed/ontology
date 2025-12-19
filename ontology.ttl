@@ -756,7 +756,10 @@ oe:ActiefstatusTypeActief a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """Actief status.
-    Een status die aanduidt dat een object actief is."""@nl-BE.
+    Een status die aangeeft dat een object actief is.
+    Afhankelijk van het type object betekent dit dat het object volledig is afgewerkt
+    en beschikbaar is om door een breder publiek geraadpleegd te worden.
+    Objecten die niet actief zijn, moeten altijd worden beschouwd als voorlopige kladversies."""@nl-BE.
 
 oe:ActiefstatusTypeTeHerwerken a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
