@@ -657,23 +657,6 @@ oe:Waarneming a owl:Class;
     At the moment, these consist exclusively of archaeological observations,
     also known as the Centrale Archeologische Inventaris (CAI)."""@en.
 
-oe:ActiefstatusTypeID a owl:DatatypeProperty;
-    rdfs:domain owl:Class;
-    rdfs:range xsd:integer;
-    rdfs:label "Status ID"@nl-BE;
-    dct:description """Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
-    Activeerbare objecten in een toepassing bezitten een collectie van minimaal 1 actiefstatus
-    waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
-
-    Elk actiefstatus heeft een ID en de actiefstatussen kunnen worden onderverdeeld
-    in 2 grote categorieën Actief en niet-Actief.
-    Een actiefstatus ID <= 50 betekent dat het object in de categorie niet-Actief zit.
-    Een actiefstatus ID > 50 betekent dat het object tot de categorie Actief behoort.
-
-    Per type object zijn de beschikbare actiefstatussen opgegeven in een enumeratie.
-    Zo wordt per type object bepaalt welke actiefstatussen beschikbaar mogen zijn.
-    We gebruiken doorheen al onze toepassing telkens hetzelfde ID voor een bepaald actiefstatus."""@nl-BE.
-
 oe:ActiefstatusTypeKlad a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Klad"@nl-BE;
@@ -1743,3 +1726,20 @@ oe:isDeOmvattendeAanduidingVan a owl:ObjectProperty;
     dct:description """
     Indicates that this Aanduidingsobject contains a (much) smaller 
     Erfgoedobject.""".
+
+oe:ActiefstatusTypeID a owl:DatatypeProperty;
+    rdfs:domain owl:Class;
+    rdfs:range xsd:integer;
+    rdfs:label "Status ID"@nl-BE;
+    dct:description """Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
+    Activeerbare objecten in een toepassing bezitten een collectie van minimaal 1 actiefstatus
+    waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
+
+    Elk actiefstatus heeft een ID en de actiefstatussen kunnen worden onderverdeeld
+    in 2 grote categorieën Actief en niet-Actief.
+    Een actiefstatus ID <= 50 betekent dat het object in de categorie niet-Actief zit.
+    Een actiefstatus ID > 50 betekent dat het object tot de categorie Actief behoort.
+
+    Per type object zijn de beschikbare actiefstatussen opgegeven in een enumeratie.
+    Zo wordt per type object bepaalt welke actiefstatussen beschikbaar mogen zijn.
+    We gebruiken doorheen al onze toepassing telkens hetzelfde ID voor een bepaald actiefstatus."""@nl-BE.
