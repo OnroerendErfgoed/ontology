@@ -621,8 +621,9 @@ oe:Gebeurtenis a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """A gebeurtenis.
-    A gebeurtenis provides more information about a specific action
-    carried out by our agency or partners, usually inventory projects."""@en.
+    Any activity undertaken with the explicit intention of gathering information about,
+    and understanding of, a Heritage Asset, and the creation of an information source
+    to record that information and understanding."""@en.
 
 oe:Persoon a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
