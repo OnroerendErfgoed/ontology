@@ -666,15 +666,17 @@ oe:ActiefstatusType a owl:Class ;
     vs:term_status "testing";
     dct:description "Overkoepelende klasse voor actiefstatus-types.
     Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
-    Activeerbare objecten in een toepassing bezitten een collectie van minimaal 1 actiefstatus
+    Activeerbare objecten in een toepassing bezitten een collectie van minimaal één actiefstatus
     waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
 
-    Elk actiefstatus heeft een ID en de actiefstatussen kunnen worden onderverdeeld
-    in 2 grote categorieën Actief en niet-Actief.
+    Elke actiefstatus heeft een ID en kan worden onderverdeeld in één van twee categorieën: actief of niet-actief.
+    De status van een object bepaalt de mate van beschikbaarheid.
+    Een actieve status duidt aan dat het object volledig is afgewerkt en publiek raadpleegbaar is.
+    Objecten met een niet-actieve status gelden steeds als voorlopige kladversies.
 
-    Per type object zijn de beschikbare actiefstatussen opgegeven in een enumeratie.
-    Zo wordt per toepassing bepaalt welke actiefstatussen beschikbaar mogen zijn.
-    We gebruiken doorheen al onze toepassing telkens hetzelfde ID voor een bepaald actiefstatus."@nl-BE .
+    Voor elke toepassing worden de beschikbare actiefstatussen per objecttype gedefinieerd in een enumeratie.
+    Deze bepaalt welke actiefstatussen toegestaan zijn.
+    Over alle toepassingen heen wordt voor eenzelfde actiefstatus steeds hetzelfde ID gebruikt."@nl-BE .
 
 oe:ActiefstatusTypeKlad a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
@@ -759,8 +761,7 @@ oe:ActiefstatusTypeActief a owl:Class;
     dct:description """Actief status.
     Een status die aangeeft dat een object actief is.
     Afhankelijk van het type object betekent dit dat het object volledig is afgewerkt
-    en beschikbaar is om door een breder publiek geraadpleegd te worden.
-    Objecten die niet actief zijn, moeten altijd worden beschouwd als voorlopige kladversies."""@nl-BE.
+    en beschikbaar is om door een breder publiek geraadpleegd te worden."""@nl-BE.
 
 oe:ActiefstatusTypeTeHerwerken a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
