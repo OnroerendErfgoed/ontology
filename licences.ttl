@@ -33,7 +33,7 @@
     dct:description """Describes a set of licences that can be used for open data 
     within the Flemish Government"""@en-GB;
     dct:description """Beschrijft een verzameling licenties die kunnen gebruikt
-    worden voor open data binnen de Vlaamse overheid."""@nl.
+    worden voor open data binnen de Vlaamse overheid."""@nl-BE.
 
 ### 2. Licenses
 
