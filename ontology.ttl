@@ -636,7 +636,6 @@ oe:Persoon a owl:Class;
     A persoon describes an individual or collective and their
     role(s) in relation to heritage assets."""@en-GB.
 
-
 oe:Thema a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Thema"@nl-BE;
