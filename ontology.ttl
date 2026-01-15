@@ -658,10 +658,12 @@ oe:Waarneming a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """A waarneming.
-    A waarneming is the result of research or other findings that hold a certain relevance
-    for heritage. A large number of sources are used for this purpose.
-    At the moment, these consist exclusively of archaeological observations,
-    also known as the Centrale Archeologische Inventaris (CAI)."""@en.
+    A waarneming is a record documenting traces of past human activity observed at a specific location.
+    Unlike an oe:Erfgoedobject, a waarneming does not imply any assessment of heritage value; it simply notes
+    that human-made constructions or other human-induced traces from the past were detected, even if these traces
+    may no longer be present after investigation.
+    Waarnemingen are compiled from various sources, which currently consist exclusively of
+    archaeological observations registered in the Centrale Archeologische Inventaris (CAI)."""@en.
 
 oe:ActiefstatusType a owl:Class ;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
