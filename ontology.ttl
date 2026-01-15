@@ -41,7 +41,7 @@
     is used for modelling information present in Onroerend Erfgoed information 
     systems."""@en;
     dct:description """De Onroerend Erfgoed ontology beschrijft een ontology die
-    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl.
+    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl-BE.
 
 ### 2. Classes
 
@@ -64,7 +64,7 @@ oe:Actor a owl:Class;
     Een actor is een persoon of ding dat iets doet. Meestal is dit een persoon
     of organisatie die betrokken is bij een bepaald business proces van 
     Onroerend Erfgoed. Het kan echter ook om een meer abstracte actor gaan zoals
-    een stuk software die handelingen verricht."""@nl.
+    een stuk software die handelingen verricht."""@nl-BE.
 
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -118,7 +118,7 @@ oe:Attachment a owl:Class;
     een rapport, brief, afbeelding, kaart, ... zijn.
     De betekenis van dit object is grotendeels beperkt tot het object waar het 
     aan toegevoegd werd.
-    """@nl.
+    """@nl-BE.
 
 oe:Besluit a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -156,7 +156,7 @@ oe:DossierAttachment a owl:Class;
     Vertegenwoordigd een digitaal object dat toegevoegd werd aan een Dossier. Kan 
     een rapport, brief, afbeelding, kaart, ... zijn. Het object is enkel relevant 
     in de context van het Dossier en kan samen met het dossier gearchiveerd of 
-    verwijderd worden."""@nl.
+    verwijderd worden."""@nl-BE.
 
 oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -346,7 +346,7 @@ oe:ToelatingVooronderzoekWV a owl:Class;
     worden in het kader van archeologisch onderzoek op basis van een
     wetenschappelijke vraagstelling. Hiervoor moet een erkende archeoloog een
     aanvraag indienen bij het Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:ToelatingOpgraving a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -360,7 +360,7 @@ oe:ToelatingOpgraving a owl:Class;
     archeologisch onderzoek op basis van een wetenschappelijke vraagstelling. 
     Hiervoor moet een erkende archeoloog een aanvraag indienen bij het 
     Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologieArcheologierapport a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -374,7 +374,7 @@ oe:ArcheologieArcheologierapport a owl:class;
     afsluiten van het veldwerk. Het bevat een eerste verslag van de uitgevoerde
     werken en resultaten, een beschrijving van de verdere aanpak en een voorstel
     over het bewaren van het archeologisch ensemble.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologieEindverslag a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -387,7 +387,7 @@ oe:ArcheologieEindverslag a owl:class;
     een erkend archeoloog na een archeologische opgraging binnen de 2 jaar na het 
     afsluiten van het veldwerk. Het bevat een volledig verslag van de uitgevoerde
     werken en resultaten.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologischEnsemble a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -417,7 +417,7 @@ oe:LocatieElement a owl:class;
     dct:description """Een locatie element.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen. De praktische uitwerken hiervan zit in een subtype.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementAdres a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -433,7 +433,7 @@ oe:LocatieElementAdres a owl:class;
     dct:description """Een locatie element dat een adres voorstel.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen als een adres.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementPerceel a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -449,7 +449,7 @@ oe:LocatieElementPerceel a owl:class;
     dct:description """Een locatie element dat een kadastraal perceel voorstel.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen als een kadastraal perceel.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementOpenbaarDomein a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -465,7 +465,7 @@ oe:LocatieElementOpenbaarDomein a owl:class;
     dct:description """Een locatie element dat een stuk openbaar domein voorstelt.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen dat deel uitmaakt van het openbare domein.
-    """@nl.
+    """@nl-BE.
 
 oe:PubliekPersoon a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -480,7 +480,7 @@ oe:PubliekPersoon a owl:Class;
     Erfgoed in een publieke capaciteit, bv. omdat ze een foto hebben getrokken
     of tekst hebben geschreven. De actor wordt publiek gemaakt om intellectuele
     of andere rechten te kunnen laten gelden.
-    """@nl.
+    """@nl-BE.
 
 oe:OnroerendErfgoedGemeente a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -496,7 +496,7 @@ oe:OnroerendErfgoedGemeente a owl:Class;
     het Vlaamse beleid. Tegelijk neemt een erkende onroerenderfgoedgemeente
     welbepaalde bevoegdheden en taken over in het kader van het uitvoeren van
     het Onroerenderfgoeddecreet van 12 juli 2013.
-    """@nl.
+    """@nl-BE.
 
 oe:ErkendArcheoloog a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -509,7 +509,7 @@ oe:ErkendArcheoloog a owl:Class;
     kunnen natuurlijke personen of rechtspersonen zijn. Een archeoloog kan
     erkend worden op basis van criteria zoals relevante ervaring en opleiding.
     Daarnaast zijn er ook een aantal archeologen die van rechtswege erkend zijn.
-    """@nl.
+    """@nl-BE.
 
 oe:MetaalDetectorist a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -522,7 +522,7 @@ oe:MetaalDetectorist a owl:Class;
     Een erkende metaaldetectorist moet aan een aantal criteria beantwoorden. Zo
     moeten ze 18 jaar oud zijn en mogen ze recent geen veroordelingen tegen de
     onroerend erfgoed wetgeving hebben opgelopen.
-    """@nl.
+    """@nl-BE.
 
 oe:Premieaanvraag a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -532,7 +532,7 @@ oe:Premieaanvraag a owl:Class;
     dct:description """Een aanvraag tot het bekomen van een premie.
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagStandaard a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -542,7 +542,7 @@ oe:PremieaanvraagStandaard a owl:Class;
     dct:description """Een aanvraag tot het bekomen van een erfgoedpremie.
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed volgens de standaardprocedure.
-    """@nl.
+    """@nl-BE.
 
 
 oe:PremieaanvraagBijzonder a owl:Class;
@@ -554,7 +554,7 @@ oe:PremieaanvraagBijzonder a owl:Class;
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed volgens de bijzondere procedure waarbij hogere bedragen in
     aanmerking worden genomen.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagBeheersplan a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -564,7 +564,7 @@ oe:PremieaanvraagBeheersplan a owl:Class;
     dct:description """Een aanvraag tot het bekomen van een onderzoekspremie.
     Een aanvraag tot het bekomen van een onderzoekspremie die de opmaak van een
     beheersplan helpt bekostigen.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -583,7 +583,7 @@ oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
     erfgoedwaarde en de groeiplaats ervan, met inbegrip van de analyse van de
     impact van geplande werken.
     * Bestemmings- en herbestemmings-onderzoek.
-    """@nl.
+    """@nl-BE.
 
 oe:Uitbetalingsaanvraag a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -593,7 +593,7 @@ oe:Uitbetalingsaanvraag a owl:Class;
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een premie.
     Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
     erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:UitbetalingsaanvraagStandaard a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -603,7 +603,7 @@ oe:UitbetalingsaanvraagStandaard a owl:Class;
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een erfgoedpremie.
     Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
     erfgoed volgens de standaardprocedure.
-    """@nl.
+    """@nl-BE.
 
 oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -613,7 +613,7 @@ oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek.
     Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie die voorafgaand
     onderzoek helpt bekostigen.
-    """@nl.
+    """@nl-BE.
 
 oe:Gebeurtenis a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -808,7 +808,7 @@ oe:follows a owl:ObjectProperty;
     """@en;
     dct:description """A volgt op B.
     Een erg brede relatie die aangeeft dat A op B volgt.
-    """@nl.
+    """@nl-BE.
 
 oe:precedes a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -823,7 +823,7 @@ oe:precedes a owl:ObjectProperty;
     """@en;
     dct:description """A gaat vooraf aan B.
     Een erg brede relatie die aangeeft dat A aan B vooraf gaat.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to Toevalsvondst
 
@@ -942,7 +942,7 @@ oe:nota_heeftAlsIndiener a owl:ObjectProperty;
     dct:description """Archeologienota A werd ingediend door Actor B.
     Geeft aan dat Actor B de archeologienota of de uitgestelde nota heeft
     ingediend.
-    """@nl.
+    """@nl-BE.
 
 oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -957,7 +957,7 @@ oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     Geeft aan dat Actor B de archeologienota of de uitgestelde nota heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to ToelatingVooronderzoekVI, ToelatingVooronderzoekWV and ToelatingOpgraving
 
@@ -973,7 +973,7 @@ oe:toelating_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:range oe:Actor;
     dct:description """Toelating A werd ingediend door Actor B.
     Geeft aan dat Actor B de toelating heeft ingediend.
-    """@nl.
+    """@nl-BE.
 
 oe:toelating_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -988,7 +988,7 @@ oe:toelating_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     Geeft aan dat Actor B de toelating heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to Dossier
 
@@ -1195,7 +1195,7 @@ oe:dos_heeftAlsOEGemeente a owl:ObjectProperty;
     dct:description """Dossier A heeft als onroerenderfgoedgemeente Actor B.
     Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
     onroerenderfgoedgemeente ligt en dus door hen behandeld dient te worden.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftAlsGemeente a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1212,7 +1212,7 @@ oe:dos_heeftAlsGemeente a owl:ObjectProperty;
     dct:description """Dossier A heeft als gemeente Actor B.
     Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
     bepaalde gemeente ligt.
-    """@nl.
+    """@nl-BE.
 
 ##### Dossier to DossierAttachment
 
@@ -1230,7 +1230,7 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     """@en;
     dct:description """Dossier A heeft als attachment DossierAttachment B.
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1245,7 +1245,7 @@ oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
     dct:description """Dossier A heeft als beslissingsbrief DossierAttachment of Poststuk B.
     Geeft aan dat er over een bepaald dossier een beslissing werd genomen en deze beslissing
     werd neergeschreven in brief B.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1261,7 +1261,7 @@ oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
     Geeft aan dat B een brief is die werd verstuurd naar een bevoegde onroerenderfgoedgemeente
     om hen te melden dat een bepaald Dossier hun verantwoordelijkheid is in
     plaats van die van het Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefNietBevoegd a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1276,7 +1276,7 @@ oe:dos_heeftBriefNietBevoegd a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief niet bevoegd DossierAttachment of Poststuk B.
     Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor om aan te geven dat het dossier
     dat hij/zij bij ons indiende eigenlijk bedoeld was voor een onroerenderfgoedgemeente.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefNietConform a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1291,7 +1291,7 @@ oe:dos_heeftBriefNietConform a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief niet conform DossierAttachment of Poststuk B.
     Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor die een aanvraag indiende
     om hen te melden dat de aanvraag eigenlijk niet geldig of niet nodig was.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefBekrachtiging a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1408,7 +1408,7 @@ oe:dos_heeftBriefEindePassiefBehoud a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief einde passief behoud B.
     Geeft aan dat B een brief is die de zakelijkrechthouder en de gebruiker 
     van een terrein op de hoogte brengen dat het passief behoud van een 
-    archeologische toevalsvondst niet meer nodig is."""@nl.
+    archeologische toevalsvondst niet meer nodig is."""@nl-BE.
 
 oe:dos_heeftBriefInSituBewaring a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1426,7 +1426,7 @@ oe:dos_heeftBriefInSituBewaring a owl:ObjectProperty;
     plaatsbezoek werd duidelijk dat de archeologische site niet bedreigd wordt
     en geen verder onderzoek vereist is. Het onderzoek is hiermee afgerond en
     het terrein vrijgegeven. De verplichtingen van passief behoud gelden niet
-    langer."""@nl.
+    langer."""@nl-BE.
 
 oe:dos_heeftBriefGedeeltelijkeInSituBewaring a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1444,7 +1444,7 @@ oe:dos_heeftBriefGedeeltelijkeInSituBewaring a owl:ObjectProperty;
     plaatsbezoek werd duidelijk dat een deel van de archeologische site niet 
     bedreigd wordt. Op een ander deel werd een onderzoek uitgevoerd. Het 
     onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefOntoegankelijkTerrein a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1462,7 +1462,7 @@ oe:dos_heeftBriefOntoegankelijkTerrein a owl:ObjectProperty;
     plaatsbezoek is gebleken dat het onmogelijk is omwille van de veiligheid om
     de toevalsvondst uitvoerig te registreren. Het onderzoek is hiermee afgerond
     en het terrein vrijgegeven. De verplichtingen van passief behoud gelden niet
-    langer."""@nl.
+    langer."""@nl-BE.
 
 oe:dos_heeftBriefPlaatsbezoekTerreinregistratie a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1479,7 +1479,7 @@ oe:dos_heeftBriefPlaatsbezoekTerreinregistratie a owl:ObjectProperty;
     agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
     plaatsbezoek werd de toevalsvondst geregistreerd. Het onderzoek is hiermee
     afgerond en het terrein vrijgegeven. De verplichtingen van passief behoud
-    gelden niet langer."""@nl.
+    gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefPlaatsbezoekZonderVondsten a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1497,7 +1497,7 @@ oe:dos_heeftBriefPlaatsbezoekZonderVondsten a owl:ObjectProperty;
     agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
     plaatsbezoek werd vastgesteld dat de vondst niet meer in site aanwezig is. 
     Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefGeenArcheologischeWaarde a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1514,7 +1514,7 @@ oe:dos_heeftBriefGeenArcheologischeWaarde a owl:ObjectProperty;
     agentschap Onroerend Erfgoed heeft contact gehad of is ter plaatse geweest. 
     Er werd vastgesteld dat de vondst geen archeologische erfgoedwaarde heeft. 
     Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftFoto a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1586,7 +1586,7 @@ oe:dateBetekend a owl:ObjectProperty;
     rdfs:range xsd:date;
     dct:description """Document A werd betekend op datum B.
     Deze property geeft aan op welke datum een bepaald document betekend werd.
-    """@nl.
+    """@nl-BE.
 
 oe:rechtsgevolgen a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1602,7 +1602,7 @@ oe:rechtsgevolgen a owl:ObjectProperty;
     dct:description """Document A has legal consequences B.
     Indicates that A creates certain legal consequences. B indicates the type of 
     these consequences.
-    """@nl.
+    """@nl-BE.
 
 oe:besluit_uitgevaardigdAls a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1631,7 +1631,7 @@ oe:besluit_handeltOver a owl:ObjectProperty;
     owl:inverseOf oe:aanduid_werdBeslistIn;
     dct:description """Besluit A handelt over Aanduidingsobject B.
     Geeft aan dat er in het besluit beslissingen genomen worden over bepaalde 
-    aanduidingsobjecten."""@nl.
+    aanduidingsobjecten."""@nl-BE.
 
 #### Properties related to Aanduidingsobject
 
