@@ -161,6 +161,7 @@ oe:DossierAttachment a owl:Class;
 oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Erfgoedobject"@nl-BE;
+    rdfs:label "Heritage asset"@en-GB;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
@@ -622,8 +623,8 @@ oe:Gebeurtenis a owl:Class;
     vs:term_status "testing";
     dct:description """A gebeurtenis.
     Any activity undertaken with the explicit intention of gathering information about,
-    and understanding of, a Heritage Asset, and the creation of an information source
-    to record that information and understanding."""@en.
+    and understanding of, a heritage asset, and the creation of an information source
+    to record that information and understanding."""@en-GB.
 
 oe:Persoon a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -633,7 +634,8 @@ oe:Persoon a owl:Class;
     vs:term_status "testing";
     dct:description """A person.
     A persoon describes an individual or collective and their
-    role in relation to the heritage in the database."""@en.
+    role(s) in relation to heritage assets."""@en-GB.
+
 
 oe:Thema a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -642,10 +644,12 @@ oe:Thema a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """A thema.
+    A theme groups heritage-related information under a shared subject, making it easier
+    for users to explore specific aspects of the broader heritage domain.”
     A geografisch thema provides more information about the heritage
     of a specific location and its history. An inhoudelijk thema offers
     more information about interesting topics, such as historic gardens and parks,
-    heritage-worthy woody vegetation, and World War heritage."""@en.
+    woody vegetation of heritage value, and World War heritage."""@en.
 
 oe:Waarneming a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -669,14 +673,16 @@ oe:ActiefstatusType a owl:Class ;
     Activeerbare objecten in een toepassing bezitten een collectie van minimaal één actiefstatus
     waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
 
-    Elke actiefstatus heeft een ID en kan worden onderverdeeld in één van twee categorieën: actief of niet-actief.
-    De status van een object bepaalt de mate van beschikbaarheid.
-    Een actieve status duidt aan dat het object volledig is afgewerkt en publiek raadpleegbaar is.
-    Objecten met een niet-actieve status gelden steeds als voorlopige kladversies.
+    Elke actiefstatus heeft een actiefstatustype dat kan worden onderverdeeld in één van twee categorieën:
+    actief of niet-actief.
+    De actiefstatus van een object bepaalt de mate van beschikbaarheid.
+    Een actieve actiefstatus duidt aan dat het object volledig is afgewerkt en publiek raadpleegbaar is.
+    Objecten met een niet-actieve actiefstatus gelden steeds als voorlopige kladversies.
 
-    Voor elke toepassing worden de beschikbare actiefstatussen per objecttype gedefinieerd in een enumeratie.
-    Deze bepaalt welke actiefstatussen toegestaan zijn.
-    Over alle toepassingen heen wordt voor eenzelfde actiefstatus steeds hetzelfde ID gebruikt."@nl-BE .
+    Elk ActiefstatusType heeft een uniek oe:ActiefstatusTypeID dat wordt gebruikt om het type te identificeren.
+
+    Voor elke toepassing worden de beschikbare actiefstatustypes per objecttype gedefinieerd in een enumeratie.
+    Deze bepaalt welke actiefstatussen toegestaan zijn."@nl-BE .
 
 oe:ActiefstatusTypeKlad a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
@@ -739,7 +745,7 @@ oe:ActiefstatusTypeOnHold a owl:Class;
     vs:term_status "testing";
     dct:description """On hold status.
     Een status die aanduidt dat het publicatieproces rond een object tijdelijk stopgezet wordt.
-    De reden voor deze onderbreking moet worden genoteerd in het veld Opmerkingen."""@nl-BE.
+    De reden voor deze onderbreking moet worden genoteerd."""@nl-BE.
 
 oe:ActiefstatusTypeHerroepen a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
@@ -1755,5 +1761,7 @@ oe:ActiefstatusTypeID a owl:DatatypeProperty;
     rdfs:range xsd:integer;
     rdfs:label "Status ID"@nl-BE;
     dct:description """
-    Een actiefstatus ID <= 50 betekent dat het object in de categorie niet-Actief zit.
-    Een actiefstatus ID > 50 betekent dat het object tot de categorie Actief behoort."""@nl-BE.
+    Elk ActiefstatusTypeID identificeert uniek een bepaald oe:ActiefstatusType
+    en wordt in alle toepassingen altijd met hetzelfde actiefstatustype geassocieerd.
+    Een ActiefstatusTypeID ≤ 50 duidt op een type dat behoort tot de categorie ‘niet‑Actief’.
+    Een ActiefstatusTypeID > 50 duidt op een type dat behoort tot de categorie ‘Actief’.”"""@nl-BE.
