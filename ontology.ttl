@@ -24,8 +24,8 @@
 <https://id.erfgoed.net/vocab/ontology> a owl:Ontology;
     rdfs:label "Onroerend Erfgoed ontology";
     dct:created "2015-09-17"^^xsd:date;
-    dct:modified "2019-03-07"^^xsd:date;
-    owl:versionInfo "0.1.0.dev";
+    dct:modified "2025-11-25"^^xsd:date;
+    owl:versionInfo "0.2.0";
     dct:publisher <https://id.erfgoed.net/actoren/501>;
     dct:creator <https://id.erfgoed.net/actoren/1>;
     dct:contributor <https://id.erfgoed.net/actoren/1163>;
@@ -33,6 +33,7 @@
     dct:contributor <https://id.erfgoed.net/actoren/1765>;
     dct:contributor <https://id.erfgoed.net/actoren/1766>;
     dct:contributor <https://id.erfgoed.net/actoren/1850>;
+    dct:contributor <https://id.erfgoed.net/actoren/1764>;
     vann:preferredNamespacePrefix "oe";
     vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/ontology#";
     vs:term_status "testing";
@@ -40,7 +41,7 @@
     is used for modelling information present in Onroerend Erfgoed information 
     systems."""@en;
     dct:description """De Onroerend Erfgoed ontology beschrijft een ontology die
-    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl.
+    gebruikt wordt binnen Onroerend Erfgoed in informatiesystemen."""@nl-BE.
 
 ### 2. Classes
 
@@ -49,7 +50,7 @@
 oe:Actor a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Actor"@en;
-    rdfs:label "Actor"@nl;
+    rdfs:label "Actor"@nl-BE;
     foaf:homepage <https://actoren.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2016-02-18"^^xsd:date;
@@ -63,22 +64,22 @@ oe:Actor a owl:Class;
     Een actor is een persoon of ding dat iets doet. Meestal is dit een persoon
     of organisatie die betrokken is bij een bepaald business proces van 
     Onroerend Erfgoed. Het kan echter ook om een meer abstracte actor gaan zoals
-    een stuk software die handelingen verricht."""@nl.
+    een stuk software die handelingen verricht."""@nl-BE.
 
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Aanduidingsobject";
+    rdfs:label "Aanduidingsobject"@nl-BE;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
     dct:description """An aanduidingsobject.
     An aanduidingsobject is an object that designates an area as heritage. This 
     can be both used for listings and lower level forms of protection such as 
-    the vaststelling.""".
+    the vaststelling."""@en.
 
 oe:Advies a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Advies"@nl;
+    rdfs:label "Advies"@nl-BE;
     foaf:homepage <https://adviezen.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     dct:modified "2015-10-01"^^xsd:date;
@@ -89,7 +90,7 @@ oe:Advies a owl:Class;
 
 oe:ToelatingVoorHandelingen a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toelating voor Handelingen"@nl;
+    rdfs:label "Toelating voor Handelingen"@nl-BE;
     foaf:homepage <https://adviezen.onroerenderfgoed.be>;
     dct:created "2017-05-17"^^xsd:date;
     vs:term_status "testing";
@@ -102,7 +103,7 @@ oe:ToelatingVoorHandelingen a owl:Class;
 
 oe:Attachment a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Attachment"@nl;
+    rdfs:label "Attachment"@nl-BE;
     rdfs:label "Attachment"@en;
     dct:created "2015-03-07"^^xsd:date;
     dct:modified "2015-03-10"^^xsd:date;
@@ -117,7 +118,7 @@ oe:Attachment a owl:Class;
     een rapport, brief, afbeelding, kaart, ... zijn.
     De betekenis van dit object is grotendeels beperkt tot het object waar het 
     aan toegevoegd werd.
-    """@nl.
+    """@nl-BE.
 
 oe:Besluit a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -140,7 +141,7 @@ oe:Dossier a owl:Class;
 
 oe:DossierAttachment a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Dossier attachment"@nl;
+    rdfs:label "Dossier attachment"@nl-BE;
     rdfs:label "Dossier attachment"@en;
     dct:created "2015-02-18"^^xsd:date;
     dct:modified "2015-03-10"^^xsd:date;
@@ -155,18 +156,19 @@ oe:DossierAttachment a owl:Class;
     Vertegenwoordigd een digitaal object dat toegevoegd werd aan een Dossier. Kan 
     een rapport, brief, afbeelding, kaart, ... zijn. Het object is enkel relevant 
     in de context van het Dossier en kan samen met het dossier gearchiveerd of 
-    verwijderd worden."""@nl.
+    verwijderd worden."""@nl-BE.
 
 oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Erfgoedobject";
+    rdfs:label "Erfgoedobject"@nl-BE;
+    rdfs:label "Heritage asset"@en-GB;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
     dct:description """An erfgoedobject.
     An erfgoedobject describes some piece of cultural heritage from a scientific, 
     artistic and historic point of view. It implies no legal protection, that's 
-    the responsibility of aanduidingsobjecten.""".
+    the responsibility of aanduidingsobjecten."""@en.
 
 oe:Plan a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -193,7 +195,7 @@ oe:Poststuk a owl:Class;
 
 oe:Toevalsvondst a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toevalsvondst"@nl;
+    rdfs:label "Toevalsvondst"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/vondstmeldingen/toevalsvondsten>;
     dct:created "2016-02-18"^^xsd:date;
     vs:term_status "testing";
@@ -204,7 +206,7 @@ oe:Toevalsvondst a owl:Class;
 
 oe:Archeologienota a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologienota"@nl;
+    rdfs:label "Archeologienota"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/archeologienotas>;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-02-19"^^xsd:date;
@@ -222,7 +224,7 @@ oe:Archeologienota a owl:Class;
 
 oe:ArcheologienotaNota a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologienota nota"@nl;
+    rdfs:label "Archeologienota nota"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/notas/notas>;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-02-22"^^xsd:date;
@@ -239,7 +241,7 @@ oe:ArcheologienotaNota a owl:Class;
 oe:ToelatingVooronderzoekVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label """Toelating vooronderzoek met ingreep in de bodem in het kader van
-    een vergunningsplichtige ingreep"""@nl;
+    een vergunningsplichtige ingreep"""@nl-BE;
     rdfs:label """Permit for site-based evaluation during a spatial planning
     process"""@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_vooronderzoek>;
@@ -255,7 +257,7 @@ oe:ToelatingVooronderzoekVI a owl:Class;
     Deze resource bevat zowel de aanvraag door de erkende archeoloog, een set
     van gegevens die duidelijk maken waar, waarom en hoe het vooronderzoek zal 
     uitgevoerd worden en de finale beslissing over de aanvrag.
-    """@nl;
+    """@nl-BE;
     dct:description """A toelating vooronderzoek met ingreep in de bodem.
     A permit that allows a site-based evaluation to be undertaken. This is a limited 
     programme of intrusive fieldwork to determine the presence or absence of 
@@ -268,7 +270,7 @@ oe:ToelatingVooronderzoekVI a owl:Class;
 
 oe:MeldingAanvangVooronderzoekVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep"@nl;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een vergunningsplichtige ingreep"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_vi>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
@@ -279,7 +281,7 @@ oe:MeldingAanvangVooronderzoekVI a owl:Class;
 
 oe:MeldingAanvangVooronderzoekWV a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling"@nl;
+    rdfs:label "Melding aanvang vooronderzoek op basis van een wetenschappelijke vraagstelling"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_vooronderzoek_wv>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
@@ -290,7 +292,7 @@ oe:MeldingAanvangVooronderzoekWV a owl:Class;
 
 oe:MeldingAanvangOpgravingVI a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Melding aanvang opgraving op basis van een vergunningsplichtige ingreep"@nl;
+    rdfs:label "Melding aanvang opgraving op basis van een vergunningsplichtige ingreep"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_vi>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
@@ -301,7 +303,7 @@ oe:MeldingAanvangOpgravingVI a owl:Class;
 
 oe:MeldingAanvangOpgravingWV a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Melding aanvang opgraving op basis van een wetenschappelijke vraagstelling"@nl;
+    rdfs:label "Melding aanvang opgraving op basis van een wetenschappelijke vraagstelling"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/meldingen_aanvang_opgraving_wv>;
     dct:created "2016-02-22"^^xsd:date;
     vs:term_status "testing";
@@ -312,7 +314,7 @@ oe:MeldingAanvangOpgravingWV a owl:Class;
 
 oe:Projectcode a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Projectcode"@nl;
+    rdfs:label "Projectcode"@nl-BE;
     rdfs:label "Projectcode"@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/projectcodes>;
     dct:created "2016-03-03"^^xsd:date;
@@ -320,7 +322,7 @@ oe:Projectcode a owl:Class;
     dct:description """Een projectcode.
     Een unieke identifier die een archeoloog moet toewijzen aan zijn projecten. 
     Voorbeelden: 2016A1, 2017L31;
-    """@nl;
+    """@nl-BE;
     dct:description """A projectcode.
     A unique identifier that an archaeologist has to assign to his projects. 
     Sample codes: 2016A1, 2017L31.
@@ -329,7 +331,7 @@ oe:Projectcode a owl:Class;
 oe:ToelatingVooronderzoekWV a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label """Toelating vooronderzoek in het kader van wetenschappelijke
-    vraagstelling"""@nl;
+    vraagstelling"""@nl-BE;
     rdfs:label "Site-based evaluation permit for scientific research"@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/toelatingen>;
     dct:created "2016-06-15"^^xsd:date;
@@ -344,11 +346,11 @@ oe:ToelatingVooronderzoekWV a owl:Class;
     worden in het kader van archeologisch onderzoek op basis van een
     wetenschappelijke vraagstelling. Hiervoor moet een erkende archeoloog een
     aanvraag indienen bij het Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:ToelatingOpgraving a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Toelating opgraving"@nl;
+    rdfs:label "Toelating opgraving"@nl-BE;
     rdfs:label "Excavation permit"@en;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/toelatingen>;
     dct:created "2016-06-15"^^xsd:date;
@@ -358,11 +360,11 @@ oe:ToelatingOpgraving a owl:Class;
     archeologisch onderzoek op basis van een wetenschappelijke vraagstelling. 
     Hiervoor moet een erkende archeoloog een aanvraag indienen bij het 
     Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologieArcheologierapport a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologierapport"@nl;
+    rdfs:label "Archeologierapport"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten/archeologierapporten>;
     dct:created "2016-06-15"^^xsd:date;
     vs:term_status "testing";
@@ -372,11 +374,11 @@ oe:ArcheologieArcheologierapport a owl:class;
     afsluiten van het veldwerk. Het bevat een eerste verslag van de uitgevoerde
     werken en resultaten, een beschrijving van de verdere aanpak en een voorstel
     over het bewaren van het archeologisch ensemble.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologieEindverslag a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Eindverslag van een opgraving"@nl;
+    rdfs:label "Eindverslag van een opgraving"@nl-BE;
     foaf:homepage <https://loket.onroerenderfgoed.be/archeologie/rapporten/eindverslagen>;
     dct:created "2016-06-15"^^xsd:date;
     vs:term_status "testing";
@@ -385,18 +387,18 @@ oe:ArcheologieEindverslag a owl:class;
     een erkend archeoloog na een archeologische opgraging binnen de 2 jaar na het 
     afsluiten van het veldwerk. Het bevat een volledig verslag van de uitgevoerde
     werken en resultaten.
-    """@nl.
+    """@nl-BE.
 
 oe:ArcheologischEnsemble a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Archeologisch ensemble"@nl;
+    rdfs:label "Archeologisch ensemble"@nl-BE;
     rdfs:label "Archaeological ensemble"@en;
     dct:created "2016-08-09"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een archeologisch ensemble.
     Een archeologisch ensemble is het geheel van archeologische artefacten en
     onderzoeksdocumenten afkomstig van een archeologisch onderzoek.
-    """@nl;
+    """@nl-BE;
     dct:description """An archaeological ensemble.
     An archaeological ensemble is the combination of archaeological artefacts
     and research documents generated by one archaeological research.
@@ -404,7 +406,7 @@ oe:ArcheologischEnsemble a owl:class;
 
 oe:LocatieElement a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Locatie element"@nl;
+    rdfs:label "Locatie element"@nl-BE;
     rdfs:label "Location element"@en;
     dct:created "2016-11-30"^^xsd:date;
     vs:term_status "testing";
@@ -415,11 +417,11 @@ oe:LocatieElement a owl:class;
     dct:description """Een locatie element.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen. De praktische uitwerken hiervan zit in een subtype.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementAdres a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Locatie element - adres"@nl;
+    rdfs:label "Locatie element - adres"@nl-BE;
     rdfs:label "Location element - address"@en;
     rdfs:subClassOf oe:LocatieElement;
     dct:created "2016-11-30"^^xsd:date;
@@ -431,11 +433,11 @@ oe:LocatieElementAdres a owl:class;
     dct:description """Een locatie element dat een adres voorstel.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen als een adres.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementPerceel a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Locatie element - perceel"@nl;
+    rdfs:label "Locatie element - perceel"@nl-BE;
     rdfs:label "Location element - parcel"@en;
     rdfs:subClassOf oe:LocatieElement;
     dct:created "2016-11-30"^^xsd:date;
@@ -447,11 +449,11 @@ oe:LocatieElementPerceel a owl:class;
     dct:description """Een locatie element dat een kadastraal perceel voorstel.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen als een kadastraal perceel.
-    """@nl.
+    """@nl-BE.
 
 oe:LocatieElementOpenbaarDomein a owl:class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Locatie element - openbaar domein"@nl;
+    rdfs:label "Locatie element - openbaar domein"@nl-BE;
     rdfs:label "Location element - public domain"@en;
     rdfs:subClassOf oe:LocatieElement;
     dct:created "2016-11-30"^^xsd:date;
@@ -463,11 +465,11 @@ oe:LocatieElementOpenbaarDomein a owl:class;
     dct:description """Een locatie element dat een stuk openbaar domein voorstelt.
     Een set gestructureerde data die een locatie of een stuk daarvan
     voorstellen dat deel uitmaakt van het openbare domein.
-    """@nl.
+    """@nl-BE.
 
 oe:PubliekPersoon a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "publiek persoon"@nl;
+    rdfs:label "publiek persoon"@nl-BE;
     rdfs:subClassOf oe:Actor;
     rdfs:subClassOf foaf:Person;
     dct:created "2017-01-12"^^xsd:date;
@@ -478,11 +480,11 @@ oe:PubliekPersoon a owl:Class;
     Erfgoed in een publieke capaciteit, bv. omdat ze een foto hebben getrokken
     of tekst hebben geschreven. De actor wordt publiek gemaakt om intellectuele
     of andere rechten te kunnen laten gelden.
-    """@nl.
+    """@nl-BE.
 
 oe:OnroerendErfgoedGemeente a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "onroerenderfgoedgemeente"@nl;
+    rdfs:label "onroerenderfgoedgemeente"@nl-BE;
     rdfs:subClassOf oe:Actor;
     rdfs:subClassOf foaf:Organization;
     dct:created "2017-01-07"^^xsd:date;
@@ -494,11 +496,11 @@ oe:OnroerendErfgoedGemeente a owl:Class;
     het Vlaamse beleid. Tegelijk neemt een erkende onroerenderfgoedgemeente
     welbepaalde bevoegdheden en taken over in het kader van het uitvoeren van
     het Onroerenderfgoeddecreet van 12 juli 2013.
-    """@nl.
+    """@nl-BE.
 
 oe:ErkendArcheoloog a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "erkend archeoloog"@nl;
+    rdfs:label "erkend archeoloog"@nl-BE;
     rdfs:subClassOf oe:Actor;
     dct:created "2017-01-12"^^xsd:date;
     vs:term_status "testing";
@@ -507,11 +509,11 @@ oe:ErkendArcheoloog a owl:Class;
     kunnen natuurlijke personen of rechtspersonen zijn. Een archeoloog kan
     erkend worden op basis van criteria zoals relevante ervaring en opleiding.
     Daarnaast zijn er ook een aantal archeologen die van rechtswege erkend zijn.
-    """@nl.
+    """@nl-BE.
 
 oe:MetaalDetectorist a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "metaaldetectorist"@nl;
+    rdfs:label "metaaldetectorist"@nl-BE;
     rdfs:subClassOf oe:Actor;
     dct:created "2017-09-18"^^xsd:date;
     vs:term_status "testing";
@@ -520,53 +522,53 @@ oe:MetaalDetectorist a owl:Class;
     Een erkende metaaldetectorist moet aan een aantal criteria beantwoorden. Zo
     moeten ze 18 jaar oud zijn en mogen ze recent geen veroordelingen tegen de
     onroerend erfgoed wetgeving hebben opgelopen.
-    """@nl.
+    """@nl-BE.
 
 oe:Premieaanvraag a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "premieaanvraag"@nl;
+    rdfs:label "premieaanvraag"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van een premie.
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagStandaard a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl;
+    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van een erfgoedpremie.
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed volgens de standaardprocedure.
-    """@nl.
+    """@nl-BE.
 
 
 oe:PremieaanvraagBijzonder a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de uitgebreide procedure"@nl;
+    rdfs:label "premieaanvraag voor een erfgoedpremie volgens de uitgebreide procedure"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van een erfgoedpremie.
     Een aanvraag tot het bekomen van een premie in verband met onroerend
     erfgoed volgens de bijzondere procedure waarbij hogere bedragen in
     aanmerking worden genomen.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagBeheersplan a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "premieaanvraag voor een onderzoekspremie voor het opstellen van een beheersplan"@nl;
+    rdfs:label "premieaanvraag voor een onderzoekspremie voor het opstellen van een beheersplan"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van een onderzoekspremie.
     Een aanvraag tot het bekomen van een onderzoekspremie die de opmaak van een
     beheersplan helpt bekostigen.
-    """@nl.
+    """@nl-BE.
 
 oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "premieaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl;
+    rdfs:label "premieaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van een onderzoekspremie.
@@ -581,37 +583,213 @@ oe:PremieaanvraagVoorafgaandOnderzoek a owl:Class;
     erfgoedwaarde en de groeiplaats ervan, met inbegrip van de analyse van de
     impact van geplande werken.
     * Bestemmings- en herbestemmings-onderzoek.
-    """@nl.
+    """@nl-BE.
 
 oe:Uitbetalingsaanvraag a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "uitbetalingsaanvraag"@nl;
+    rdfs:label "uitbetalingsaanvraag"@nl-BE;
     dct:created "2048-04-11"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een premie.
     Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
     erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:UitbetalingsaanvraagStandaard a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "uitbetalingsaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl;
+    rdfs:label "uitbetalingsaanvraag voor een erfgoedpremie volgens de standaard procedure"@nl-BE;
     dct:created "2017-02-20"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een erfgoedpremie.
     Een aanvraag tot het bekomen van de uitbetaling van een premie in verband met onroerend
     erfgoed volgens de standaardprocedure.
-    """@nl.
+    """@nl-BE.
 
 oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "uitbetalingsaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl;
+    rdfs:label "uitbetalingsaanvraag voor een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek"@nl-BE;
     dct:created "2018-11-06"^^xsd:date;
     vs:term_status "testing";
     dct:description """Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie voor het uitvoeren van voorafgaand onderzoek.
     Een aanvraag tot het bekomen van de uitbetaling van een onderzoekspremie die voorafgaand
     onderzoek helpt bekostigen.
-    """@nl.
+    """@nl-BE.
+
+oe:Gebeurtenis a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Gebeurtenis"@nl-BE;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A gebeurtenis.
+    Any activity undertaken with the explicit intention of gathering information about,
+    and understanding of, a heritage asset, and the creation of an information source
+    to record that information and understanding."""@en-GB.
+
+oe:Persoon a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Persoon"@nl-BE;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A person.
+    A persoon describes an individual or collective and their
+    role(s) in relation to heritage assets."""@en-GB.
+
+oe:Thema a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Thema"@nl-BE;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A thema.
+    A theme groups heritage-related information under a shared subject, making it easier
+    for users to explore specific aspects of the broader heritage domain.”
+    A geografisch thema provides more information about the heritage
+    of a specific location and its history. An inhoudelijk thema offers
+    more information about interesting topics, such as historic gardens and parks,
+    woody vegetation of heritage value, and World War heritage."""@en.
+
+oe:Waarneming a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Waarneming"@nl-BE;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A waarneming.
+    A waarneming is a record documenting traces of past human activity observed at a specific location.
+    Unlike an oe:Erfgoedobject, a waarneming does not imply any assessment of heritage value; it simply notes
+    that human-made constructions or other human-induced traces from the past were detected, even if these traces
+    may no longer be present after investigation.
+    Waarnemingen are compiled from various sources, which currently consist exclusively of
+    archaeological observations registered in the Centrale Archeologische Inventaris (CAI)."""@en.
+
+oe:ActiefstatusType a owl:Class ;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Actiefstatus type"@nl-BE;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Overkoepelende klasse voor actiefstatus-types.
+    Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
+    Activeerbare objecten in een toepassing bezitten een collectie van minimaal één actiefstatus
+    waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
+
+    Elke actiefstatus heeft een actiefstatustype dat kan worden onderverdeeld in één van twee categorieën:
+    actief of niet-actief.
+    De actiefstatus van een object bepaalt de mate van beschikbaarheid.
+    Een actieve actiefstatus duidt aan dat het object volledig is afgewerkt en publiek raadpleegbaar is.
+    Objecten met een niet-actieve actiefstatus gelden steeds als voorlopige kladversies.
+
+    Elk ActiefstatusType heeft een uniek oe:ActiefstatusTypeID dat wordt gebruikt om het type te identificeren.
+
+    Voor elke toepassing worden de beschikbare actiefstatustypes per objecttype gedefinieerd in een enumeratie.
+    Deze bepaalt welke actiefstatussen toegestaan zijn."""@nl-BE.
+
+oe:ActiefstatusTypeKlad a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klad"@nl-BE;
+    oe:ActiefstatusTypeID 10;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klad status.
+    Een status die aanduidt dat een object in klad-status staat."""@nl-BE.
+
+oe:ActiefstatusTypeKlaarZonderFoto a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar zonder foto"@nl-BE;
+    oe:ActiefstatusTypeID 20;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar zonder foto status.
+    Een status die aanduidt dat een object klaar is voor activatie, maar er is
+    nog geen foto toegevoegd."""@nl-BE.
+
+oe:ActiefstatusTypeKlaarVoorControle a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar voor controle"@nl-BE;
+    oe:ActiefstatusTypeID 23;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar voor controle status.
+    Een status die aanduidt dat een object klaar is voor activatie, maar
+    het object moet nog gecontroleerd worden."""@nl-BE.
+
+oe:ActiefstatusTypeKlaarVoorActivatie a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Klaar voor activatie"@nl-BE;
+    oe:ActiefstatusTypeID 25;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Klaar voor activatie status.
+    Een status die aanduidt dat een object klaar is om geactiveerd te worden."""@nl-BE.
+
+oe:ActiefstatusTypeAutomatischTeActiveren a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Automatisch te activeren"@nl-BE;
+    oe:ActiefstatusTypeID 30;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Automatisch te activeren status.
+    Een status die aanduidt dat een object automatisch geactiveerd zal worden."""@nl-BE.
+
+oe:ActiefstatusTypeOnHold a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "On hold"@en;
+    oe:ActiefstatusTypeID 40;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """On hold status.
+    Een status die aanduidt dat het publicatieproces rond een object tijdelijk stopgezet wordt.
+    De reden voor deze onderbreking moet worden genoteerd."""@nl-BE.
+
+oe:ActiefstatusTypeHerroepen a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Herroepen"@nl-BE;
+    oe:ActiefstatusTypeID 45;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Herroepen status.
+    Een status die aanduidt dat een object herroepen is en dus niet meer actief is."""@nl-BE.
+
+oe:ActiefstatusTypeActief a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Actief"@nl-BE;
+    oe:ActiefstatusTypeID 75;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Actief status.
+    Een status die aangeeft dat een object actief is.
+    Afhankelijk van het type object betekent dit dat het object volledig is afgewerkt
+    en beschikbaar is om door een breder publiek geraadpleegd te worden."""@nl-BE.
+
+oe:ActiefstatusTypeTeHerwerken a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Te herwerken"@nl-BE;
+    oe:ActiefstatusTypeID 85;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Te herwerken status.
+    Een status die aanduidt dat een object dat al actief was moet herwerkt worden."""@nl-BE.
+
+oe:ActiefstatusTypeTeValideren a owl:Class;
+    rdfs:subClassOf oe:ActiefstatusType;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Te valideren"@nl-BE;
+    oe:ActiefstatusTypeID 87;
+    dct:created "2025-11-25"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """Te valideren status.
+    Een status die aanduidt dat een object dat al actief was, herwerkt is en dat
+    deze herwerking gevalideerd moet worden."""@nl-BE.
 
 ### 3. Properties
 
@@ -619,7 +797,7 @@ oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
 
 oe:follows a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "volgt op"@nl;
+    rdfs:label "volgt op"@nl-BE;
     rdfs:label "follows"@en;
     dct:created "2016-03-03"^^xsd:date;
     vs:term_status "testing";
@@ -630,11 +808,11 @@ oe:follows a owl:ObjectProperty;
     """@en;
     dct:description """A volgt op B.
     Een erg brede relatie die aangeeft dat A op B volgt.
-    """@nl.
+    """@nl-BE.
 
 oe:precedes a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "gaat vooraf aan"@nl;
+    rdfs:label "gaat vooraf aan"@nl-BE;
     rdfs:label "precedes"@en;
     dct:created "2016-03-03"^^xsd:date;
     vs:term_status "testing";
@@ -645,13 +823,13 @@ oe:precedes a owl:ObjectProperty;
     """@en;
     dct:description """A gaat vooraf aan B.
     Een erg brede relatie die aangeeft dat A aan B vooraf gaat.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to Toevalsvondst
 
 oe:tv_heeftAlsVinder a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als vinder"@nl;
+    rdfs:label "heeft als vinder"@nl-BE;
     rdfs:label "was found by"@en;
     dct:created "2016-02-23"^^xsd:date;
     vs:term_status "testing";
@@ -659,14 +837,14 @@ oe:tv_heeftAlsVinder a owl:ObjectProperty;
     rdfs:range oe:Actor;
     dct:description """Toevalsvondst A heeft als vinder Actor B.
     Geeft aan dat de toevalsvondst A werd gedaan door de actor B.
-    """@nl;
+    """@nl-BE;
     dct:description """Toevalsvondst A was found by Actor B.
     Indicaties that accidental find A was done by Actor B.
     """@en.
 
 oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als gebruiker"@nl;
+    rdfs:label "heeft als gebruiker"@nl-BE;
     rdfs:label "was found on a terrain used by"@en;
     dct:created "2016-02-23"^^xsd:date;
     vs:term_status "testing";
@@ -675,7 +853,7 @@ oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
     dct:description """Toevalsvondst A heeft als gebruiker Actor B.
     Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
     de gebruiker is.
-    """@nl;
+    """@nl-BE;
     dct:description """Toevalsvondst A was found on a terrain used by Actor B.
     Indicaties that accidental find A was done on a terrain that's being used
     by Actor B.
@@ -683,7 +861,7 @@ oe:tv_heeftAlsGebruiker a owl:ObjectProperty;
 
 oe:tv_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als zakelijkrechthouder"@nl;
+    rdfs:label "heeft als zakelijkrechthouder"@nl-BE;
     rdfs:label "was found on a terrain owned by"@en;
     dct:created "2016-02-23"^^xsd:date;
     vs:term_status "testing";
@@ -692,7 +870,7 @@ oe:tv_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
     dct:description """Toevalsvondst A heeft als zakelijkrechthouder Actor B.
     Geeft aan dat de toevalsvondst A werd gedaan op een terrein waarvan Actor B 
     de zakelijkrechthouder is.
-    """@nl;
+    """@nl-BE;
     dct:description """Toevalsvondst A was found on a terrain owned by Actor B.
     Indicaties that accidental find A was done on a terrain that's owned in some 
     way by Actor B.
@@ -700,7 +878,7 @@ oe:tv_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
 
 oe:tv_heeftAlsGemeente a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als gemeente"@nl;
+    rdfs:label "heeft als gemeente"@nl-BE;
     rdfs:label "was found in community"@en;
     dct:created "2016-02-24"^^xsd:date;
     vs:term_status "testing";
@@ -709,7 +887,7 @@ oe:tv_heeftAlsGemeente a owl:ObjectProperty;
     dct:description """Toevalsvondst A heeft als gemeente Actor B.
     Geeft aan dat de toevalsvondst A werd gedaan op een terrein dat ligt op het
     grondgebied van Actor B.
-    """@nl;
+    """@nl-BE;
     dct:description """Toevalsvondst A was found on a terrain in community Actor B.
     Indicaties that accidental find A was done on a terrain that's situated on 
     the land governed by Actor B.
@@ -719,7 +897,7 @@ oe:tv_heeftAlsGemeente a owl:ObjectProperty;
 
 oe:ae_heeftAlsGebruiker a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als gebruiker"@nl;
+    rdfs:label "heeft als gebruiker"@nl-BE;
     rdfs:label "is being used by"@en;
     dct:created "2016-08-09"^^xsd:date;
     vs:term_status "testing";
@@ -728,7 +906,7 @@ oe:ae_heeftAlsGebruiker a owl:ObjectProperty;
     dct:description """Archeologisch ensemble A heeft als gebruiker Actor B.
     Geeft aan dat Actor B het Archeologisch ensemble A in beheer heeft. Dit
     impliceert dat Actor B niet de zakelijk rechthouder is.
-    """@nl;
+    """@nl-BE;
     dct:description """Archaeological ensemble A is being used by Actor B.
     Indicates that Actor B is using the Archaeological ensemble A. This
     means actor B is not the owner of the ensemble.
@@ -736,7 +914,7 @@ oe:ae_heeftAlsGebruiker a owl:ObjectProperty;
 
 oe:ae_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als zakelijkrechthouder"@nl;
+    rdfs:label "heeft als zakelijkrechthouder"@nl-BE;
     rdfs:label "is owned by"@en;
     dct:created "2016-08-09"^^xsd:date;
     vs:term_status "testing";
@@ -744,7 +922,7 @@ oe:ae_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
     rdfs:range oe:Actor;
     dct:description """Archeologisch ensemble A heeft als zakelijkrechthouder Actor B.
     Geeft aan dat Actor B het Archeologisch ensemble A in bezit heeft.
-    """@nl;
+    """@nl-BE;
     dct:description """Archaeological ensemble A is owned by Actor B.
     Indicates that Actor B is the owner of Archaeological ensemble A.
     """@en.
@@ -753,7 +931,7 @@ oe:ae_heeftAlsZakelijkrechthouder a owl:ObjectProperty;
 
 oe:nota_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd ingediend door"@nl;
+    rdfs:label "werd ingediend door"@nl-BE;
     rdfs:label "was submitted by"@en;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
@@ -764,11 +942,11 @@ oe:nota_heeftAlsIndiener a owl:ObjectProperty;
     dct:description """Archeologienota A werd ingediend door Actor B.
     Geeft aan dat Actor B de archeologienota of de uitgestelde nota heeft
     ingediend.
-    """@nl.
+    """@nl-BE.
 
 oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl;
+    rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl-BE;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain [
@@ -779,13 +957,13 @@ oe:nota_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     Geeft aan dat Actor B de archeologienota of de uitgestelde nota heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to ToelatingVooronderzoekVI, ToelatingVooronderzoekWV and ToelatingOpgraving
 
 oe:toelating_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd ingediend door"@nl;
+    rdfs:label "werd ingediend door"@nl-BE;
     rdfs:label "was submitted by"@en;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
@@ -795,11 +973,11 @@ oe:toelating_heeftAlsIndiener a owl:ObjectProperty;
     rdfs:range oe:Actor;
     dct:description """Toelating A werd ingediend door Actor B.
     Geeft aan dat Actor B de toelating heeft ingediend.
-    """@nl.
+    """@nl-BE.
 
 oe:toelating_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl;
+    rdfs:label "werd ingediend onder de verantwoordelijkheid van"@nl-BE;
     dct:created "2016-09-15"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain [
@@ -810,7 +988,7 @@ oe:toelating_heeftAlsIndienendeErkendArcheoloog a owl:ObjectProperty;
     Geeft aan dat Actor B de toelating heeft
     ingediend of heeft laten indienen onder zijn of haar verantwoordelijkheid.
     Actor B zal in veel gevallen geen natuurlijk, maar een rechtspersoon zijn.
-    """@nl.
+    """@nl-BE.
 
 #### Properties related to Dossier
 
@@ -927,7 +1105,7 @@ oe:dos_werdOpgestartDoorPoststuk a owl:ObjectProperty;
 
 oe:dos_heeftAlsVerantwoordelijke a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als verantwoordelijke"@nl;
+    rdfs:label "heeft als verantwoordelijke"@nl-BE;
     rdfs:label "has as person responsible"@en;
     dct:created "2016-05-11"^^xsd:date;
     dct:modified "2016-08-09"^^xsd:date;
@@ -938,7 +1116,7 @@ oe:dos_heeftAlsVerantwoordelijke a owl:ObjectProperty;
     Geeft aan dat de verantwoordelijke voor dossier A actor B is. Vaak is dit
     wel de dossierbehandelaar, maar kan deze niet de finale beslissing nemen.
     Deze wordt dan genomen door de beslisser.
-    """@nl;
+    """@nl-BE;
     dct:description """Actor B is responsible for Dossier A.
     Indicates that Actor B is responsible for Dossier A. While this is the actor
     that handles the dossier most of the time, quite often they will not be
@@ -951,7 +1129,7 @@ oe:dos_heeftAlsVerantwoordelijke a owl:ObjectProperty;
 
 oe:dos_heeftAlsBeslisser a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als beslisser"@nl;
+    rdfs:label "heeft als beslisser"@nl-BE;
     rdfs:label "has as decision maker"@en;
     dct:created "2016-08-09"^^xsd:date;
     vs:term_status "testing";
@@ -961,7 +1139,7 @@ oe:dos_heeftAlsBeslisser a owl:ObjectProperty;
     Geeft aan dat Actor B het recht heeft om dossier A finaal goed te keuren
     of te verwerpen. Mogelijk is dit dezelfde actor als de verantwoordelijke,
     maar vaak zal dit niet zo zijn.
-    """@nl;
+    """@nl-BE;
     dct:description """Actor B is the decision maker for Dossier A.
     Indicates that Actor B is the final decision maker for Dossier A. A dossier
     will often be handled by a responsible actor, but the final decision will be
@@ -970,7 +1148,7 @@ oe:dos_heeftAlsBeslisser a owl:ObjectProperty;
 
 oe:dos_heeftAlsMedewerker a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als medewerker"@nl;
+    rdfs:label "heeft als medewerker"@nl-BE;
     rdfs:label "has as collaborator"@en;
     dct:created "2023-04-12"^^xsd:date;
     vs:term_status "testing";
@@ -979,7 +1157,7 @@ oe:dos_heeftAlsMedewerker a owl:ObjectProperty;
     dct:description """Actor B ondersteunt als medewerker de verantwoordelijke Actor C voor Dossier A.
     Je hebt een dossierverantwoordelijke en daarnaast heb je
     bij grote dossiers nog een aantal andere betrokken medewerkers.
-    """@nl;
+    """@nl-BE;
     dct:description """As a collaborator, Actor B supports the Actor C responsible for Dossier A.
     You have an actor C that is responsible for Dossier A and you also have,
     in the case of large files, a number of other collaborators who are involved.
@@ -1017,7 +1195,7 @@ oe:dos_heeftAlsOEGemeente a owl:ObjectProperty;
     dct:description """Dossier A heeft als onroerenderfgoedgemeente Actor B.
     Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
     onroerenderfgoedgemeente ligt en dus door hen behandeld dient te worden.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftAlsGemeente a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1034,13 +1212,13 @@ oe:dos_heeftAlsGemeente a owl:ObjectProperty;
     dct:description """Dossier A heeft als gemeente Actor B.
     Deze relatie geeft aan dat een bepaald dossier binnen de grenzen van een
     bepaalde gemeente ligt.
-    """@nl.
+    """@nl-BE.
 
 ##### Dossier to DossierAttachment
 
 oe:dos_heeftBijlage a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als attachment"@nl;
+    rdfs:label "heeft als attachment"@nl-BE;
     rdfs:label "has attachment"@en;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-03-10"^^xsd:date;
@@ -1052,11 +1230,11 @@ oe:dos_heeftBijlage a owl:ObjectProperty;
     """@en;
     dct:description """Dossier A heeft als attachment DossierAttachment B.
     Deze relatie geeft aan dat B een bestand is dat toegevoegd werd aan A.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als beslissingsbrief"@nl;
+    rdfs:label "heeft als beslissingsbrief"@nl-BE;
     dct:created "2020-05-28"^^xsd:date;
     dct:modified "2020-05-28"^^xsd:date;
     vs:term_status "testing";
@@ -1067,11 +1245,11 @@ oe:dos_heeftBriefBeslissing a owl:ObjectProperty;
     dct:description """Dossier A heeft als beslissingsbrief DossierAttachment of Poststuk B.
     Geeft aan dat er over een bepaald dossier een beslissing werd genomen en deze beslissing
     werd neergeschreven in brief B.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief inkennisstelling niet bevoegd"@nl;
+    rdfs:label "heeft als brief inkennisstelling niet bevoegd"@nl-BE;
     dct:created "2016-11-03"^^xsd:date;
     dct:modified "2016-11-22"^^xsd:date;
     vs:term_status "testing";
@@ -1083,11 +1261,11 @@ oe:dos_heeftBriefInkennisstellingNietBevoegd a owl:ObjectProperty;
     Geeft aan dat B een brief is die werd verstuurd naar een bevoegde onroerenderfgoedgemeente
     om hen te melden dat een bepaald Dossier hun verantwoordelijkheid is in
     plaats van die van het Agentschap Onroerend Erfgoed.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefNietBevoegd a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief niet bevoegd"@nl;
+    rdfs:label "heeft als brief niet bevoegd"@nl-BE;
     dct:created "2016-11-03"^^xsd:date;
     dct:modified "2016-11-22"^^xsd:date;
     vs:term_status "testing";
@@ -1098,11 +1276,11 @@ oe:dos_heeftBriefNietBevoegd a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief niet bevoegd DossierAttachment of Poststuk B.
     Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor om aan te geven dat het dossier
     dat hij/zij bij ons indiende eigenlijk bedoeld was voor een onroerenderfgoedgemeente.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefNietConform a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief niet conform"@nl;
+    rdfs:label "heeft als brief niet conform"@nl-BE;
     dct:created "2016-11-03"^^xsd:date;
     dct:modified "2016-11-22"^^xsd:date;
     vs:term_status "testing";
@@ -1113,11 +1291,11 @@ oe:dos_heeftBriefNietConform a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief niet conform DossierAttachment of Poststuk B.
     Geeft aan dat B een brief is die werd verstuurd naar een bepaalde Actor die een aanvraag indiende
     om hen te melden dat de aanvraag eigenlijk niet geldig of niet nodig was.
-    """@nl.
+    """@nl-BE.
 
 oe:dos_heeftBriefBekrachtiging a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief bekrachtiging"@nl;
+    rdfs:label "heeft als brief bekrachtiging"@nl-BE;
     dct:created "2016-10-25"^^xsd:date;
     dct:modified "2016-10-25"^^xsd:date;
     vs:term_status "testing";
@@ -1132,7 +1310,7 @@ oe:dos_heeftBriefBekrachtiging a owl:ObjectProperty;
 
 oe:dos_heeftBriefBekrachtigingMetVoorwaarden a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief bekrachtiging met voorwaarden"@nl;
+    rdfs:label "heeft als brief bekrachtiging met voorwaarden"@nl-BE;
     dct:created "2016-10-25"^^xsd:date;
     dct:modified "2016-10-25"^^xsd:date;
     vs:term_status "testing";
@@ -1147,7 +1325,7 @@ oe:dos_heeftBriefBekrachtigingMetVoorwaarden a owl:ObjectProperty;
 
 oe:dos_heeftBriefStilzwijgendeBekrachtiging a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief stilzwijgende bekrachtiging"@nl;
+    rdfs:label "heeft als brief stilzwijgende bekrachtiging"@nl-BE;
     dct:created "2016-10-25"^^xsd:date;
     dct:modified "2016-10-25"^^xsd:date;
     vs:term_status "testing";
@@ -1165,7 +1343,7 @@ oe:dos_heeftBriefStilzwijgendeBekrachtiging a owl:ObjectProperty;
 
 oe:dos_heeftBriefWeigering a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief weigering"@nl;
+    rdfs:label "heeft als brief weigering"@nl-BE;
     dct:created "2016-10-25"^^xsd:date;
     dct:modified "2016-10-25"^^xsd:date;
     vs:term_status "testing";
@@ -1180,7 +1358,7 @@ oe:dos_heeftBriefWeigering a owl:ObjectProperty;
 
 oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief inkennisstelling"@nl;
+    rdfs:label "heeft als brief inkennisstelling"@nl-BE;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-10-26"^^xsd:date;
     vs:term_status "testing";
@@ -1200,7 +1378,7 @@ oe:dos_heeftBriefInkennisstelling a owl:ObjectProperty;
 
 oe:dos_heeftBriefTermijnverlenging a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief termijnverlenging"@nl;
+    rdfs:label "heeft als brief termijnverlenging"@nl-BE;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-03-10"^^xsd:date;
     vs:term_status "testing";
@@ -1215,7 +1393,7 @@ oe:dos_heeftBriefTermijnverlenging a owl:ObjectProperty;
 
 oe:dos_heeftBriefEindePassiefBehoud a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief einde passief behoud"@nl;
+    rdfs:label "heeft als brief einde passief behoud"@nl-BE;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-04-25"^^xsd:date;
     vs:term_status "testing";
@@ -1230,11 +1408,11 @@ oe:dos_heeftBriefEindePassiefBehoud a owl:ObjectProperty;
     dct:description """Dossier A heeft als brief einde passief behoud B.
     Geeft aan dat B een brief is die de zakelijkrechthouder en de gebruiker 
     van een terrein op de hoogte brengen dat het passief behoud van een 
-    archeologische toevalsvondst niet meer nodig is."""@nl.
+    archeologische toevalsvondst niet meer nodig is."""@nl-BE.
 
 oe:dos_heeftBriefInSituBewaring a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief in situ bewaring"@nl;
+    rdfs:label "heeft als brief in situ bewaring"@nl-BE;
     dct:created "2016-04-25"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1248,11 +1426,11 @@ oe:dos_heeftBriefInSituBewaring a owl:ObjectProperty;
     plaatsbezoek werd duidelijk dat de archeologische site niet bedreigd wordt
     en geen verder onderzoek vereist is. Het onderzoek is hiermee afgerond en
     het terrein vrijgegeven. De verplichtingen van passief behoud gelden niet
-    langer."""@nl.
+    langer."""@nl-BE.
 
 oe:dos_heeftBriefGedeeltelijkeInSituBewaring a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief gedeeltelijke in situ bewaring"@nl;
+    rdfs:label "heeft als brief gedeeltelijke in situ bewaring"@nl-BE;
     dct:created "2019-01-30"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1266,11 +1444,11 @@ oe:dos_heeftBriefGedeeltelijkeInSituBewaring a owl:ObjectProperty;
     plaatsbezoek werd duidelijk dat een deel van de archeologische site niet 
     bedreigd wordt. Op een ander deel werd een onderzoek uitgevoerd. Het 
     onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefOntoegankelijkTerrein a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief ontoegankelijk terrein"@nl;
+    rdfs:label "heeft als brief ontoegankelijk terrein"@nl-BE;
     dct:created "2016-04-25"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1284,11 +1462,11 @@ oe:dos_heeftBriefOntoegankelijkTerrein a owl:ObjectProperty;
     plaatsbezoek is gebleken dat het onmogelijk is omwille van de veiligheid om
     de toevalsvondst uitvoerig te registreren. Het onderzoek is hiermee afgerond
     en het terrein vrijgegeven. De verplichtingen van passief behoud gelden niet
-    langer."""@nl.
+    langer."""@nl-BE.
 
 oe:dos_heeftBriefPlaatsbezoekTerreinregistratie a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief plaatsbezoek met terreinregistratie"@nl;
+    rdfs:label "heeft als brief plaatsbezoek met terreinregistratie"@nl-BE;
     dct:created "2016-04-25"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1301,11 +1479,11 @@ oe:dos_heeftBriefPlaatsbezoekTerreinregistratie a owl:ObjectProperty;
     agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
     plaatsbezoek werd de toevalsvondst geregistreerd. Het onderzoek is hiermee
     afgerond en het terrein vrijgegeven. De verplichtingen van passief behoud
-    gelden niet langer."""@nl.
+    gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefPlaatsbezoekZonderVondsten a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief plaatsbezoek zonder aanwezige vondsten"@nl;
+    rdfs:label "heeft als brief plaatsbezoek zonder aanwezige vondsten"@nl-BE;
     dct:created "2019-01-30"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1319,11 +1497,11 @@ oe:dos_heeftBriefPlaatsbezoekZonderVondsten a owl:ObjectProperty;
     agentschap Onroerend Erfgoed is ter plaatse geweest. Tijdens het
     plaatsbezoek werd vastgesteld dat de vondst niet meer in site aanwezig is. 
     Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftBriefGeenArcheologischeWaarde a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als brief geen archeologische waarde"@nl;
+    rdfs:label "heeft als brief geen archeologische waarde"@nl-BE;
     dct:created "2019-01-30"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Dossier;
@@ -1336,11 +1514,11 @@ oe:dos_heeftBriefGeenArcheologischeWaarde a owl:ObjectProperty;
     agentschap Onroerend Erfgoed heeft contact gehad of is ter plaatse geweest. 
     Er werd vastgesteld dat de vondst geen archeologische erfgoedwaarde heeft. 
     Het onderzoek is hiermee afgerond en het terrein vrijgegeven. De verplichtingen 
-    van passief behoud gelden niet langer."""@nl.
+    van passief behoud gelden niet langer."""@nl-BE.
 
 oe:dos_heeftFoto a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "heeft als foto"@nl;
+    rdfs:label "heeft als foto"@nl-BE;
     rdfs:label "has picture"@en;
     dct:created "2016-02-18"^^xsd:date;
     dct:modified "2016-03-10"^^xsd:date;
@@ -1387,32 +1565,32 @@ oe:post_isHetAntwoordOp a owl:ObjectProperty;
 
 oe:dateSigned a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd getekend op"@nl;
+    rdfs:label "werd getekend op"@nl-BE;
     rdfs:label "was signed on"@en;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
     rdfs:subPropertyOf dct:date;
     dct:description """Document A werd getekend op datum B.
     Geeft aan op welke datum een bepaald document ondertekend werd.
-    """@nl;
+    """@nl-BE;
     dct:description """Document A was signed on date B.
     Indicates on what date a document was signed.
     """@en.
 
 oe:dateBetekend a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd betekend op"@nl;
+    rdfs:label "werd betekend op"@nl-BE;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
     rdfs:subPropertyOf dct:date;
     rdfs:range xsd:date;
     dct:description """Document A werd betekend op datum B.
     Deze property geeft aan op welke datum een bepaald document betekend werd.
-    """@nl.
+    """@nl-BE.
 
 oe:rechtsgevolgen a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "rechtsgevolgen"@nl;
+    rdfs:label "rechtsgevolgen"@nl-BE;
     rdfs:label "legal consequences"@en;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
@@ -1420,15 +1598,15 @@ oe:rechtsgevolgen a owl:ObjectProperty;
     dct:description """Document A heeft rechtsgevolgen B.
     Geeft aan dat er aan het document rechtsgevolgen gekoppeld zijn van een 
     bepaald type.
-    """@nl;
+    """@nl-BE;
     dct:description """Document A has legal consequences B.
     Indicates that A creates certain legal consequences. B indicates the type of 
     these consequences.
-    """@nl.
+    """@nl-BE.
 
 oe:besluit_uitgevaardigdAls a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "uitgevaardigd als"@nl;
+    rdfs:label "uitgevaardigd als"@nl-BE;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
     rdfs:domain oe:Besluit;
@@ -1436,7 +1614,7 @@ oe:besluit_uitgevaardigdAls a owl:ObjectProperty;
     dct:description """Besluit A werd uitgevaardigd als B.
     Geeft aan dat het besluit uitgevaardigd werd door een bepaald type autoriteit,
     bv. een koning, minister of administrateur-generaal.
-    """@nl;
+    """@nl-BE;
     dct:description """Besluit A werd uitgevaardigd als B.
     Indicates that A was created by a certain type of authority, eg. a king, 
     a minister or a civil servant.
@@ -1444,7 +1622,7 @@ oe:besluit_uitgevaardigdAls a owl:ObjectProperty;
 
 oe:besluit_handeltOver a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "regelt de aanduiding van"@nl;
+    rdfs:label "regelt de aanduiding van"@nl-BE;
     rdfs:label "handles the designation of"@en;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
@@ -1453,13 +1631,13 @@ oe:besluit_handeltOver a owl:ObjectProperty;
     owl:inverseOf oe:aanduid_werdBeslistIn;
     dct:description """Besluit A handelt over Aanduidingsobject B.
     Geeft aan dat er in het besluit beslissingen genomen worden over bepaalde 
-    aanduidingsobjecten."""@nl.
+    aanduidingsobjecten."""@nl-BE.
 
 #### Properties related to Aanduidingsobject
 
 oe:aanduid_werdBeslistIn a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "werd beslist in"@nl;
+    rdfs:label "werd beslist in"@nl-BE;
     rdfs:label "was decided in"@en;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
@@ -1473,7 +1651,7 @@ oe:aanduid_werdBeslistIn a owl:ObjectProperty;
 
 oe:aanduid_aanduidingstype a owl:ObjectProperty;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "aanduidngstype"@nl;
+    rdfs:label "aanduidngstype"@nl-BE;
     rdfs:label "designationtype"@en;
     dct:created "2016-03-02"^^xsd:date;
     vs:term_status "testing";
@@ -1481,7 +1659,7 @@ oe:aanduid_aanduidingstype a owl:ObjectProperty;
     rdfs:range skos:Concept;
     dct:description """Aanduidingsobject A aanduidingstype B.
     Geeft aan als wat A aangeduid werd (beschermd monument, 
-    vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl;
+    vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl-BE;
     dct:description """Designationobject A designationtype B.
     Indicates as what A was designated (listed monument, 
     scheduled built heritage, listed landscape, ...)."""@en.
@@ -1578,3 +1756,13 @@ oe:isDeOmvattendeAanduidingVan a owl:ObjectProperty;
     dct:description """
     Indicates that this Aanduidingsobject contains a (much) smaller 
     Erfgoedobject.""".
+
+oe:ActiefstatusTypeID a owl:DatatypeProperty;
+    rdfs:domain owl:Class;
+    rdfs:range xsd:integer;
+    rdfs:label "Status ID"@nl-BE;
+    dct:description """
+    Elk ActiefstatusTypeID identificeert uniek een bepaald oe:ActiefstatusType
+    en wordt in alle toepassingen altijd met hetzelfde actiefstatustype geassocieerd.
+    Een ActiefstatusTypeID ≤ 50 duidt op een type dat behoort tot de categorie ‘niet‑Actief’.
+    Een ActiefstatusTypeID > 50 duidt op een type dat behoort tot de categorie ‘Actief’.”"""@nl-BE.
