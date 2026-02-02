@@ -666,10 +666,10 @@ oe:Waarneming a owl:Class;
 
 oe:ActiefstatusType a owl:Class ;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
-    rdfs:label "Actiefstatus type"@nl-BE ;
+    rdfs:label "Actiefstatus type"@nl-BE;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
-    dct:description "Overkoepelende klasse voor actiefstatus-types.
+    dct:description """Overkoepelende klasse voor actiefstatus-types.
     Vele van onze toepassingen bevatten objecten die activeerbaar zijn.
     Activeerbare objecten in een toepassing bezitten een collectie van minimaal één actiefstatus
     waarbij het laatste toegevoegde actiefstatus het huidige actiefstatus van het object is.
@@ -683,7 +683,7 @@ oe:ActiefstatusType a owl:Class ;
     Elk ActiefstatusType heeft een uniek oe:ActiefstatusTypeID dat wordt gebruikt om het type te identificeren.
 
     Voor elke toepassing worden de beschikbare actiefstatustypes per objecttype gedefinieerd in een enumeratie.
-    Deze bepaalt welke actiefstatussen toegestaan zijn."@nl-BE .
+    Deze bepaalt welke actiefstatussen toegestaan zijn."""@nl-BE.
 
 oe:ActiefstatusTypeKlad a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
@@ -725,7 +725,7 @@ oe:ActiefstatusTypeKlaarVoorActivatie a owl:Class;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
     dct:description """Klaar voor activatie status.
-    Een status die aanduidt dat een object klaar is om geactiveerd te worden."""@nl-BE
+    Een status die aanduidt dat een object klaar is om geactiveerd te worden."""@nl-BE.
 
 oe:ActiefstatusTypeAutomatischTeActiveren a owl:Class;
     rdfs:subClassOf oe:ActiefstatusType;
