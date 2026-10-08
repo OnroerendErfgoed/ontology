@@ -1,0 +1,36 @@
+# A stable term is a promise, so this guard checks that no release takes one
+# back. See scripts/check_terms_append_only.py for the rules and the reasoning.
+#
+# It is the only CI in this repository for now, and deliberately small: no
+# build, no publish, just the one invariant that cannot be repaired afterwards.
+# Renaming or removing a term that something already refers to rewrites the
+# meaning of records that were written years ago, and nothing fails at the
+# moment it happens — which is exactly why it needs a gate here rather than a
+# convention.
+
+name: terms append-only
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  terms-append-only:
+    name: stable terms are append-only
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The guard diffs against origin/master, so it needs the history
+          # rather than a shallow clone.
+          fetch-depth: 0
+
+      - name: Install raptor
+        # `rapper` parses the Turtle. Same tool build.sh already uses, so the
+        # check cannot disagree with the build about what the files say.
+        run: sudo apt-get update && sudo apt-get install -y raptor2-utils
+
+      - name: Check that no stable term was removed, renamed or demoted
+        run: python3 scripts/check_terms_append_only.py

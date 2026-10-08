@@ -1,0 +1,296 @@
+# Contents of this file
+### 1. Basic info
+### 2. Entity classes
+### 3. Activity classes
+#
+# The vocabulary of the dossier platform itself: the terms the engine defines,
+# as opposed to the terms of a business process it carries. A process publishes
+# its own activities and entity types under its own namespace; everything the
+# platform defines lives here, so that a term always belongs to whoever defines
+# it.
+#
+# Every term here is `stable`, and that is a promise rather than a label: these
+# terms are stored in the platform's databases, in the provenance it exports and
+# in the archives it hands over. A stable term is therefore append-only — it may
+# be added, never removed and never renamed. Retiring one is done with
+# `vs:term_status "archaic"` and a pointer to its successor, so that what has
+# already been recorded keeps meaning what it meant.
+
+# Internal Namespaces
+
+@prefix system:     <https://id.erfgoed.net/vocab/dossierplatform#>.
+
+# External Namespaces
+@prefix dct:        <http://purl.org/dc/terms/>.
+@prefix owl:        <http://www.w3.org/2002/07/owl#>.
+@prefix prov:       <http://www.w3.org/ns/prov#>.
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann:       <http://purl.org/vocab/vann/>.
+@prefix vs:         <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#>.
+
+### 1. Basic info about the Ontology
+
+<https://id.erfgoed.net/vocab/dossierplatform> a owl:Ontology;
+    rdfs:label "Dossier platform vocabulary"@en;
+    rdfs:label "Vocabularium van het dossierplatform"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    owl:versionInfo "0.1.0";
+    dct:publisher <https://id.erfgoed.net/actoren/501>;
+    dct:creator <https://id.erfgoed.net/actoren/1>;
+    vann:preferredNamespacePrefix "system";
+    vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/dossierplatform#";
+    vs:term_status "stable";
+    dct:description """The vocabulary of the dossier platform itself: the entity
+    and activity classes that the platform engine defines, independent of any
+    business process running on it."""@en;
+    dct:description """Het vocabularium van het dossierplatform zelf: de
+    entiteits- en activiteitsklassen die de engine definieert, onafhankelijk van
+    welk bedrijfsproces erop loopt."""@nl-BE.
+
+### 2. Entity classes
+#
+# What a dossier can hold besides the entities of its own process. Each is a
+# subclass of prov:Entity: the platform records them with full provenance, like
+# any other entity.
+
+system:Task a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Task"@en;
+    rdfs:label "Taak"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Work the platform itself must carry out and that needs a trace: a mail to send, a deadline
+    that fires, an activity scheduled for later. Because it is process work it is recorded
+    as a versioned entity rather than as a hidden job."""@en;
+    dct:description """Werk dat het platform zelf moet uitvoeren en waarvan een spoor nodig is: een mail die
+    uitgaat, een deadline die afloopt, een activiteit die later gepland is. Omdat het
+    proceswerk is, wordt het als geversioneerde entiteit bewaard en niet als een verborgen
+    job."""@nl-BE.
+
+system:Note a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Note"@en;
+    rdfs:label "Nota"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """An explanatory note attached to an activity by whoever performed it."""@en;
+    dct:description """Een toelichting bij een activiteit, geschreven door wie ze uitvoerde."""@nl-BE.
+
+system:Rollback a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Rollback record"@en;
+    rdfs:label "Terugdraaiing"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """The record of a rollback: which state a dossier was returned to, and before which activity."""@en;
+    dct:description """Het verslag van een terugdraaiing: naar welke toestand een dossier is teruggebracht, en vóór
+    welke activiteit."""@nl-BE.
+
+system:Migration a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Migration record"@en;
+    rdfs:label "Migratie"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """The record of a dossier being moved to a newer version of its process definition."""@en;
+    dct:description """Het verslag van de overgang van een dossier naar een nieuwere versie van zijn
+    procesdefinitie."""@nl-BE.
+
+system:Exception a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Exception grant"@en;
+    rdfs:label "Toegestane afwijking"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """An administratively authorised departure from the process rules, for one activity in one
+    dossier."""@en;
+    dct:description """Een administratief toegestane afwijking op de procesregels, voor één activiteit in één
+    dossier."""@nl-BE.
+
+system:DossierAccess a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Dossier access list"@en;
+    rdfs:label "Toegangslijst"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """The access list of a dossier: who may see it, and in which role."""@en;
+    dct:description """De toegangslijst van een dossier: wie het mag zien, en in welke rol."""@nl-BE.
+
+system:External a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "External reference"@en;
+    rdfs:label "Externe verwijzing"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """A reference to something outside the platform, kept as an entity so that provenance can be
+    attached to it."""@en;
+    dct:description """Een verwijzing naar iets buiten het platform, bewaard als entiteit zodat er herkomst aan kan
+    hangen."""@nl-BE.
+
+### 3. Activity classes
+#
+# What the platform can do to a dossier, as opposed to what a process does with
+# it. Each is a subclass of prov:Activity.
+
+system:Tombstone a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Tombstone"@en;
+    rdfs:label "Inhoud verwijderen"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Irreversibly redacting the content of an entity, when the law requires it."""@en;
+    dct:description """Het onomkeerbaar verwijderen van de inhoud van een entiteit, wanneer de wet dat vereist."""@nl-BE.
+
+system:VoidEntity a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Void entity"@en;
+    rdfs:label "Entiteit buiten werking stellen"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Setting an entity aside: it stays in the record, but no longer counts for the process rules."""@en;
+    dct:description """Een entiteit buiten werking stellen: ze blijft in het register, maar telt niet meer mee voor
+    de procesregels."""@nl-BE.
+
+system:RestoreEntity a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Restore entity"@en;
+    rdfs:label "Entiteit herstellen"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Returning the content of an entity to an earlier version."""@en;
+    dct:description """De inhoud van een entiteit terugbrengen naar een eerdere versie."""@nl-BE.
+
+system:ReconcileRelations a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Reconcile relations"@en;
+    rdfs:label "Relaties bijstellen"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Returning the domain relations of a dossier to an earlier composition, in a single activity."""@en;
+    dct:description """De domeinrelaties van een dossier in één activiteit terugbrengen naar een eerdere
+    samenstelling."""@nl-BE.
+
+system:RollbackBefore a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Roll back"@en;
+    rdfs:label "Terugdraaien"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Returning a dossier to the state it had immediately before a given activity."""@en;
+    dct:description """Een dossier terugbrengen naar de toestand van onmiddellijk vóór een bepaalde activiteit."""@nl-BE.
+
+system:MigrateWorkflow a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Migrate process definition"@en;
+    rdfs:label "Procesdefinitie migreren"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Moving a dossier to a newer version of its process definition."""@en;
+    dct:description """Een dossier naar een nieuwere versie van zijn procesdefinitie brengen."""@nl-BE.
+
+system:GrantException a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Grant exception"@en;
+    rdfs:label "Afwijking toestaan"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Authorising a departure from the process rules for one activity."""@en;
+    dct:description """Een afwijking op de procesregels toestaan voor één activiteit."""@nl-BE.
+
+system:RetractException a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Retract exception"@en;
+    rdfs:label "Afwijking intrekken"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Withdrawing an authorised departure from the process rules."""@en;
+    dct:description """Een toegestane afwijking op de procesregels intrekken."""@nl-BE.
+
+system:ConsumeException a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Consume exception"@en;
+    rdfs:label "Afwijking opgebruiken"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Using up an authorised departure at the moment the exempted activity runs."""@en;
+    dct:description """Het opgebruiken van een toegestane afwijking op het moment dat de vrijgestelde activiteit
+    uitgevoerd wordt."""@nl-BE.
+
+system:SystemAction a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "System action"@en;
+    rdfs:label "Systeemactie"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """An administrative correction carried out by the platform itself."""@en;
+    dct:description """Een administratieve correctie, uitgevoerd door het platform zelf."""@nl-BE.
+
+system:CompleteTask a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Complete task"@en;
+    rdfs:label "Taak afronden"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Completing a task, with its result."""@en;
+    dct:description """Het afronden van een taak, met het resultaat."""@nl-BE.
+
+system:RequeueTask a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Requeue task"@en;
+    rdfs:label "Taak opnieuw inplannen"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Rescheduling a task that had failed for good."""@en;
+    dct:description """Een taak die definitief gefaald was, opnieuw inplannen."""@nl-BE.
+
+system:MigrateEntity a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "Migrate entity"@en;
+    rdfs:label "Entiteit migreren"@nl-BE;
+    dct:created "2026-10-07"^^xsd:date;
+    dct:modified "2026-10-07"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Rewriting an entity to a newer content schema, preserving its provenance."""@en;
+    dct:description """Een entiteit herschrijven naar een nieuwer inhoudsschema, met behoud van herkomst."""@nl-BE.
