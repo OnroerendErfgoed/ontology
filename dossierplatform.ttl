@@ -103,8 +103,8 @@ system:Migration a owl:Class;
     dct:created "2026-10-07"^^xsd:date;
     dct:modified "2026-10-07"^^xsd:date;
     vs:term_status "stable";
-    dct:description """The record of a dossier being moved to a newer generation of its process definition."""@en;
-    dct:description """Het verslag van de overgang van een dossier naar een nieuwere generatie van zijn
+    dct:description """The record of a dossier being moved to a newer version of its process definition."""@en;
+    dct:description """Het verslag van de overgang van een dossier naar een nieuwere versie van zijn
     procesdefinitie."""@nl-BE.
 
 system:Exception a owl:Class;
@@ -214,8 +214,8 @@ system:MigrateWorkflow a owl:Class;
     dct:created "2026-10-07"^^xsd:date;
     dct:modified "2026-10-07"^^xsd:date;
     vs:term_status "stable";
-    dct:description """Moving a dossier to a newer generation of its process definition."""@en;
-    dct:description """Een dossier naar een nieuwere generatie van zijn procesdefinitie brengen."""@nl-BE.
+    dct:description """Moving a dossier to a newer version of its process definition."""@en;
+    dct:description """Een dossier naar een nieuwere versie van zijn procesdefinitie brengen."""@nl-BE.
 
 system:GrantException a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
