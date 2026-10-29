@@ -1,0 +1,175 @@
+# NOT FOR master.
+#
+# This file exists on the branch `poc-startup-gate` and nowhere else. It
+# defines the terms the dossier platform's two demonstration processes
+# name — `toelatingen` and `openbaarheid van bestuur` — so that the
+# engine's startup gate can be satisfied without pretending those terms
+# are part of the published Onroerend Erfgoed vocabulary. They are not.
+# They are the vocabulary of a proof of concept, and several of them
+# (`oe:testDienAanvraagInV2`, `oe:testBewerkAanvraagV2Only`) exist only
+# to exercise workflow versioning.
+#
+# The engine refuses to start when a process names a term no vocabulary
+# defines — deliberately, because a term nobody publishes is a term
+# nobody can look up, and this platform keeps what it records for
+# decades. Baselining them instead would have said "we tolerate these",
+# which is weaker and gets forgotten; defining them here says what they
+# are, where anyone can read it, while keeping them out of master.
+#
+# Every term is `unstable`: this is a proof of concept, and nothing here
+# carries the append-only promise that master's terms carry.
+#
+# Generated from the two workflow definitions, so what a term *is* here
+# is what the engine actually treats it as: an activity, an entity type,
+# a relation type, or the functional role of an agent.
+
+@prefix oe:    <https://id.erfgoed.net/vocab/ontology#>.
+@prefix owl:   <http://www.w3.org/2002/07/owl#>.
+@prefix prov:  <http://www.w3.org/ns/prov#>.
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+
+# The `oe:` namespace is claimed by ontology.ttl on master; this file
+# only adds terms in it, and only on this branch.
+
+### Terms the `toelatingen` demonstration process names
+
+# Activities
+
+oe:bewerkAanvraag a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkAanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+oe:bewerkRelaties a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkRelaties"@nl-BE;
+    vs:term_status "unstable".
+
+oe:dienAanvraagIn a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "dienAanvraagIn"@nl-BE;
+    vs:term_status "unstable".
+
+oe:doeVoorstelBeslissing a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "doeVoorstelBeslissing"@nl-BE;
+    vs:term_status "unstable".
+
+oe:duidBehandelaarAan a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "duidBehandelaarAan"@nl-BE;
+    vs:term_status "unstable".
+
+oe:duidVerantwoordelijkeOrganisatieAan a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "duidVerantwoordelijkeOrganisatieAan"@nl-BE;
+    vs:term_status "unstable".
+
+oe:duidVerantwoordelijkenAan a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "duidVerantwoordelijkenAan"@nl-BE;
+    vs:term_status "unstable".
+
+oe:neemBeslissing a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "neemBeslissing"@nl-BE;
+    vs:term_status "unstable".
+
+oe:setDossierAccess a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "setDossierAccess"@nl-BE;
+    vs:term_status "unstable".
+
+oe:setSystemFields a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "setSystemFields"@nl-BE;
+    vs:term_status "unstable".
+
+oe:tekenBeslissing a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "tekenBeslissing"@nl-BE;
+    vs:term_status "unstable".
+
+oe:testBewerkAanvraagV2Only a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "testBewerkAanvraagV2Only"@nl-BE;
+    vs:term_status "unstable".
+
+oe:testDienAanvraagInV2 a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "testDienAanvraagInV2"@nl-BE;
+    vs:term_status "unstable".
+
+oe:trekAanvraagIn a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "trekAanvraagIn"@nl-BE;
+    vs:term_status "unstable".
+
+oe:vervolledigAanvraag a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "vervolledigAanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+# Entity types
+
+oe:aanvraag a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "aanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+oe:behandelaar a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    a prov:Role;
+    rdfs:label "behandelaar"@nl-BE;
+    vs:term_status "unstable".
+
+oe:beslissing a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "beslissing"@nl-BE;
+    vs:term_status "unstable".
+
+oe:bijlagen a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "bijlagen"@nl-BE;
+    vs:term_status "unstable".
+
+oe:dossierVerantwoordelijken a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "dossierVerantwoordelijken"@nl-BE;
+    vs:term_status "unstable".
+
+oe:handtekening a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "handtekening"@nl-BE;
+    vs:term_status "unstable".
+
+oe:system_fields a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "system_fields"@nl-BE;
+    vs:term_status "unstable".
+
+oe:verantwoordelijke_organisatie a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    a prov:Role;
+    rdfs:label "verantwoordelijke_organisatie"@nl-BE;
+    vs:term_status "unstable".
+
+# Relation types
+
+oe:betreft a rdf:Property;
+    rdfs:label "betreft"@nl-BE;
+    vs:term_status "unstable".
+
+oe:gerelateerd_aan a rdf:Property;
+    rdfs:label "gerelateerd_aan"@nl-BE;
+    vs:term_status "unstable".
+
+oe:neemtAkteVan a rdf:Property;
+    rdfs:label "neemtAkteVan"@nl-BE;
+    vs:term_status "unstable".
+
+oe:valtOnder a rdf:Property;
+    rdfs:label "valtOnder"@nl-BE;
+    vs:term_status "unstable".

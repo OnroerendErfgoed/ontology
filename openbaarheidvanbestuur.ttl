@@ -1,0 +1,225 @@
+# NOT FOR master.
+#
+# The vocabulary of the `openbaarheid van bestuur` demonstration process,
+# on the branch `poc-startup-gate` and nowhere else.
+#
+# Unlike the `oe:` terms in `poc-ontology-terms.ttl`, this namespace has
+# no document on master at all. That is a different kind of gap and the
+# engine says so differently: a term that is missing can be defined in
+# the file its namespace already has, but a namespace nobody claims is a
+# missing *file* — there is nowhere to put the definition. This file is
+# that nowhere, for as long as the process is a proof of concept.
+#
+# Every term is `unstable`. Nothing here carries master's append-only
+# promise.
+
+@prefix ovb:   <https://id.erfgoed.net/vocab/openbaarheidvanbestuur#>.
+@prefix dct:   <http://purl.org/dc/terms/>.
+@prefix owl:   <http://www.w3.org/2002/07/owl#>.
+@prefix prov:  <http://www.w3.org/ns/prov#>.
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann:  <http://purl.org/vocab/vann/>.
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#>.
+
+### 1. Basic info about this vocabulary
+
+<https://id.erfgoed.net/vocab/openbaarheidvanbestuur> a owl:Ontology;
+    rdfs:label "Openbaarheid van bestuur (proof of concept)"@nl-BE;
+    dct:created "2026-10-29"^^xsd:date;
+    dct:modified "2026-10-29"^^xsd:date;
+    vann:preferredNamespacePrefix "ovb";
+    vann:preferredNamespaceUri "https://id.erfgoed.net/vocab/openbaarheidvanbestuur#";
+    vs:term_status "unstable";
+    dct:description """The process vocabulary of the openbaarheid-van-bestuur
+    demonstration process carried by the dossier platform. A proof of concept:
+    the terms are named by a running workflow definition, not by a published
+    standard, and they are defined here so that the platform's startup gate can
+    resolve them."""@en.
+
+### 2. Terms
+
+# Activities
+
+ovb:anonimiseerAanvragerActor a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "anonimiseerAanvragerActor"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:anonimiseerAanvragerGegevens a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "anonimiseerAanvragerGegevens"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:berekenAutomatischeVelden a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "berekenAutomatischeVelden"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkAanvraag a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkAanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkAanvrager a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkAanvrager"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkBehandeling a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkBehandeling"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkBestandenInzage a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkBestandenInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkBijlagen a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkBijlagen"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkDeadline a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkDeadline"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bewerkOntvankelijkheid a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "bewerkOntvankelijkheid"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:createAanvraag a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "createAanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:dienAanvraagIn a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "dienAanvraagIn"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:maakActor a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "maakActor"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:moveBestandenToDossier a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "moveBestandenToDossier"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:moveBijlagenToDossier a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "moveBijlagenToDossier"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:sluitDossierAf a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "sluitDossierAf"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:stelToegangsrechtenIn a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "stelToegangsrechtenIn"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:stuurMailDigitaleInzage a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "stuurMailDigitaleInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:stuurMailFysiekeInzage a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "stuurMailFysiekeInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:stuurMailOntvankelijkheid a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "stuurMailOntvankelijkheid"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:trekDossierIn a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "trekDossierIn"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:voegOpmerkingToe a owl:Class;
+    rdfs:subClassOf prov:Activity;
+    rdfs:label "voegOpmerkingToe"@nl-BE;
+    vs:term_status "unstable".
+
+# Entity types
+
+ovb:aanvraag a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "aanvraag"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:aanvragerActor a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "aanvragerActor"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:aanvragerGegevens a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "aanvragerGegevens"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:behandeling a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "behandeling"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:bestandenInzage a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "bestandenInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:datumIndienen a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "datumIndienen"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:deadline a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "deadline"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:mailDigitaleInzage a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "mailDigitaleInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:mailFysiekeInzage a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "mailFysiekeInzage"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:mailOntvankelijkheid a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "mailOntvankelijkheid"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:manierVanIndienen a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "manierVanIndienen"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:ontvankelijkheid a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "ontvankelijkheid"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:opmerking a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "opmerking"@nl-BE;
+    vs:term_status "unstable".
+
+ovb:typeOpenbaarheid a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "typeOpenbaarheid"@nl-BE;
+    vs:term_status "unstable".
