@@ -140,6 +140,14 @@ oe:dossierVerantwoordelijken a owl:Class;
     rdfs:label "dossierVerantwoordelijken"@nl-BE;
     vs:term_status "unstable".
 
+oe:Rechtsgrond a owl:Class;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Rechtsgrond"@nl-BE;
+    rdfs:comment """Het artikel of de regelgeving waar een beslissing onder valt,
+    uitgegeven door de Vlaamse Codex. Een `external: true`-entiteitstype: de
+    identiteit wordt elders gemunt en de engine bewaart alleen de URI."""@nl-BE;
+    vs:term_status "unstable".
+
 oe:handtekening a owl:Class;
     rdfs:subClassOf prov:Entity;
     rdfs:label "handtekening"@nl-BE;
