@@ -281,3 +281,72 @@ system:MigrateEntity a owl:Class;
     vs:term_status "stable";
     dct:description """Rewriting an entity to a newer content schema, preserving its provenance."""@en;
     dct:description """Een entiteit herschrijven naar een nieuwer inhoudsschema, met behoud van herkomst."""@nl-BE.
+
+### 4. Roles
+
+# The functional role an agent had in an activity — what they *did* — which
+# the platform writes into `prov:hadRole` on the association. It is not the
+# capability that decided whether they were allowed to: that is an ACM/IDM
+# group name, it belongs to the identity provider, and no vocabulary
+# publishes it. These six are the roles the engine itself records, for the
+# activities it provides; a process names its own under its own namespace.
+
+system:platform a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Platform"@en;
+    rdfs:label "Platform"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """The platform acting on its own behalf: a worker draining a task, a chained activity, a scheduled call. There is a person behind the dossier, but not behind this step."""@en;
+    dct:description """Het platform dat op eigen initiatief handelt: een worker die een taak afwerkt, een gekoppelde activiteit, een ingeplande oproep. Er zit wel een mens achter het dossier, maar niet achter deze stap."""@nl-BE.
+
+system:participant a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Participant"@en;
+    rdfs:label "Deelnemer"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Took part, in no stated capacity. Recorded when an activity declares no roles and the caller names none — the honest answer to a question the definition never asked."""@en;
+    dct:description """Nam deel, zonder vermelde hoedanigheid. Wordt genoteerd wanneer een activiteit geen rollen declareert en de aanroeper er geen noemt — het eerlijke antwoord op een vraag die de definitie nooit gesteld heeft."""@nl-BE.
+
+system:administrator a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Administrator"@en;
+    rdfs:label "Beheerder"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Administered the dossier rather than advanced it: rolling state back to an earlier moment, or migrating it to a newer definition."""@en;
+    dct:description """Beheerde het dossier in plaats van het vooruit te helpen: de toestand terugzetten naar een eerder moment, of ze migreren naar een nieuwere definitie."""@nl-BE.
+
+system:tombstoner a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Tombstoner"@en;
+    rdfs:label "Wisser"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Redacted the content of an entity, keeping the row so the provenance graph keeps its shape."""@en;
+    dct:description """Wiste de inhoud van een entiteit, met behoud van de rij zodat de herkomstgrafiek haar vorm houdt."""@nl-BE.
+
+system:voider a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Voider"@en;
+    rdfs:label "Buitenwerkingsteller"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Set an entity aside: its content is preserved and it stays in the record, but it no longer counts for anything the workflow gates on."""@en;
+    dct:description """Zette een entiteit opzij: de inhoud blijft bewaard en ze blijft in het register staan, maar ze telt niet langer mee voor wat de workflow afdwingt."""@nl-BE.
+
+system:granter a prov:Role;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:label "Granter"@en;
+    rdfs:label "Toekenner"@nl-BE;
+    dct:created "2026-11-04"^^xsd:date;
+    dct:modified "2026-11-04"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """Granted or retracted an exception: a named, recorded permission to bypass a rule the workflow would otherwise enforce."""@en;
+    dct:description """Kende een uitzondering toe of trok ze in: een benoemde, geregistreerde toestemming om een regel te omzeilen die de workflow anders afdwingt."""@nl-BE.

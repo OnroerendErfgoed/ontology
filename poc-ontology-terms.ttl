@@ -181,3 +181,21 @@ oe:neemtAkteVan a rdf:Property;
 oe:valtOnder a rdf:Property;
     rdfs:label "valtOnder"@nl-BE;
     vs:term_status "unstable".
+
+# Roles
+#
+# The functional role of the agent — what they did in the activity, written
+# into `prov:hadRole`. `oe:behandelaar` and `oe:verantwoordelijke_organisatie`
+# are above, with the entity types, because the process uses each of those
+# names for both a role and an entity type.
+
+oe:aanvrager a prov:Role;
+    rdfs:label "aanvrager"@nl-BE;
+    rdfs:comment """Diende de aanvraag in, of handelde verder namens de
+    aanvrager."""@nl-BE;
+    vs:term_status "unstable".
+
+oe:ondertekenaar a prov:Role;
+    rdfs:label "ondertekenaar"@nl-BE;
+    rdfs:comment """Tekende de beslissing."""@nl-BE;
+    vs:term_status "unstable".

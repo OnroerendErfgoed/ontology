@@ -223,3 +223,20 @@ ovb:typeOpenbaarheid a owl:Class;
     rdfs:subClassOf prov:Entity;
     rdfs:label "typeOpenbaarheid"@nl-BE;
     vs:term_status "unstable".
+
+# Roles
+#
+# The functional role of the agent, written into `prov:hadRole`. Not to be
+# confused with `vioe-proces-ovb:behandelaar`, which is the ACM/IDM group
+# that decides who may call: that one carries a colon without being a CURIE,
+# it belongs to the identity provider, and no vocabulary publishes it.
+
+ovb:aanvrager a prov:Role;
+    rdfs:label "aanvrager"@nl-BE;
+    rdfs:comment """Diende de vraag om openbaarheid in."""@nl-BE;
+    vs:term_status "unstable".
+
+ovb:behandelaar a prov:Role;
+    rdfs:label "behandelaar"@nl-BE;
+    rdfs:comment """Behandelde de vraag om openbaarheid."""@nl-BE;
+    vs:term_status "unstable".
