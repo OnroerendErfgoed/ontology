@@ -140,6 +140,20 @@ oe:dossierVerantwoordelijken a owl:Class;
     rdfs:label "dossierVerantwoordelijken"@nl-BE;
     vs:term_status "unstable".
 
+oe:DigitaalDossier a owl:Class;
+    rdfs:subClassOf oe:Dossier;
+    rdfs:label "Digitaal dossier"@nl-BE;
+    rdfs:label "Digital dossier"@en;
+    rdfs:comment """Een dossier dat op dit platform behandeld wordt: de eenheid
+    waarin entiteiten, activiteiten en relaties gegroepeerd zijn, en waarop
+    schrijfbewerkingen geserialiseerd worden. Enger dan `oe:Dossier`, dat ook
+    een papieren dossier dekt — en dat is precies waarom het bestaat: alleen in
+    `from_types`/`to_types` van een relatie geldig, waar de engine moet kunnen
+    nagaan dat een eindpunt een dossier van dit platform is. Het is géén
+    `entity_types:`-waarde en mag er geen worden: een dossier heeft geen
+    versies, geen inhoud en geen model."""@nl-BE;
+    vs:term_status "unstable".
+
 oe:Rechtsgrond a owl:Class;
     rdfs:subClassOf prov:Entity;
     rdfs:label "Rechtsgrond"@nl-BE;
