@@ -131,19 +131,6 @@ system:DossierAccess a owl:Class;
     dct:description """The access list of a dossier: who may see it, and in which role."""@en;
     dct:description """De toegangslijst van een dossier: wie het mag zien, en in welke rol."""@nl-BE.
 
-system:External a owl:Class;
-    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
-    rdfs:subClassOf prov:Entity;
-    rdfs:label "External reference"@en;
-    rdfs:label "Externe verwijzing"@nl-BE;
-    dct:created "2026-10-07"^^xsd:date;
-    dct:modified "2026-10-07"^^xsd:date;
-    vs:term_status "stable";
-    dct:description """A reference to something outside the platform, kept as an entity so that provenance can be
-    attached to it."""@en;
-    dct:description """Een verwijzing naar iets buiten het platform, bewaard als entiteit zodat er herkomst aan kan
-    hangen."""@nl-BE.
-
 ### 3. Activity classes
 #
 # What the platform can do to a dossier, as opposed to what a process does with
