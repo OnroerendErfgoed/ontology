@@ -266,22 +266,3 @@ oe:agentId a owl:DatatypeProperty;
     persistence layer. Present only when the node is keyed on an IRI; when
     it is not, the key already is this identifier."""@en;
     vs:term_status "unstable".
-
-oe:agentCode a owl:DatatypeProperty;
-    rdfs:domain prov:Agent;
-    rdfs:range xsd:string;
-    rdfs:label "agentCode"@en;
-    rdfs:comment """An administrative code identifying this agent in a
-    register other than the one its IRI comes from — an OVO code for a
-    Flemish public body, for example. Always accompanied by
-    `oe:agentCodeScheme`: an OVO code and a KBO number look alike and
-    identify different things."""@en;
-    vs:term_status "unstable".
-
-oe:agentCodeScheme a owl:DatatypeProperty;
-    rdfs:domain prov:Agent;
-    rdfs:range xsd:string;
-    rdfs:label "agentCodeScheme"@en;
-    rdfs:comment """Which register `oe:agentCode` is from. A code without
-    its register is a number with no meaning."""@en;
-    vs:term_status "unstable".
