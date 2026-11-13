@@ -29,6 +29,7 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#>.
 
 # The `oe:` namespace is claimed by ontology.ttl on master; this file
 # only adds terms in it, and only on this branch.
@@ -212,4 +213,56 @@ oe:aanvrager a prov:Role;
 oe:ondertekenaar a prov:Role;
     rdfs:label "ondertekenaar"@nl-BE;
     rdfs:comment """Tekende de beslissing."""@nl-BE;
+    vs:term_status "unstable".
+
+
+### The three attributes the PROV renderer mints
+
+# Unlike everything above, these are **not** generated from a workflow
+# definition and they are not proof-of-concept vocabulary. The engine's
+# PROV-JSON builder writes them on every entity and every agent node of
+# every document it produces, in `oe:`, whatever process the dossier
+# belongs to. In PROV-JSON they are attributes; in the PROV-O
+# serialisation they become predicates in our own published namespace,
+# so each one is a URI in a record kept for decades that today resolves
+# to nothing.
+#
+# They sit here because this branch is what the startup gate reads, and
+# because `oe:` is claimed by master's ontology.ttl so nothing else on
+# this branch may claim it. That makes this a temporary home and not the
+# right one: these three belong in the published platform vocabulary,
+# which is where they should move once it is willing to carry them.
+#
+# Nothing had ever asked whether they were defined. `declared_terms()`
+# walks what a *definition* names — activities, entity types, relation
+# types, roles — and these come from the renderer, so no traversal over
+# definitions can reach them. Found 2026-10-29, defined 2026-11-13.
+
+oe:entityId a owl:DatatypeProperty;
+    rdfs:domain prov:Entity;
+    rdfs:range xsd:string;
+    rdfs:label "entityId"@en;
+    rdfs:comment """The identifier of the logical entity this version is a
+    snapshot of. Every version of one logical entity carries the same
+    value; it is what makes a revision chain recognisable as being about
+    one thing."""@en;
+    vs:term_status "unstable".
+
+oe:versionId a owl:DatatypeProperty;
+    rdfs:domain prov:Entity;
+    rdfs:range xsd:string;
+    rdfs:label "versionId"@en;
+    rdfs:comment """The identifier of this version itself, as opposed to the
+    logical entity it belongs to. Distinct from the node's own IRI, which
+    encodes the dossier and the type as well."""@en;
+    vs:term_status "unstable".
+
+oe:agentId a owl:DatatypeProperty;
+    rdfs:domain prov:Agent;
+    rdfs:range xsd:string;
+    rdfs:label "agentId"@en;
+    rdfs:comment """The platform's own identifier for this agent, carried
+    beside the agent's IRI so a reader can correlate a node back to the
+    persistence layer. Present only when the node is keyed on an IRI; when
+    it is not, the key already is this identifier."""@en;
     vs:term_status "unstable".
