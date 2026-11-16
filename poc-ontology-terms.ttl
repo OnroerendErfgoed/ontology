@@ -30,6 +30,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#>.
+@prefix void:  <http://rdfs.org/ns/void#>.
 
 # The `oe:` namespace is claimed by ontology.ttl on master; this file
 # only adds terms in it, and only on this branch.
@@ -266,3 +267,39 @@ oe:agentId a owl:DatatypeProperty;
     persistence layer. Present only when the node is keyed on an IRI; when
     it is not, the key already is this identifier."""@en;
     vs:term_status "unstable".
+
+
+### Where a process publishes its entities, beside the form the platform mints
+
+# The dossier platform mints
+# `…/dossiers/{did}/entities/{type}/{eid}[/{vid}]`. The existing
+# applications also publish a shorter, process-specific spelling of the
+# same entities — same dossier UUID, same entity UUID, with the type
+# carried by the path instead of written in it. A process declares that
+# second form with `uri_base:` on an entity type, and the engine then
+# treats identifiers of that shape as **ours** rather than as somebody
+# else's.
+#
+# Which path means which class is not the engine's to decide, for the
+# same reason a prefix binding is not: the publisher states both halves,
+# and we are only responsible for getting it right. That is what this
+# block is. VoID is the idiomatic vocabulary — `void:uriSpace` hangs on a
+# dataset rather than on a class, so the class link goes through a
+# partition.
+#
+# `void:class` carries the **full IRI** on purpose. A CURIE here would be
+# read against this document's prefixes while the engine reads its own,
+# and two documents agreeing today is not the same as them meaning the
+# same thing. (ENG-156.)
+
+<https://id.erfgoed.net/vocab/datasets#dossierplatform> a void:Dataset;
+    rdfs:label "Dossierplatform entities"@en;
+    rdfs:comment """The entities the dossier platform holds. Each class
+    partition names a process-specific URI space beside the canonical
+    form."""@en;
+    void:classPartition
+        <https://id.erfgoed.net/vocab/datasets#toelatingen-aanvraag>.
+
+<https://id.erfgoed.net/vocab/datasets#toelatingen-aanvraag> a void:Dataset;
+    void:class <https://id.erfgoed.net/vocab/ontology#aanvraag>;
+    void:uriSpace "https://id.erfgoed.net/toelatingen/".
