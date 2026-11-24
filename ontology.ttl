@@ -69,6 +69,7 @@ oe:Actor a owl:Class;
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Aanduidingsobject"@nl-BE;
+    rdfs:label "Designation object"@en-GB;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
@@ -1660,7 +1661,7 @@ oe:aanduid_aanduidingstype a owl:ObjectProperty;
     dct:description """Aanduidingsobject A aanduidingstype B.
     Geeft aan als wat A aangeduid werd (beschermd monument, 
     vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl-BE;
-    dct:description """Designationobject A designationtype B.
+    dct:description """Designation object A designationtype B.
     Indicates as what A was designated (listed monument, 
     scheduled built heritage, listed landscape, ...)."""@en.
 
