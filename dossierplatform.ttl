@@ -107,6 +107,26 @@ system:Migration a owl:Class;
     dct:description """Het verslag van de overgang van een dossier naar een nieuwere generatie van zijn
     procesdefinitie."""@nl-BE.
 
+system:DataMigration a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
+    rdfs:subClassOf prov:Entity;
+    rdfs:label "Data migration record"@en;
+    rdfs:label "Datamigratie"@nl-BE;
+    dct:created "2026-11-24"^^xsd:date;
+    dct:modified "2026-11-24"^^xsd:date;
+    vs:term_status "stable";
+    dct:description """The record of one bulk content change applied to a dossier: which migration it was part of,
+    which entity type it touched, and the versions it wrote. A dossier carries one per migration, which is what makes
+    the migration idempotent, and what finds the whole batch again when it has to be undone. Not to be confused with
+    system:Migration, which records a dossier moving to a newer generation of its process definition: that changes
+    which rules a dossier is under, while this changes what its entities say under the rules they already had."""@en;
+    dct:description """Het verslag van één bulkwijziging van inhoud in een dossier: van welke migratie ze deel
+    uitmaakt, welk entiteitstype ze raakte en welke versies ze schreef. Een dossier draagt er één per migratie: dat
+    maakt de migratie idempotent, en het is waarmee de hele reeks wordt teruggevonden als ze teruggedraaid moet
+    worden. Niet te verwarren met system:Migration, het verslag van de overgang van een dossier naar een nieuwere
+    generatie van zijn procesdefinitie: dat verandert onder welke regels een dossier valt, dit verandert wat zijn
+    entiteiten zeggen onder de regels die ze al hadden."""@nl-BE.
+
 system:Exception a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/dossierplatform>;
     rdfs:subClassOf prov:Entity;
@@ -290,7 +310,11 @@ system:MigrateEntity a owl:Class;
     rdfs:label "Migrate entity"@en;
     rdfs:label "Entiteit migreren"@nl-BE;
     dct:created "2026-10-07"^^xsd:date;
-    dct:modified "2026-10-07"^^xsd:date;
+    dct:modified "2026-11-24"^^xsd:date;
     vs:term_status "stable";
-    dct:description """Rewriting an entity to a newer content schema, preserving its provenance."""@en;
-    dct:description """Een entiteit herschrijven naar een nieuwer inhoudsschema, met behoud van herkomst."""@nl-BE.
+    dct:description """Rewriting an entity's content in place during a bulk data migration, preserving its
+    provenance: a new version derived from the old one, under the schema the entity already had. Moving an entity
+    to a newer schema is a different thing and belongs to system:MigrateWorkflow."""@en;
+    dct:description """De inhoud van een entiteit herschrijven tijdens een bulkmigratie, met behoud van herkomst:
+    een nieuwe versie afgeleid van de oude, onder het schema dat de entiteit al had. Een entiteit naar een nieuwer
+    schema brengen is iets anders en hoort bij system:MigrateWorkflow."""@nl-BE.
