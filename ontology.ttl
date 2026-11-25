@@ -674,6 +674,7 @@ oe:Waarneming a owl:Class;
 oe:Verhaalplaat a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Verhaalplaat"@nl-BE;
+    rdfs:label "Story plaque"@en-GB;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2026-11-24"^^xsd:date;
     vs:term_status "testing";
