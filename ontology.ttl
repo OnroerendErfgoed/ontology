@@ -69,6 +69,8 @@ oe:Actor a owl:Class;
 oe:Aanduidingsobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Aanduidingsobject"@nl-BE;
+    rdfs:label "Designation object"@en-GB;
+    rdfs:label "Objet de désignation"@fr;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
@@ -162,6 +164,7 @@ oe:Erfgoedobject a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Erfgoedobject"@nl-BE;
     rdfs:label "Heritage asset"@en-GB;
+    rdfs:label "Objet patrimonial"@fr;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2015-09-17"^^xsd:date;
     vs:term_status "testing";
@@ -618,6 +621,8 @@ oe:UitbetalingsaanvraagVoorafgaandOnderzoek a owl:Class;
 oe:Gebeurtenis a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Gebeurtenis"@nl-BE;
+    rdfs:label "Event"@en-GB;
+    rdfs:label "Événement"@fr;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
@@ -653,6 +658,8 @@ oe:Thema a owl:Class;
 oe:Waarneming a owl:Class;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
     rdfs:label "Waarneming"@nl-BE;
+    rdfs:label "Observation"@en-GB;
+    rdfs:label "Observation"@fr;
     foaf:homepage <https://inventaris.onroerenderfgoed.be>;
     dct:created "2025-11-25"^^xsd:date;
     vs:term_status "testing";
@@ -663,6 +670,18 @@ oe:Waarneming a owl:Class;
     may no longer be present after investigation.
     Waarnemingen are compiled from various sources, which currently consist exclusively of
     archaeological observations registered in the Centrale Archeologische Inventaris (CAI)."""@en.
+
+oe:Verhaalplaat a owl:Class;
+    rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
+    rdfs:label "Verhaalplaat"@nl-BE;
+    rdfs:label "Story plaque"@en-GB;
+    foaf:homepage <https://inventaris.onroerenderfgoed.be>;
+    dct:created "2026-11-24"^^xsd:date;
+    vs:term_status "testing";
+    dct:description """A verhaalplaat.
+    A verhaalplaat is a commemorative plaque of the Flemish Agency for Immovable Heritage, placed on a
+    historic building or heritage site to show which well-known figures lived, worked or stayed there.
+    The initiative is part of the campaign Het verhaal van Vlaanderen leeft."""@en.
 
 oe:ActiefstatusType a owl:Class ;
     rdfs:isDefinedBy <https://id.erfgoed.net/vocab/ontology>;
@@ -1660,7 +1679,7 @@ oe:aanduid_aanduidingstype a owl:ObjectProperty;
     dct:description """Aanduidingsobject A aanduidingstype B.
     Geeft aan als wat A aangeduid werd (beschermd monument, 
     vastgesteld bouwkundig erfgoed, beschermd landschap, ...)."""@nl-BE;
-    dct:description """Designationobject A designationtype B.
+    dct:description """Designation object A designationtype B.
     Indicates as what A was designated (listed monument, 
     scheduled built heritage, listed landscape, ...)."""@en.
 
